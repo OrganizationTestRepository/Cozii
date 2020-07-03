@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Sign Up and Sign In base Layout-->
+    <dimen name="tab_layout_top_margin">25dp</dimen>
+    <dimen name="tab_layout_end_margin">25dp</dimen>
+
+    <!--    login page-->
+    <dimen name="circular_profile_user_top_margin">15dp</dimen>
+    <dimen name="circular_profile_user_left_margin">30dp</dimen>
+    <dimen name="login_title_text_size">40sp</dimen>
+</resources>
