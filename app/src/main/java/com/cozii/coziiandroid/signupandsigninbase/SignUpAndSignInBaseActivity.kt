@@ -13,7 +13,7 @@ class SignUpAndSignInBaseActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up_and_sign_in_base)
 
         //Titles of the Sign Up arrays
-        val tabTitles : Array<String> = arrayOf("SignIn","SignUp")
+        val tabTitles : Array<String> = arrayOf("Sign In","Sign Up")
 
         val signupPagerAdapter = SignUpAndSignInPagerAdapter(this)
         base_view_pager.adapter = signupPagerAdapter
