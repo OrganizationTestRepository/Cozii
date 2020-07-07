@@ -9,15 +9,16 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_sign_up_and_sign_in"
+        style="@style/MyTabLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/tab_layout_end_margin"
         android:layout_marginRight="@dimen/tab_layout_end_margin"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingEnd="@dimen/tab_end_padding"
+        android:paddingRight="@dimen/tab_end_padding"
         app:layout_constraintBottom_toTopOf="@+id/ten_percent_guide_line"
-        app:tabGravity="fill"
-        app:tabIndicatorColor="@android:color/black"
-        app:tabIndicatorHeight="4dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tabIndicatorHeight="2dp" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/base_view_pager"
@@ -30,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1"/>
+        app:layout_constraintGuide_percent="0.13" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
