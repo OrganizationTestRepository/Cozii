@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CoziiAndroid</string>
+
+    <!-- Login Fragment -->
+    <string name="tv_login_title">Sign in to\nCozii Proptech</string>
+    <string name="login_remember_me">Remember me</string>
+    <string name="login_forget_password">Forget password?</string>
+    <string name="login_username_hint">Email address</string>
+    <string name="login_password_hint">Password</string>
 </resources>
