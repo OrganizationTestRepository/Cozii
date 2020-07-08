@@ -7,4 +7,19 @@
     <string name="login_forget_password">Forget password?</string>
     <string name="login_username_hint">Email address</string>
     <string name="login_password_hint">Password</string>
+
+    <!-- Register Fragment -->
+    <string name="tv_registration_title">Get Started.</string>
+    <string name="tv_registration_second_title">Live more.\nLess hassle.</string>
+    <string name="tv_registration_description">Enter your first name and last name\nor login with a social account</string>
+    <string name="tv_registration_second_description">Enter your email address and\npassword or login with a social\naccount</string>
+    <string name="register_first_name_hint">First Name</string>
+    <string name="register_last_name_hint">Last Name</string>
+    <string name="register_step_one">Step 1 of 2</string>
+    <string name="register_email_hint">Email Address</string>
+    <string name="register_password_hint">Password</string>
+    <string name="register_reenter_password_hint">Re-enter Password</string>
+    <string name="register_step_two">Step 2 of 2</string>
+
+
 </resources>

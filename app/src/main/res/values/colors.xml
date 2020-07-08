@@ -10,4 +10,7 @@
     <color name="color_login_button">#f7941e</color>
     <color name="tab_indicator_color">#f7941e</color>
     <color name="tab_text_color">#878787</color>
+
+    <!--    register Screen-->
+    <color name="color_register_desc">#373d3f</color>
 </resources>
