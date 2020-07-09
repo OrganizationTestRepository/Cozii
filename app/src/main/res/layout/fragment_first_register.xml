@@ -49,7 +49,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.93" />
 
-    <TextView
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_sign_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,7 +60,8 @@
         android:layout_marginEnd="@dimen/tab_layout_end_margin"
         android:layout_marginRight="@dimen/tab_layout_end_margin"
         android:layout_marginBottom="@dimen/tab_bottom_margin"
-        android:textColor="@color/color_login_remember_me"/>
+        android:textColor="@color/color_login_remember_me"
+        app:font_name="RobotoMedium"/>
 
     <View
         android:id="@+id/sign_up_view"
@@ -71,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="@+id/tv_sign_up"
         app:layout_constraintBottom_toTopOf="@+id/fragment_third_guide_line"/>
 
-    <TextView
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_sign_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,10 +83,11 @@
         android:layout_marginEnd="@dimen/tab_layout_end_margin"
         android:layout_marginRight="@dimen/tab_layout_end_margin"
         android:layout_marginBottom="@dimen/tab_bottom_margin"
-        android:textColor="@color/tab_text_color"/>
+        android:textColor="@color/tab_text_color"
+        app:font_name="RobotoRegular"/>
 
 
-    <TextView
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_registration_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -94,9 +96,10 @@
         android:textColor="@color/color_login_title"
         android:textSize="@dimen/login_title_text_size"
         app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_third_guide_line" />
+        app:layout_constraintTop_toBottomOf="@+id/fragment_third_guide_line"
+        app:font_name="RobotoRegular"/>
 
-    <TextView
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/tab_layout_top_margin"
@@ -104,10 +107,12 @@
         android:textColor="@color/color_register_desc"
         android:textSize="@dimen/registration_desc_text_size"
         app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toBottomOf="@+id/tv_registration_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_registration_title"
+        app:font_name="RobotoRegular"/>
 
-    <EditText
+    <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
         android:id="@+id/et_register_first_name"
+        style="@style/EditTextAppearance"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/login_edit_text_username_top_margin"
@@ -117,10 +122,12 @@
         android:textSize="@dimen/login_edit_text_text_size"
         app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
         app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toBottomOf="@id/fragment_fourth_guide_line" />
+        app:layout_constraintTop_toBottomOf="@id/fragment_fourth_guide_line"
+        app:font_name="RobotoRegular"/>
 
-    <EditText
+    <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
         android:id="@+id/et_register_last_name"
+        style="@style/EditTextAppearance"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/login_edit_text_password_top_margin"
@@ -130,9 +137,10 @@
         android:textSize="@dimen/login_edit_text_text_size"
         app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
         app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toBottomOf="@id/et_register_first_name" />
+        app:layout_constraintTop_toBottomOf="@id/et_register_first_name"
+        app:font_name="RobotoRegular"/>
 
-    <TextView
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_step_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -140,7 +148,8 @@
         android:textColor="@color/color_login_remember_me"
         android:textSize="@dimen/login_edit_text_text_size"
         app:layout_constraintTop_toBottomOf="@+id/et_register_last_name"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_second_guide_line" />
+        app:layout_constraintEnd_toEndOf="@+id/fragment_second_guide_line"
+        app:font_name="RobotoRegular"/>
 
     <ImageView
         android:id="@+id/iv_google"
