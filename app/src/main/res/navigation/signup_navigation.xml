@@ -13,9 +13,7 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment3_to_registerFirstFragment2"
-            app:destination="@id/registerFirstFragment"
-            app:popUpTo="@+id/registerFirstFragment"
-            app:popUpToInclusive="true"/>
+            app:destination="@id/registerFirstFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFirstFragment"
@@ -25,7 +23,7 @@
         <action
             android:id="@+id/action_registerFirstFragment_to_loginFragment3"
             app:destination="@id/loginFragment3"
-            app:popUpTo="@+id/registerFirstFragment"
+            app:popUpTo="@+id/loginFragment3"
             app:popUpToInclusive="true"/>
         <action
             android:id="@+id/action_registerFirstFragment_to_registerSecondFragment"
@@ -39,7 +37,7 @@
         <action
             android:id="@+id/action_registerSecondFragment_to_loginFragment3"
             app:destination="@id/loginFragment3"
-            app:popUpTo="@+id/registerFirstFragment"
+            app:popUpTo="@+id/loginFragment3"
             app:popUpToInclusive="true"
             />
     </fragment>
