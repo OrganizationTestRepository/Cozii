@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 
 import com.cozii.coziiandroid.R
+import com.cozii.coziiandroid.signupandsigninbase.SignUpAndSignInBaseActivity
 import kotlinx.android.synthetic.main.fragment_login.*
 
 
@@ -24,6 +25,8 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (activity as SignUpAndSignInBaseActivity).updateStatusBarColor("#ffffff")
 
         tv_sign_up.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_loginFragment3_to_registerFirstFragment2);
