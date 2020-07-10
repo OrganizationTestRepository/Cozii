@@ -135,7 +135,7 @@
         app:layout_constraintTop_toBottomOf="@id/et_login_username"
         app:font_name="RobotoRegular"/>
 
-    <com.cozii.coziiandroid.coziicustomviews.CoziiRadioButton
+    <RadioButton
         android:id="@+id/rb_remember_me"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -145,8 +145,7 @@
         android:textColor="@color/color_login_remember_me"
         android:textSize="@dimen/login_edit_text_text_size"
         app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
-        app:layout_constraintTop_toBottomOf="@+id/et_login_password"
-        app:font_name="RobotoRegular"/>
+        app:layout_constraintTop_toBottomOf="@+id/et_login_password" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_forget_password"
