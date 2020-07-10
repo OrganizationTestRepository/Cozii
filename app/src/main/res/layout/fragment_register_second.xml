@@ -167,6 +167,17 @@
         app:layout_constraintEnd_toEndOf="@+id/fragment_second_guide_line"
         app:font_name="RobotoRegular"/>
 
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_register_agreement"
+        android:layout_marginTop="@dimen/reset_second_title_top_margin"
+        android:textColor="@color/color_login_remember_me"
+        android:textSize="@dimen/login_edit_text_text_size"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_step_info"/>
+
     <ImageView
         android:id="@+id/iv_google"
         android:layout_width="wrap_content"
