@@ -28,5 +28,9 @@ class LoginFragment : Fragment() {
         tv_sign_up.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_loginFragment3_to_registerFirstFragment2);
         }
+
+        tv_forget_password.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_loginFragment3_to_resetPasswordFirstFragment);
+        }
     }
 }
