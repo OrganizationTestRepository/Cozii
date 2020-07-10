@@ -20,4 +20,13 @@
 
     <!--    registration page-->
     <dimen name="registration_desc_text_size">14sp</dimen>
+
+    <!--    reset password page-->
+    <dimen name="reset_password_title_text_size">20sp</dimen>
+    <dimen name="reset_password_second_title_text_size">18sp</dimen>
+    <dimen name="reset_title_bottom_margin">10dp</dimen>
+    <dimen name="reset_first_image_margin_top">45dp</dimen>
+    <dimen name="reset_second_title_top_margin">20dp</dimen>
+    <dimen name="reset_edit_text_text_size">14sp</dimen>
+    <dimen name="reset_edit_text_email_top_margin">30dp</dimen>
 </resources>

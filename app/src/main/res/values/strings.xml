@@ -21,5 +21,11 @@
     <string name="register_reenter_password_hint">Re-enter Password</string>
     <string name="register_step_two">Step 2 of 2</string>
 
+    <!-- Reset Password Fragment -->
+    <string name="reset_password_title">Reset Password</string>
+    <string name="reset_password_desc">Enter the email address you used for\nthis account to reset your password.</string>
+    <string name="reset_hint_email">Email address</string>
+    <string name="button_send_email">Send Email</string>
+
 
 </resources>
