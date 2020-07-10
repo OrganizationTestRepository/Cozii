@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.cozii.coziiandroid.R
+import com.cozii.coziiandroid.signupandsigninbase.SignUpAndSignInBaseActivity
 
 class ResetPasswordFirstFragment : Fragment() {
 
@@ -16,5 +17,10 @@ class ResetPasswordFirstFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_reset_password_first, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        (activity as SignUpAndSignInBaseActivity).updateStatusBarColor("#3f2587")
     }
 }
