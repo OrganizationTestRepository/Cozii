@@ -49,4 +49,27 @@
         android:name="com.cozii.coziiandroid.signupandsigninbase.resetpassword.ResetPasswordFirstFragment"
         android:label="fragment_reset_password_first"
         tools:layout="@layout/fragment_reset_password_first" />
+    <fragment
+        android:id="@+id/resetPasswordDeepLinkFragment2"
+        android:name="com.cozii.coziiandroid.signupandsigninbase.resetpassword.ResetPasswordDeepLinkFragment"
+        android:label="fragment_reset_password_deep_link"
+        tools:layout="@layout/fragment_reset_password_deep_link">
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="http://app.cozii.ca/staging/index.php/forgotpassword/resetpassword/Mjc3" />
+        <action
+            android:id="@+id/action_resetPasswordDeepLinkFragment2_to_resetPasswordSuccessFragment"
+            app:destination="@id/resetPasswordSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordSuccessFragment"
+        android:name="com.cozii.coziiandroid.signupandsigninbase.resetpassword.ResetPasswordSuccessFragment"
+        android:label="fragment_reset_password_success"
+        tools:layout="@layout/fragment_reset_password_success" >
+        <action
+            android:id="@+id/action_resetPasswordSuccessFragment_to_loginFragment3"
+            app:destination="@id/loginFragment3"
+            app:popUpTo="@+id/resetPasswordSuccessFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
 </navigation>
