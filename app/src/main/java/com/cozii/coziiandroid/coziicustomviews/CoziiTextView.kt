@@ -21,7 +21,7 @@ class CoziiTextView : AppCompatTextView {
     }
 
     private fun setCustomFontType(context: Context, font: Int) {
-        val fontType = Font?.setTypeFont(context,font)
+        val fontType = Font.setTypeFont(context,font)
         typeface = fontType
     }
 }
