@@ -14,6 +14,13 @@
     <!--    register Screen-->
     <color name="color_register_desc">#373d3f</color>
 
+    <!-- Onboarding Home Screen -->
+    <color name = "color_onboarding_welcome">#ffffff</color>
+    <color name = "color_onboarding_purple">#3f2587</color>
+    <color name = "color_onboarding_orange">#f8a000</color>
+    <color name = "color_onboarding_black">#000000</color>
+    <color name = "color_onboarding_grey">#444444</color>
+
     <!--    reset password Screen-->
     <color name="color_reset_password_top_view">#3f2587</color>
     <color name="color_reset_password_desc">#373d3f</color>
