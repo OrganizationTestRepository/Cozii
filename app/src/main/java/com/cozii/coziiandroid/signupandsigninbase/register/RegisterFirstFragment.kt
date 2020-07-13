@@ -1,4 +1,4 @@
-package com.cozii.coziiandroid.signupandsigninbase.login
+package com.cozii.coziiandroid.signupandsigninbase.register
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,31 +9,30 @@ import androidx.navigation.Navigation
 
 import com.cozii.coziiandroid.R
 import com.cozii.coziiandroid.signupandsigninbase.SignUpAndSignInBaseActivity
-import kotlinx.android.synthetic.main.fragment_login.*
+import kotlinx.android.synthetic.main.fragment_first_register.*
+import kotlinx.android.synthetic.main.fragment_first_register.tv_sign_in
 
 
-class LoginFragment : Fragment() {
+class RegisterFirstFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
-
+        return inflater.inflate(R.layout.fragment_first_register, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         (activity as SignUpAndSignInBaseActivity).updateStatusBarColor("#ffffff")
-
-        tv_sign_up.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_registerFirstFragment);
+        tv_sign_in.setOnClickListener {
+                Navigation.findNavController(it).navigate(R.id.action_registerFirstFragment_to_loginFragment);
         }
 
-        tv_forget_password.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_resetPasswordFirstFragment);
+        first_register_login_button.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_registerFirstFragment_to_registerSecondFragment);
         }
     }
+
 }
