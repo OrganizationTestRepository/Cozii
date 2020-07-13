@@ -29,11 +29,11 @@ class LoginFragment : Fragment() {
         (activity as SignUpAndSignInBaseActivity).updateStatusBarColor("#ffffff")
 
         tv_sign_up.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_loginFragment3_to_registerFirstFragment2);
+            Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_registerFirstFragment);
         }
 
         tv_forget_password.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_loginFragment3_to_resetPasswordFirstFragment);
+            Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_resetPasswordFirstFragment);
         }
     }
 }

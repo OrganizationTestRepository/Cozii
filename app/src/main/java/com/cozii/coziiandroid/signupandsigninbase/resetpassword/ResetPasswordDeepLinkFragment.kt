@@ -28,7 +28,7 @@ class ResetPasswordDeepLinkFragment : Fragment() {
         (activity as SignUpAndSignInBaseActivity).updateStatusBarColor("#3f2587")
 
         set_password_button.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_resetPasswordDeepLinkFragment2_to_resetPasswordSuccessFragment);
+            Navigation.findNavController(it).navigate(R.id.action_resetPasswordDeepLinkFragment_to_resetPasswordSuccessFragment);
         }
     }
 }

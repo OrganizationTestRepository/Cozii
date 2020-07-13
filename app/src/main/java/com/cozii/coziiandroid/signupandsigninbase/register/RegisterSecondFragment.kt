@@ -28,7 +28,7 @@ class RegisterSecondFragment : Fragment() {
         (activity as SignUpAndSignInBaseActivity).updateStatusBarColor("#ffffff")
 
         tv_sign_in.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_registerSecondFragment_to_loginFragment3);
+            Navigation.findNavController(it).navigate(R.id.action_registerSecondFragment_to_loginFragment);
         }
     }
 

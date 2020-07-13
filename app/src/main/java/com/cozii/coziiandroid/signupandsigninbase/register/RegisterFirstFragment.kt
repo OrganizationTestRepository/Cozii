@@ -27,7 +27,7 @@ class RegisterFirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as SignUpAndSignInBaseActivity).updateStatusBarColor("#ffffff")
         tv_sign_in.setOnClickListener {
-                Navigation.findNavController(it).navigate(R.id.action_registerFirstFragment_to_loginFragment3);
+                Navigation.findNavController(it).navigate(R.id.action_registerFirstFragment_to_loginFragment);
         }
 
         first_register_login_button.setOnClickListener {
