@@ -20,6 +20,25 @@
     <string name="register_password_hint">Password</string>
     <string name="register_reenter_password_hint">Re-enter Password</string>
     <string name="register_step_two">Step 2 of 2</string>
+    <string name="tv_register_agreement">I agree with the Terms and Conditions and Privacy Statements.</string>
+
+    <!-- Reset Password Fragment -->
+    <string name="reset_password_title">Reset Password</string>
+    <string name="reset_password_desc">Enter the email address you used for\nthis account to reset your password.</string>
+    <string name="reset_hint_email">Email address</string>
+    <string name="button_send_email">Send Email</string>
+
+    <!-- Reset Password Deeplink Fragment -->
+    <string name="reset_password_deeplink_title">Enter new password</string>
+    <string name="reset_password_hint">Password</string>
+    <string name="reset_password_reenter_hint">Re-enter your password</string>
+    <string name="button_set_password">Set Password</string>
+
+    <!-- Reset Password Success Fragment -->
+    <string name="reset_password_success_title">Done!</string>
+    <string name="reset_password_success_desc">Your password has been changed!</string>
+    <string name="button_sign_in">Sign In</string>
+
 
 
 </resources>

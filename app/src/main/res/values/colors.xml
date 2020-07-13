@@ -13,4 +13,9 @@
 
     <!--    register Screen-->
     <color name="color_register_desc">#373d3f</color>
+
+    <!--    reset password Screen-->
+    <color name="color_reset_password_top_view">#3f2587</color>
+    <color name="color_reset_password_desc">#373d3f</color>
+    <color name="button_send_email_color">#452293</color>
 </resources>

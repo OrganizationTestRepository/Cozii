@@ -1,4 +1,4 @@
-package com.cozii.coziiandroid.signupandsigninbase.login
+package com.cozii.coziiandroid.signupandsigninbase.resetpassword
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,31 +9,26 @@ import androidx.navigation.Navigation
 
 import com.cozii.coziiandroid.R
 import com.cozii.coziiandroid.signupandsigninbase.SignUpAndSignInBaseActivity
-import kotlinx.android.synthetic.main.fragment_login.*
+import kotlinx.android.synthetic.main.fragment_reset_password_deep_link.*
 
-
-class LoginFragment : Fragment() {
+class ResetPasswordDeepLinkFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        return inflater.inflate(R.layout.fragment_reset_password_deep_link, container, false)
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as SignUpAndSignInBaseActivity).updateStatusBarColor("#ffffff")
+        (activity as SignUpAndSignInBaseActivity).updateStatusBarColor("#3f2587")
 
-        tv_sign_up.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_registerFirstFragment);
-        }
-
-        tv_forget_password.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_resetPasswordFirstFragment);
+        set_password_button.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_resetPasswordDeepLinkFragment_to_resetPasswordSuccessFragment);
         }
     }
 }

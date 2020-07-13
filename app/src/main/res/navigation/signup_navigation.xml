@@ -3,17 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/signup_navigation"
-    app:startDestination="@id/loginFragment3">
+    app:startDestination="@id/loginFragment">
 
 
     <fragment
-        android:id="@+id/loginFragment3"
+        android:id="@+id/loginFragment"
         android:name="com.cozii.coziiandroid.signupandsigninbase.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment3_to_registerFirstFragment2"
+            android:id="@+id/action_loginFragment_to_registerFirstFragment"
             app:destination="@id/registerFirstFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_resetPasswordFirstFragment"
+            app:destination="@id/resetPasswordFirstFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFirstFragment"
@@ -21,9 +24,9 @@
         android:label="fragment_first_register"
         tools:layout="@layout/fragment_first_register" >
         <action
-            android:id="@+id/action_registerFirstFragment_to_loginFragment3"
-            app:destination="@id/loginFragment3"
-            app:popUpTo="@+id/loginFragment3"
+            android:id="@+id/action_registerFirstFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/loginFragment"
             app:popUpToInclusive="true"/>
         <action
             android:id="@+id/action_registerFirstFragment_to_registerSecondFragment"
@@ -35,10 +38,36 @@
         android:label="fragment_register_second"
         tools:layout="@layout/fragment_register_second" >
         <action
-            android:id="@+id/action_registerSecondFragment_to_loginFragment3"
-            app:destination="@id/loginFragment3"
-            app:popUpTo="@+id/loginFragment3"
-            app:popUpToInclusive="true"
-            />
+            android:id="@+id/action_registerSecondFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFirstFragment"
+        android:name="com.cozii.coziiandroid.signupandsigninbase.resetpassword.ResetPasswordFirstFragment"
+        android:label="fragment_reset_password_first"
+        tools:layout="@layout/fragment_reset_password_first" />
+    <fragment
+        android:id="@+id/resetPasswordDeepLinkFragment"
+        android:name="com.cozii.coziiandroid.signupandsigninbase.resetpassword.ResetPasswordDeepLinkFragment"
+        android:label="fragment_reset_password_deep_link"
+        tools:layout="@layout/fragment_reset_password_deep_link">
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="http://app.cozii.ca/staging/index.php/forgotpassword/resetpassword/Mjc3" />
+        <action
+            android:id="@+id/action_resetPasswordDeepLinkFragment_to_resetPasswordSuccessFragment"
+            app:destination="@id/resetPasswordSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordSuccessFragment"
+        android:name="com.cozii.coziiandroid.signupandsigninbase.resetpassword.ResetPasswordSuccessFragment"
+        android:label="fragment_reset_password_success"
+        tools:layout="@layout/fragment_reset_password_success">
+        <action
+            android:id="@+id/action_resetPasswordSuccessFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
