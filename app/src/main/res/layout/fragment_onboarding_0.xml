@@ -5,111 +5,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home.Home">
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/fragment_first_guide_line"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent="0.9" />
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/fragment_second_guide_line"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent="0.45" />
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/fragment_fourth_guide_line"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.1" />
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/fragment_fifth_guide_line"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.9" />
+  <View
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="@drawable/onboarding_top_view"
+      app:layout_constraintBottom_toTopOf="@+id/fragment_second_guide_line"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+  <ImageView
+      android:id="@+id/onboarding_logo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:src="@drawable/ic_facebook"
+      app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+      app:layout_constraintTop_toTopOf="parent" />
+  <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/tv_login_title"
+      android:textColor="@android:color/white"
+      android:textSize="40sp"
+      app:font_name="RobotoRegular"
+      app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+      app:layout_constraintTop_toBottomOf="@+id/onboarding_logo" />
 
-    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
-        android:id="@+id/coziiTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_login_title"
-        android:textColor="@color/color_login_title"
-        android:textSize="@dimen/login_title_text_size"
-        app:font_name="RobotoRegular"
-        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/fragment_first_guide_line"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/fragment_second_guide_line"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/fragment_third_guide_line"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/fragment_fourth_guide_line"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/fragment_fifth_guide_line"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/fragment_sixth_guide_line"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.93" />
-<!--
-    <shape
-        android:layout_marginBottom="250dp"
-        android:shape="rectangle"
-        app:layout_constraintBottom_toBottomOf="@+id/view">
-
-        app:layout_constraintTop_toBottomOf="@id/fragment_third_guide_line" />
-
-        <solid android:color="@android:color/holo_red_dark" />
-
-        <corners android:radius="32dp" />
-
-    </shape>
- -->
-    <corners
-        android:background="@android:color/transparent"
-        android:bottomLeftRadius="20dp"
-        android:bottomRightRadius="20dp"
-        android:topLeftRadius="20dp"
-        android:topRightRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_first_guide_line"
-        app:layout_constraintEnd_toEndOf="@id/fragment_fifth_guide_line"
-        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
-        app:layout_constraintTop_toBottomOf="@id/fragment_second_guide_line" />
-
-
-    <View
-
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:background="@color/color_login_title"
-        android:foregroundGravity="top"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_second_guide_line"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-
-
-        />
+  <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/fragment_second_guide_line"
+      app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+      app:layout_constraintEnd_toEndOf="@id/fragment_fifth_guide_line"
+      android:background="@drawable/onboarding_rectangle_outline"
+      >
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:foreground="@android:drawable/bottom_bar"
-
         android:text="@string/tv_login_title"
-        android:textColor="@color/color_login_title"
-        android:textSize="@dimen/login_title_text_size"
-        app:font_name="RobotoRegular"
-        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:font_name="RobotoRegular" />
+
+  </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
