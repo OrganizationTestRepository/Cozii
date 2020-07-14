@@ -55,6 +55,6 @@
         android:layout_height="661dp"
         android:src="@drawable/Capture"
         app:layout_constraintBottom_toTopOf="@id/fragment_third_guide_line"
-        app:layout_constraintStart_toEndOf="@id/iv_facebook" />
+        app:layout_constraintStart_toEndOf="@id/iv_facebook"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
