@@ -30,6 +30,10 @@ class RegisterSecondFragment : Fragment() {
         tv_sign_in.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_registerSecondFragment_to_loginFragment);
         }
+
+        second_register_login_button.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_registerSecondFragment_to_verifyEmailOtpFragment);
+        }
     }
 
 }
