@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="1" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/fragment_second_guide_line"
         android:layout_width="match_parent"
@@ -35,10 +35,44 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/onboarding_top_view"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_second_guide_line"
+        app:layout_constraintBottom_toTopOf="@id/fragment_first_guide_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/onboarding_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/cozii_proptech_logo_10"
+        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="254dp"
+        android:layout_height="211dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/illustration"
+        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fragment_second_guide_line"/>
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/welcome"
+        android:layout_width="264dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginRight="39dp"
+        android:text="Welcome to Cozii Proptech. Smart property manager in real time."
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toStartOf="@id/onboarding_logo"
+        app:layout_constraintEnd_toStartOf="@id/fragment_fifth_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/fragment_second_guide_line" />
 
 
 
