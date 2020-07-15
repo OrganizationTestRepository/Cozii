@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".signupandsigninbase.register.RegisterFirstFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_first_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_second_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_third_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_fourth_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_fifth_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_sixth_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Sign Up"
+        android:textSize="@dimen/login_edit_text_text_size"
+        android:layout_marginEnd="@dimen/tab_layout_end_margin"
+        android:layout_marginRight="@dimen/tab_layout_end_margin"
+        android:layout_marginBottom="@dimen/tab_bottom_margin"
+        android:textColor="@color/color_login_remember_me"
+        app:font_name="RobotoMedium"/>
+
+    <View
+        android:id="@+id/sign_up_view"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/color_login_button"
+        app:layout_constraintStart_toStartOf="@+id/tv_sign_up"
+        app:layout_constraintEnd_toEndOf="@+id/tv_sign_up"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_third_guide_line"/>
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_sign_up"
+        app:layout_constraintEnd_toStartOf="@+id/tv_sign_up"
+        android:text="Sign In"
+        android:textSize="@dimen/login_edit_text_text_size"
+        android:layout_marginEnd="@dimen/tab_layout_end_margin"
+        android:layout_marginRight="@dimen/tab_layout_end_margin"
+        android:layout_marginBottom="@dimen/tab_bottom_margin"
+        android:textColor="@color/tab_text_color"
+        app:font_name="RobotoRegular"/>
+
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_registration_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tab_layout_top_margin"
+        android:text="@string/tv_registration_title"
+        android:textColor="@color/color_login_title"
+        android:textSize="@dimen/login_title_text_size"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_third_guide_line"
+        app:font_name="RobotoRegular"/>
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tab_layout_top_margin"
+        android:text="@string/tv_registration_description"
+        android:textColor="@color/color_register_desc"
+        android:textSize="@dimen/registration_desc_text_size"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_registration_title"
+        app:font_name="RobotoRegular"/>
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+        android:id="@+id/et_register_first_name"
+        style="@style/EditTextAppearance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_edit_text_username_top_margin"
+        android:hint="@string/register_first_name_hint"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/login_edit_text_text_size"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/fragment_fourth_guide_line"
+        app:font_name="RobotoRegular"/>
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+        android:id="@+id/et_register_last_name"
+        style="@style/EditTextAppearance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_edit_text_password_top_margin"
+        android:hint="@string/register_last_name_hint"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/login_edit_text_text_size"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/et_register_first_name"
+        app:font_name="RobotoRegular"/>
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_step_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_step_one"
+        android:textColor="@color/color_login_remember_me"
+        android:textSize="@dimen/login_edit_text_text_size"
+        app:layout_constraintTop_toBottomOf="@+id/et_register_last_name"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_second_guide_line"
+        app:font_name="RobotoRegular"/>
+
+    <ImageView
+        android:id="@+id/iv_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_edit_text_text_size"
+        android:layout_marginBottom="@dimen/login_icons_bottom_margin"
+        android:src="@drawable/ic_google"
+        app:layout_constraintBottom_toTopOf="@id/fragment_fifth_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line" />
+
+    <ImageView
+        android:id="@+id/iv_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_icons_left_margin"
+        android:layout_marginTop="@dimen/login_edit_text_text_size"
+        android:layout_marginBottom="@dimen/login_icons_bottom_margin"
+        android:src="@drawable/ic_facebook"
+        app:layout_constraintBottom_toTopOf="@id/fragment_fifth_guide_line"
+        app:layout_constraintStart_toEndOf="@id/iv_google" />
+
+    <ImageView
+        android:id="@+id/iv_linkedin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_icons_left_margin"
+        android:layout_marginTop="@dimen/login_edit_text_text_size"
+        android:layout_marginBottom="@dimen/login_icons_bottom_margin"
+        android:src="@drawable/ic_linkedin"
+        app:layout_constraintBottom_toTopOf="@id/fragment_fifth_guide_line"
+        app:layout_constraintStart_toEndOf="@id/iv_facebook" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_login_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_fifth_guide_line" />
+
+    <ImageButton
+        android:id="@+id/first_register_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_login_floating_button"
+        android:paddingStart="@dimen/login_button_start_and_end_padding"
+        android:paddingLeft="@dimen/login_button_start_and_end_padding"
+        android:paddingTop="@dimen/login_button_top_and_bottom_padding"
+        android:paddingEnd="@dimen/login_button_start_and_end_padding"
+        android:paddingRight="@dimen/login_button_start_and_end_padding"
+        android:paddingBottom="@dimen/login_button_top_and_bottom_padding"
+        android:src="@drawable/ic_right_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_sixth_guide_line"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
