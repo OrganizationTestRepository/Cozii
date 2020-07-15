@@ -46,7 +46,7 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="32dp"
       android:layout_marginLeft="20dp"
-      android:src="@drawable/ic_facebook"
+      android:src="@drawable/cozii_proptech_logo_10"
       app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
       app:layout_constraintTop_toTopOf="parent" />
 
@@ -94,7 +94,7 @@
         android:layout_height="53dp"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:src="@group"
+        android:src="@drawable/group"
          />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
@@ -135,15 +135,15 @@
         android:layout_height="53dp"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/ic_facebook"
+        android:src="@drawable/group_4"
         />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
-        android:layout_width="67dp"
+        android:layout_width="73dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginStart="15dp"
-        android:text="Tenant"
+        android:text="Landlord"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:font_name="RobotoRegular" />
@@ -152,8 +152,8 @@
         android:layout_width="193dp"
         android:layout_height="30dp"
         android:layout_marginTop="41dp"
-        android:layout_marginStart="-67dp"
-        android:text="Connect with landlord, request and track maintenance request"
+        android:layout_marginStart="-73dp"
+        android:text="Receive and monitor repairs, receive payments, advertise your properties"
         android:textColor="@android:color/black"
         android:textSize="12sp"
         app:font_name="RobotoRegular" />
@@ -177,15 +177,15 @@
         android:layout_height="53dp"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/ic_facebook"
+        android:src="@drawable/group_8"
         />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
-        android:layout_width="67dp"
+        android:layout_width="89dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginStart="15dp"
-        android:text="Tenant"
+        android:text="Handyman"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:font_name="RobotoRegular" />
@@ -194,8 +194,8 @@
         android:layout_width="193dp"
         android:layout_height="30dp"
         android:layout_marginTop="41dp"
-        android:layout_marginStart="-67dp"
-        android:text="Connect with landlord, request and track maintenance request"
+        android:layout_marginStart="-89dp"
+        android:text="Reach more customers, get new work orders and increase your income"
         android:textColor="@android:color/black"
         android:textSize="12sp"
         app:font_name="RobotoRegular" />

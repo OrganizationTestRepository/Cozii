@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
     <shape xmlns:android="http://schemas.android.com/apk/res/android">
-        <solid android:color="@color/button_send_email_color" />
+        <solid android:color="#3f2587" />
+
         <corners android:bottomLeftRadius="20dp"
             android:bottomRightRadius="20dp"/>
 
