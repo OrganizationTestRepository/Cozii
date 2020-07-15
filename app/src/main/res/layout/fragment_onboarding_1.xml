@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@id/fragment_second_guide_line"
         app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
         app:layout_constraintEnd_toEndOf="@id/fragment_fifth_guide_line"
-        android:background="@drawable/onboarding_r"
+        android:background="@drawable/rectangular_outline_coloured"
         >
 
         <ImageView
