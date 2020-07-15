@@ -40,7 +40,8 @@
     <string name="button_sign_in">Sign In</string>
 
     <!-- Onboarding Fragment -->
-    <string name= "onboarding_description_1">As a Tenant, you can request repairs from the landlord with cozii.</string>
+    <string name= "onboarding_description_0">As a Tenant,</string>
+    <string name= "onboarding_description_1">you can request repairs from the landlord with cozii.</string>
     <string name= "onboarding_description_2">As a Tenant, you can request repairs from the landlord with cozii.</string>
     <string name= "onboarding_description_3">As a Tenant, you can request repairs from the landlord with cozii.</string>
     <string name= "onboarding_description_4">As a Tenant, you can request repairs from the landlord with cozii.</string>
