@@ -39,6 +39,12 @@
     <string name="reset_password_success_desc">Your password has been changed!</string>
     <string name="button_sign_in">Sign In</string>
 
+    <!-- Verify Email Fragment -->
+    <string name="verify_email_title">Verify your email</string>
+    <string name="verify_email_desc">Please enter the 4 digit code sent to\nyourmail@example.com</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="button_confirm">Confirm</string>
+    <string name="change_email">Change Email</string>
 
 
 </resources>
