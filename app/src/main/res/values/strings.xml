@@ -42,9 +42,9 @@
     <!-- Onboarding Fragment -->
     <string name= "onboarding_description_0">As a Tenant,</string>
     <string name= "onboarding_description_1">you can request repairs from the landlord with cozii.</string>
-    <string name= "onboarding_description_2">As a Tenant, you can request repairs from the landlord with cozii.</string>
-    <string name= "onboarding_description_3">As a Tenant, you can request repairs from the landlord with cozii.</string>
-    <string name= "onboarding_description_4">As a Tenant, you can request repairs from the landlord with cozii.</string>
-    <string name= "onboarding_description_5">As a Tenant, you can request repairs from the landlord with cozii.</string>
+    <string name= "onboarding_description_3">you can book a handyman or service expert with cozii.</string>
+    <string name= "onboarding_description_5">you can pay rent and utilities with cozii.</string>
+    <string name= "onboarding_description_6">We ask every tenant for a few details before enjoy the new lifestyle. </string>
+    <string name= "onboarding_description_7">Almost Done.</string>
 
 </resources>
