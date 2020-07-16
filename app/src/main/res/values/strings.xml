@@ -45,6 +45,9 @@
     <string name="resend_code">Resend Code</string>
     <string name="button_confirm">Confirm</string>
     <string name="change_email">Change Email</string>
+    <string name="verfied_title">Verified!</string>
+    <string name="verified_desc">Great! You have successfully\nverified the account</string>
+    <string name="button_next">Next</string>
 
 
 </resources>
