@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_verified_dialog"
+    android:padding="@dimen/reset_first_image_margin_top"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/iv_email_verified_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_email_verified"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_verified_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/reset_second_title_top_margin"
+        android:text="@string/verfied_title"
+        android:textColor="@color/color_reset_password_top_view"
+        android:textSize="@dimen/reset_password_second_title_text_size"
+        app:font_name="RobotoMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_email_verified_logo" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_verified_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/reset_second_title_top_margin"
+        android:gravity="center"
+        android:text="@string/verified_desc"
+        android:textColor="@color/color_verify_otp_desc"
+        android:textSize="@dimen/reset_edit_text_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_verified_title" />
+
+    <Button
+        android:id="@+id/verified_next_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/change_email_margin_top"
+        android:background="@drawable/background_send_email_button"
+        android:text="@string/button_next"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/tv_verified_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
