@@ -77,5 +77,14 @@
         android:id="@+id/verifyEmailOtpFragment"
         android:name="com.cozii.coziiandroid.signupandsigninbase.verifyemail.VerifyEmailOtpFragment"
         android:label="fragment_verify_email_otp"
-        tools:layout="@layout/fragment_verify_email_otp" />
+        tools:layout="@layout/fragment_verify_email_otp" >
+        <action
+            android:id="@+id/action_verifyEmailOtpFragment_to_customVerifiedDialogFragment2"
+            app:destination="@id/customVerifiedDialogFragment2" />
+    </fragment>
+    <dialog
+        android:id="@+id/customVerifiedDialogFragment2"
+        android:name="com.cozii.coziiandroid.signupandsigninbase.verifyemail.CustomVerifiedDialogFragment"
+        android:label="CustomVerifiedDialogFragment" />
+
 </navigation>
