@@ -22,4 +22,11 @@
 
     <!--    Otp screen-->
     <color name="color_verify_otp_desc">#878787</color>
+
+    <!--    Cozii Home Activity-->
+    <color name="color_bottom_nav_text">#878787</color>
+    <color name="color_alert_desc">#373d3f</color>
+    <color name="tenant_name_salutation_color">#373d3f</color>
+    <color name="color_bottom_icon_and_text_inactive">#878787</color>
+    <color name="color_bottom_icon_and_text_active">#461a95</color>
 </resources>

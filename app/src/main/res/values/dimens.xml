@@ -36,4 +36,15 @@
     <dimen name="change_email_margin_top">30dp</dimen>
     <dimen name="otp_email_corner_radius">15dp</dimen>
     <dimen name="otp_height">40dp</dimen>
+
+    <!--    verification alert -->
+    <dimen name="alert_title_text_size">20sp</dimen>
+    <dimen name="alert_title_left_margin">16dp</dimen>
+    <dimen name="alert_desc_margin_top">18dp</dimen>
+    <dimen name="alert_margin_and_padding">22dp</dimen>
+
+    <!-- Tenant Home Screen -->
+    <dimen name="tenant_name_margin_top">26dp</dimen>
+    <dimen name="home_tenant_profile_margin_top">22dp</dimen>
+    <dimen name="tenant_name_salutation_text_size">14sp</dimen>
 </resources>

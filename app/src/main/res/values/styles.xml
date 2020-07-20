@@ -15,6 +15,13 @@
         <item name="colorAccent">@color/color_login_title</item>
     </style>
 
+    <style name="HomeActivityTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="colorPrimary">#3f2587</item>
+        <item name="colorPrimaryDark">#3f2587</item>
+        <item name="colorAccent">#461a95</item>
+    </style>
+
 
 
     <style name="EditTextAppearance" parent="Widget.AppCompat.EditText">
