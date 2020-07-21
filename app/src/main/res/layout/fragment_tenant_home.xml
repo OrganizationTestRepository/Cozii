@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/layout_tenant_bottom_margin"
     tools:context=".home.tenant.TenantHomeFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/fragment_first_guide_line"
@@ -51,12 +56,13 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_tenant_name" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/tenant_image_card_view"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginTop="@dimen/home_tenant_profile_margin_top"
-        app:cardCornerRadius="50dp"
+        app:cardCornerRadius="40dp"
         app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
         app:layout_constraintTop_toBottomOf="@+id/layout_verification">
 
@@ -68,5 +74,33 @@
 
     </androidx.cardview.widget.CardView>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_tenant_options"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tenant_image_card_view"
+        android:layout_marginTop="@dimen/home_tenant_recycler_view_margin"/>
+
+    <include
+        android:id="@+id/layout_reminder"
+        layout="@layout/home_reminder_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_tenant_options"/>
+
+    <include
+        android:id="@+id/layout_suggested_rentals"
+        layout="@layout/home_rent_suggestion_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_reminder"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
