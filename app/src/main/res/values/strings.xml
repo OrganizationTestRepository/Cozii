@@ -53,6 +53,8 @@
     <string name="alert_verification_title">3 Steps left</string>
     <string name="alert_desc">We ask everyone for a few details before\nrelease all of the features of the app</string>
     <string name="tenant_salutation">What would you like to do?</string>
+    <string name="reminders_text">Reminder</string>
+    <string name="suggested_rentals_text">Suggest listing for rent</string>
 
 
 </resources>
