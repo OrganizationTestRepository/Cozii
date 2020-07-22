@@ -25,4 +25,8 @@ class HomeSharedViewModel : ViewModel() {
             SuggestedRentals(ContextCompat.getDrawable(context,R.drawable.ic_suggested_test),"Suite 104  - 767 Dovercourt Rd, Toronto. 1 min to subway")
         )
     }
+
+    fun checkVerificationStatus() : Boolean{
+        return true
+    }
 }
