@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.cozii.coziiandroid.R
+import com.cozii.coziiandroid.home.CoziiHomeActivity
 import com.cozii.coziiandroid.home.tenant.adapters.SuggestedRentalsAdapter
 import com.cozii.coziiandroid.home.tenant.adapters.TenantHomeOptionsAdapter
 import com.cozii.coziiandroid.home.viewmodel.HomeSharedViewModel
@@ -38,14 +40,18 @@ class TenantHomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        (activity as CoziiHomeActivity).updateToolbarTitle(getString(R.string.home_title))
+
+        if(homeViewModel.checkVerificationStatus()){
+            rv_suggested_rentals.apply {
+                layoutManager = LinearLayoutManager(activity,RecyclerView.HORIZONTAL,false)
+                adapter = SuggestedRentalsAdapter(homeViewModel.setSuggestedRentalOptions(context))
+            }
+        }
+
         rv_tenant_options.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = TenantHomeOptionsAdapter(homeViewModel.setTenantHomeOptions(context))
-        }
-
-        rv_suggested_rentals.apply {
-            layoutManager = LinearLayoutManager(activity,RecyclerView.HORIZONTAL,false)
-            adapter = SuggestedRentalsAdapter(homeViewModel.setSuggestedRentalOptions(context))
         }
     }
 }
