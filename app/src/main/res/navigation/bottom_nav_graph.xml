@@ -10,4 +10,9 @@
         android:name="com.cozii.coziiandroid.home.tenant.TenantHomeFragment"
         android:label="fragment_tenant_home"
         tools:layout="@layout/fragment_tenant_home" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.cozii.coziiandroid.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
