@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">CoziiAndroid</string>
+    <!-- Onboarding screens -->
+    <string name="on_board_landing_title">Welcome to Cozii Proptech.\nSmart property manager in\nreal time. </string>
+    <string name="on_board_landing_salutation">You are</string>
+    <string name="on_board_landing_tenant_desc">Connect with landlord, request\nand track maintenance request</string>
+    <string name="on_board_landing_landlord_desc">Receive and monitor repairs, receive\npayments, advertise your properties</string>
+    <string name="on_board_landing_handyman_desc">Reach more customers, get new work\norders and increase your income</string>
+    <string name="on_board_back_button">Back</string>
+    <string name="on_board_next_button">Next</string>
 
     <!-- Login Fragment -->
     <string name="tv_login_title">Sign in to\nCozii Proptech</string>
@@ -40,11 +48,14 @@
     <string name="button_sign_in">Sign In</string>
 
     <!-- Onboarding Fragment -->
-    <string name= "onboarding_description_0">As a Tenant,</string>
-    <string name= "onboarding_description_1">you can request repairs from the landlord with cozii.</string>
-    <string name= "onboarding_description_3">you can book a handyman or service expert with cozii.</string>
-    <string name= "onboarding_description_5">you can pay rent and utilities with cozii.</string>
-    <string name= "onboarding_description_6">We ask every tenant for a few details before enjoy the new lifestyle. </string>
-    <string name= "onboarding_description_7">Almost Done.</string>
+    <string name="onboarding_description_0">As a Tenant,</string>
+    <string name="onboarding_description_1">you can request repairs\nfrom the landlord with cozii.</string>
+    <string name="onboarding_description_3">you can book a handyman or service expert with cozii.</string>
+    <string name="onboarding_description_5">you can pay rent and utilities with cozii.</string>
+    <string name="onboarding_description_6">We ask every tenant for a few details before enjoy the new lifestyle. </string>
+    <string name="onboarding_description_7">Almost Done.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
