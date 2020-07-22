@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/onboard_navigation"
+    app:startDestination="@id/onBoardFirstFragment">
+
+    <fragment
+        android:id="@+id/onBoardFirstFragment"
+        android:name="com.cozii.coziiandroid.onboarding.OnBoardFirstFragment"
+        android:label="OnBoardFirstFragment" >
+        <action
+            android:id="@+id/action_onBoardFirstFragment_to_onBoardingTenantFragment"
+            app:destination="@id/onBoardingTenantFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingTenantFragment"
+        android:name="com.cozii.coziiandroid.onboarding.OnBoardingTenantFragment"
+        android:label="OnBoardingTenantFragment" />
+</navigation>
