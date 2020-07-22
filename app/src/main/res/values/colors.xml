@@ -36,4 +36,5 @@
     <color name="tenant_home_background_color">#eceff5</color>
     <color name="tenant_first_view_bg_color">#3f2587</color>
     <color name="tenant_second_view_bg_color">#eeebf9</color>
+    <color name="cozii_home_toolbar_color">#3f2587</color>
 </resources>

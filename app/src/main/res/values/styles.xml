@@ -15,7 +15,7 @@
         <item name="colorAccent">@color/color_login_title</item>
     </style>
 
-    <style name="HomeActivityTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="HomeActivityTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:windowBackground">@android:color/white</item>
         <item name="colorPrimary">#3f2587</item>
         <item name="colorPrimaryDark">#3f2587</item>

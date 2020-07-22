@@ -55,6 +55,11 @@
     <string name="tenant_salutation">What would you like to do?</string>
     <string name="reminders_text">Reminder</string>
     <string name="suggested_rentals_text">Suggest listing for rent</string>
+    <string name="home_title">Home</string>
+    <string name="profile_title">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

@@ -61,4 +61,5 @@
     <dimen name="suggested_rental_margin_end">15dp</dimen>
     <dimen name="suggested_rental_desc_text_size">12sp</dimen>
     <dimen name="layout_tenant_bottom_margin">40dp</dimen>
+    <dimen name="home_activity_title_text_size">20sp</dimen>
 </resources>
