@@ -15,9 +15,12 @@ class CoziiHomeActivity : AppCompatActivity() {
         setUpView()
     }
 
-    fun setUpView(){
+    private fun setUpView(){
         val navFragment = findNavController(R.id.home_nav_fragment)
-
         home_bottom_navigation_view.setupWithNavController(navFragment)
+    }
+
+    fun updateToolbarTitle(title : String){
+        toolbar_title.text = title
     }
 }
