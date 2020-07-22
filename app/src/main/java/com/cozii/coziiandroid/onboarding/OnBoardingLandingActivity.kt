@@ -7,11 +7,11 @@ import android.os.Bundle
 import android.view.WindowManager
 import com.cozii.coziiandroid.R
 
-class Home : AppCompatActivity() {
+class OnBoardingLandingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up_and_sign_in_base)
+        setContentView(R.layout.onboard_landing_activity)
 
     }
 
