@@ -6,13 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".home.CoziiHomeActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/home_toolbar"
+        android:layout_width="0dp"
+        android:background="@color/cozii_home_toolbar_color"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_title"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/home_toolbar"
+        app:layout_constraintEnd_toEndOf="@id/home_toolbar"
+        app:layout_constraintTop_toTopOf="@id/home_toolbar"
+        app:layout_constraintBottom_toBottomOf="@id/home_toolbar"
+        android:textAlignment="center"
+        app:font_name="RobotoMedium"
+        android:textSize="@dimen/home_activity_title_text_size"/>
+
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/home_bottom_navigation_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/home_toolbar">
 
         <fragment
             android:id="@+id/home_nav_fragment"
