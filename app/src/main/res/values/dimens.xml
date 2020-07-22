@@ -36,4 +36,30 @@
     <dimen name="change_email_margin_top">30dp</dimen>
     <dimen name="otp_email_corner_radius">15dp</dimen>
     <dimen name="otp_height">40dp</dimen>
+
+    <!--    verification alert -->
+    <dimen name="alert_title_text_size">20sp</dimen>
+    <dimen name="alert_title_left_margin">16dp</dimen>
+    <dimen name="alert_desc_margin_top">18dp</dimen>
+    <dimen name="alert_margin_and_padding">22dp</dimen>
+
+    <!-- Tenant Home Screen -->
+    <dimen name="tenant_name_margin_top">26dp</dimen>
+    <dimen name="home_tenant_profile_margin_top">22dp</dimen>
+    <dimen name="tenant_name_salutation_text_size">14sp</dimen>
+    <dimen name="home_tenant_recycler_view_margin">15dp</dimen>
+    <dimen name="tenant_option_margin">10dp</dimen>
+    <dimen name="tenant_option_margin_start">5dp</dimen>
+    <dimen name="tenant_option_left_margin">15dp</dimen>
+    <dimen name="tenant_options_divider_margin">45dp</dimen>
+    <dimen name="reminder_title_text_size">20sp</dimen>
+    <dimen name="reminder_layout_margin_top">25dp</dimen>
+    <dimen name="reminder_title_margin_top">15dp</dimen>
+    <dimen name="reminder_alert_text_size">14sp</dimen>
+    <dimen name="reminder_date_text_size">10sp</dimen>
+    <dimen name="reminder_date_alert_margin">5dp</dimen>
+    <dimen name="suggested_rental_margin_end">15dp</dimen>
+    <dimen name="suggested_rental_desc_text_size">12sp</dimen>
+    <dimen name="layout_tenant_bottom_margin">40dp</dimen>
+    <dimen name="home_activity_title_text_size">20sp</dimen>
 </resources>

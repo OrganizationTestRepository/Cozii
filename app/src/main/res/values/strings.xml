@@ -49,5 +49,17 @@
     <string name="verified_desc">Great! You have successfully\nverified the account</string>
     <string name="button_next">Next</string>
 
+    <!-- Tenant Home Fragment -->
+    <string name="alert_verification_title">3 Steps left</string>
+    <string name="alert_desc">We ask everyone for a few details before\nrelease all of the features of the app</string>
+    <string name="tenant_salutation">What would you like to do?</string>
+    <string name="reminders_text">Reminder</string>
+    <string name="suggested_rentals_text">Suggest listing for rent</string>
+    <string name="home_title">Home</string>
+    <string name="profile_title">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>
