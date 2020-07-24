@@ -62,4 +62,13 @@
     <dimen name="suggested_rental_desc_text_size">12sp</dimen>
     <dimen name="layout_tenant_bottom_margin">40dp</dimen>
     <dimen name="home_activity_title_text_size">20sp</dimen>
+
+    <!-- Profile Screen -->
+    <dimen name="profile_name_text_size">18sp</dimen>
+    <dimen name="profile_name_margin_start">20dp</dimen>
+    <dimen name="profile_rating_left_margin">5dp</dimen>
+    <dimen name="profile_type_text_size">14sp</dimen>
+    <dimen name="profile_type_padding">15dp</dimen>
+    <dimen name="verification_start_margin">5dp</dimen>
+    <dimen name="verification_name_left_margin">20dp</dimen>
 </resources>
