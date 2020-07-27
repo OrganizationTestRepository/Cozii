@@ -34,9 +34,9 @@ class OnBoardingTenantInstructionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val handler = Handler()
-        handler.postDelayed({
-            activity?.findNavController(10)?.navigate(R.id.action_onBoardingTenantInstructionFragment_to_onBoardFirstFragment)
-        }, 100)
+//        handler.postDelayed({
+//            activity?.findNavController(10)?.navigate(R.id.action_onBoardingTenantInstructionFragment_to_onBoardFirstFragment)
+//        }, 100)
     }
 
 }
