@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 
 import com.cozii.coziiandroid.R
@@ -32,7 +33,10 @@ class OnBoardingTenantInstructionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val handler = Handler()
+        handler.postDelayed({
+            activity?.findNavController(10)?.navigate(R.id.action_onBoardingTenantInstructionFragment_to_onBoardFirstFragment)
+        }, 100)
     }
 
 }
