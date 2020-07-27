@@ -9,53 +9,12 @@
     <string name="on_board_back_button">Back</string>
     <string name="on_board_next_button">Next</string>
 
-    <!-- Login Fragment -->
-    <string name="tv_login_title">Sign in to\nCozii Proptech</string>
-    <string name="login_remember_me">Remember me</string>
-    <string name="login_forget_password">Forget password?</string>
-    <string name="login_username_hint">Email address</string>
-    <string name="login_password_hint">Password</string>
-
-    <!-- Register Fragment -->
-    <string name="tv_registration_title">Get Started.</string>
-    <string name="tv_registration_second_title">Live more.\nLess hassle.</string>
-    <string name="tv_registration_description">Enter your first name and last name\nor login with a social account</string>
-    <string name="tv_registration_second_description">Enter your email address and\npassword or login with a social\naccount</string>
-    <string name="register_first_name_hint">First Name</string>
-    <string name="register_last_name_hint">Last Name</string>
-    <string name="register_step_one">Step 1 of 2</string>
-    <string name="register_email_hint">Email Address</string>
-    <string name="register_password_hint">Password</string>
-    <string name="register_reenter_password_hint">Re-enter Password</string>
-    <string name="register_step_two">Step 2 of 2</string>
-    <string name="tv_register_agreement">I agree with the Terms and Conditions and Privacy Statements.</string>
-
-    <!-- Reset Password Fragment -->
-    <string name="reset_password_title">Reset Password</string>
-    <string name="reset_password_desc">Enter the email address you used for\nthis account to reset your password.</string>
-    <string name="reset_hint_email">Email address</string>
-    <string name="button_send_email">Send Email</string>
-
-    <!-- Reset Password Deeplink Fragment -->
-    <string name="reset_password_deeplink_title">Enter new password</string>
-    <string name="reset_password_hint">Password</string>
-    <string name="reset_password_reenter_hint">Re-enter your password</string>
-    <string name="button_set_password">Set Password</string>
-
-    <!-- Reset Password Success Fragment -->
-    <string name="reset_password_success_title">Done!</string>
-    <string name="reset_password_success_desc">Your password has been changed!</string>
-    <string name="button_sign_in">Sign In</string>
-
     <!-- Onboarding Fragment -->
     <string name="onboarding_description_0">As a Tenant,</string>
     <string name="onboarding_description_1">you can request repairs\nfrom the landlord with cozii.</string>
-    <string name="onboarding_description_3">you can book a handyman or service expert with cozii.</string>
-    <string name="onboarding_description_5">you can pay rent and utilities with cozii.</string>
-    <string name="onboarding_description_6">We ask every tenant for a few details before enjoy the new lifestyle. </string>
+    <string name="onboarding_description_3">you can book a handyman\nor service expert with cozii.</string>
+    <string name="onboarding_description_5">you can pay rent and\nutilities with cozii.</string>
+    <string name="onboarding_description_6">We ask every tenant for a\nfew details before enjoy\nthe new lifestyle. </string>
     <string name="onboarding_description_7">Almost Done.</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
