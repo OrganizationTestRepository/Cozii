@@ -37,6 +37,7 @@ class OnBoardFirstFragment : Fragment() {
             it.findNavController().navigate(R.id.action_onBoardFirstFragment_to_onBoardingTenantFragment)
 
         }
+
     }
 
 }
