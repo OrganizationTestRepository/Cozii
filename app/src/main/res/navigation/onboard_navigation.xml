@@ -16,7 +16,11 @@
     <fragment
         android:id="@+id/onBoardingTenantFragment"
         android:name="com.cozii.coziiandroid.onboarding.OnBoardingTenantFragment"
-        android:label="OnBoardingTenantFragment" />
+        android:label="OnBoardingTenantFragment" >
+        <action
+            android:id="@+id/action_onBoardingTenantFragment_to_onBoardFirstFragment2"
+            app:destination="@id/onBoardFirstFragment" />
+    </fragment>
 <!--    <fragment-->
 <!--        android:id="@+id/onBoardingTenantInstructionFragment"-->
 <!--        android:name="com.cozii.coziiandroid.onboarding.OnBoardingTenantInstructionFragment"-->

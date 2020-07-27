@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.cozii.coziiandroid.R
 import kotlinx.android.synthetic.main.fragment_onboarding_0.*
 import kotlinx.android.synthetic.main.fragment_onboarding_2.*
@@ -37,7 +38,8 @@ class OnBoardingTenantFragment : Fragment() {
         var counter = 1;
 
         tv_on_board_next.setOnClickListener{
-            counter++;
+            if(counter < 3)
+                counter++;
             if(counter == 1){
                 on_board_first_logo.setImageDrawable(ContextCompat.getDrawable(context!!, R.drawable.second_onboard_tenant_logo))
 
@@ -57,6 +59,9 @@ class OnBoardingTenantFragment : Fragment() {
 
         tv_on_board_back.setOnClickListener {
             counter--;
+            if(counter == 0){
+                it.findNavController().navigate(R.id.action_onBoardingTenantFragment_to_onBoardFirstFragment2)
+            }
             if(counter == 1){
                 on_board_first_logo.setImageDrawable(ContextCompat.getDrawable(context!!, R.drawable.second_onboard_tenant_logo))
 
@@ -65,11 +70,12 @@ class OnBoardingTenantFragment : Fragment() {
             if(counter == 2){
                 on_board_first_logo.setImageDrawable(ContextCompat.getDrawable(context!!,R.drawable.third_onboard_tenant_logo))
                 welcome.setText( R.string.onboarding_description_5)
+                tv_tenant_salutation.setText(R.string.onboarding_description_0)
             }
             if(counter == 3){
                 on_board_first_logo.setImageDrawable(ContextCompat.getDrawable(context!!,R.drawable.fith_onboard_tenant_logo))
                 welcome.setText( R.string.onboarding_description_6)
-                tv_tenant_salutation.setText(R.string.onboarding_description_7)
+                tv_tenant_salutation.setText(R.string.onboarding_description_0)
             }
 
         }
