@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--    on_boarding-->
+    <dimen name="on_boarding_logo_left_margin">20dp</dimen>
+    <dimen name="on_boarding_logo_top_margin">45dp</dimen>
+    <dimen name="on_boarding_landing_title_top_margin">24dp</dimen>
+    <dimen name="on_boarding_landing_title_text_size">20sp</dimen>
+    <dimen name="on_boarding_tenant_view_height">85dp</dimen>
+    <dimen name="on_boarding_tenant_view_margin_top">23dp</dimen>
+    <dimen name="on_boarding_tenant_tenant_margin_top">16dp</dimen>
+    <dimen name="on_boarding_tenant_margin_start">15dp</dimen>
+    <dimen name="on_boarding_tenant_text_size">18sp</dimen>
+    <dimen name="on_boarding_tenant_function_text_size">12sp</dimen>
+    <dimen name="on_boarding_navigation_text_size">16sp</dimen>
+    <dimen name="on_board_text_size_tenant">20sp</dimen>
+
     <!--    Sign Up and Sign In base Layout-->
     <dimen name="tab_layout_top_margin">25dp</dimen>
     <dimen name="tab_layout_end_margin">25dp</dimen>
