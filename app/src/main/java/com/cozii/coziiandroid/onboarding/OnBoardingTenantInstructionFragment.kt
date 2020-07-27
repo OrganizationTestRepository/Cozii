@@ -1,6 +1,7 @@
 package com.cozii.coziiandroid.onboarding
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -31,12 +32,7 @@ class OnBoardingTenantInstructionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
-        tv_on_board_next.setOnClickListener{
-            it.findNavController().navigate(R.id.action_onBoardFirstFragment_to_onBoardingTenantFragment)
-
-        }
+        
     }
 
 }
