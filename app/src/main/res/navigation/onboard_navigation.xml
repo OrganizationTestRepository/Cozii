@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/onboard_navigation"
-    app:startDestination="@id/onBoardFirstFragment">
+    app:startDestination="@id/onBoardUserSelectionFragment">
 
     <fragment
-        android:id="@+id/onBoardFirstFragment"
-        android:name="com.cozii.coziiandroid.onboarding.OnBoardFirstFragment"
+        android:id="@+id/onBoardUserSelectionFragment"
+        android:name="com.cozii.coziiandroid.onboarding.OnBoardUserSelectionFragment"
         android:label="OnBoardFirstFragment" >
         <action
-            android:id="@+id/action_onBoardFirstFragment_to_onBoardingTenantFragment"
+            android:id="@+id/action_onBoardUserSelectionFragment_to_onBoardingTenantFragment"
             app:destination="@id/onBoardingTenantFragment" />
     </fragment>
     <fragment
@@ -18,16 +18,7 @@
         android:name="com.cozii.coziiandroid.onboarding.OnBoardingTenantFragment"
         android:label="OnBoardingTenantFragment" >
         <action
-            android:id="@+id/action_onBoardingTenantFragment_to_onBoardFirstFragment2"
-            app:destination="@id/onBoardFirstFragment" />
+            android:id="@+id/action_onBoardingTenantFragment_to_onBoardUserSelectionFragment"
+            app:destination="@id/onBoardUserSelectionFragment" />
     </fragment>
-<!--    <fragment-->
-<!--        android:id="@+id/onBoardingTenantInstructionFragment"-->
-<!--        android:name="com.cozii.coziiandroid.onboarding.OnBoardingTenantInstructionFragment"-->
-<!--        android:label="on_boarding_tenant_instruction_fragment"-->
-<!--        tools:layout="@layout/on_boarding_tenant_instruction_fragment" >-->
-<!--        <action-->
-<!--            android:id="@+id/action_onBoardingTenantInstructionFragment_to_onBoardFirstFragment"-->
-<!--            app:destination="@id/onBoardFirstFragment" />-->
-<!--    </fragment>-->
 </navigation>
