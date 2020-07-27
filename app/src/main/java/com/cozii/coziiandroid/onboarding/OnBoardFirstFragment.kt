@@ -32,8 +32,10 @@ class OnBoardFirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         tv_on_board_next.setOnClickListener{
             it.findNavController().navigate(R.id.action_onBoardFirstFragment_to_onBoardingTenantFragment)
+
         }
     }
 
