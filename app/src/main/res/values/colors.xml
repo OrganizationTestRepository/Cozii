@@ -19,16 +19,6 @@
     <color name="color_register_desc">#373d3f</color>
     <color name="color_text_otp">#3f2587</color>
 
-
-=======
-    <!-- Onboarding Home Screen -->
-    <color name = "color_onboarding_welcome">#ffffff</color>
-    <color name = "color_onboarding_purple">#3f2587</color>
-    <color name = "color_onboarding_orange">#f8a000</color>
-    <color name = "color_onboarding_black">#000000</color>
-    <color name = "color_onboarding_grey">#444444</color>
-
->>>>>>> cozii-reset-password-ui
     <!--    reset password Screen-->
     <color name="color_reset_password_top_view">#3f2587</color>
     <color name="color_reset_password_desc">#373d3f</color>
@@ -56,5 +46,6 @@
     <color name="profile_bg_color">#eceff5</color>
     <color name="cozii_rating_star_color">#3f2587</color>
     <color name="verification_divider_color">#b3979797</color>
+    <color name="color_onboarding_orange">#f8a000</color>
 
 </resources>

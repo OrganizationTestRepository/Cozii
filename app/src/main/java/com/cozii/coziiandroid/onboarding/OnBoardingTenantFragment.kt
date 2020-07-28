@@ -1,5 +1,7 @@
 package com.cozii.coziiandroid.onboarding
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.cozii.coziiandroid.Home.OnBoardingLandingActivity
 import com.cozii.coziiandroid.R
+import com.cozii.coziiandroid.home.CoziiHomeActivity
+import com.cozii.coziiandroid.signupandsigninbase.SignUpAndSignInBaseActivity
 import kotlinx.android.synthetic.main.fragment_onboarding.*
 import kotlinx.android.synthetic.main.fragment_onboarding.tv_on_board_next
 import kotlinx.android.synthetic.main.fragment_onboarding.tv_on_board_back
@@ -32,6 +36,7 @@ class OnBoardingTenantFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_onboarding, container, false)
     }
 
+    @SuppressLint("UseRequireInsteadOfGet")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as OnBoardingLandingActivity).updateStatusBarColor("#3f2587")
@@ -70,7 +75,10 @@ class OnBoardingTenantFragment : Fragment() {
                 tv_tenant_salutation.setText(R.string.onboarding_description_7)
             }
             if (counter == 4) {
-
+                val intent = Intent(activity,
+                    SignUpAndSignInBaseActivity::class.java)
+                startActivity(intent)
+                activity?.finish()
             }
 
         }
