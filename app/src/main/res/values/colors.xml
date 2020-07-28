@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
+    <!--    on boarding-->
+    <color name="on_board_navigation_text_color">#3f2587</color>
+    <color name="on_board_background_color">#3f2587</color>
+
     <!--    login Screen-->
     <color name="color_login_title">#3f2587</color>
     <color name="color_login_remember_me">#452293</color>
@@ -13,19 +17,35 @@
 
     <!--    register Screen-->
     <color name="color_register_desc">#373d3f</color>
+    <color name="color_text_otp">#3f2587</color>
 
-
-=======
-    <!-- Onboarding Home Screen -->
-    <color name = "color_onboarding_welcome">#ffffff</color>
-    <color name = "color_onboarding_purple">#3f2587</color>
-    <color name = "color_onboarding_orange">#f8a000</color>
-    <color name = "color_onboarding_black">#000000</color>
-    <color name = "color_onboarding_grey">#444444</color>
-
->>>>>>> cozii-reset-password-ui
     <!--    reset password Screen-->
     <color name="color_reset_password_top_view">#3f2587</color>
     <color name="color_reset_password_desc">#373d3f</color>
     <color name="button_send_email_color">#452293</color>
+
+    <!--    Otp screen-->
+    <color name="color_verify_otp_desc">#878787</color>
+
+    <!--    Cozii Home Activity-->
+    <color name="color_bottom_nav_text">#878787</color>
+    <color name="color_alert_desc">#373d3f</color>
+
+    <!--    Tenant Home Fragment-->
+    <color name="tenant_name_salutation_color">#373d3f</color>
+    <color name="color_bottom_icon_and_text_inactive">#878787</color>
+    <color name="color_bottom_icon_and_text_active">#461a95</color>
+    <color name="color_tenant_option_inactive">#f2f2f2</color>
+    <color name="tenant_divider_color">#fdfdfd</color>
+    <color name="tenant_home_background_color">#eceff5</color>
+    <color name="tenant_first_view_bg_color">#3f2587</color>
+    <color name="tenant_second_view_bg_color">#eeebf9</color>
+    <color name="cozii_home_toolbar_color">#3f2587</color>
+
+    <!-- Profile Fragment-->
+    <color name="profile_bg_color">#eceff5</color>
+    <color name="cozii_rating_star_color">#3f2587</color>
+    <color name="verification_divider_color">#b3979797</color>
+    <color name="color_onboarding_orange">#f8a000</color>
+
 </resources>

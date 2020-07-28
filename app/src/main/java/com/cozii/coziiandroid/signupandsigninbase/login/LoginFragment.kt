@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 
 import com.cozii.coziiandroid.R
 import com.cozii.coziiandroid.signupandsigninbase.SignUpAndSignInBaseActivity
@@ -29,11 +29,11 @@ class LoginFragment : Fragment() {
         (activity as SignUpAndSignInBaseActivity).updateStatusBarColor("#ffffff")
 
         tv_sign_up.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_registerFirstFragment);
+            it.findNavController().navigate(R.id.action_loginFragment_to_registerFirstFragment);
         }
 
         tv_forget_password.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_resetPasswordFirstFragment);
+            it.findNavController().navigate(R.id.action_loginFragment_to_resetPasswordFirstFragment);
         }
     }
 }

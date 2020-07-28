@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".signupandsigninbase.SignUpAndSignInBaseActivity"
+            android:name=".Home.OnBoardingLandingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SignUpAndSignInActivityTheme"
             android:windowSoftInputMode="stateHidden|adjustPan">
@@ -21,7 +21,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <nav-graph android:value="@navigation/signup_navigation"/>
+        </activity>
+        <activity
+            android:name=".signupandsigninbase.SignUpAndSignInBaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SignUpAndSignInActivityTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <nav-graph android:value="@navigation/signup_navigation" />
+        </activity>
+        <activity android:name="com.cozii.coziiandroid.home.CoziiHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeActivityTheme">
+
         </activity>
     </application>
 

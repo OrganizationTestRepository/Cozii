@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/verification_name_left_margin"
+    android:layout_marginBottom="@dimen/verification_name_left_margin"
+    android:paddingTop="@dimen/verification_name_left_margin"
+    android:paddingBottom="@dimen/verification_name_left_margin"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_first_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_second_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <ImageView
+        android:id="@+id/iv_add_landlord_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/verification_start_margin"
+        android:src="@drawable/ic_disabled_add_landlord"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_add_landlord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/verification_name_left_margin"
+        android:text="First Option"
+        android:textColor="@color/color_tenant_option_inactive"
+        android:textSize="@dimen/profile_type_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toEndOf="@id/iv_add_landlord_icon"
+        app:layout_constraintTop_toTopOf="@id/iv_add_landlord_icon"
+        app:layout_constraintBottom_toBottomOf="@id/iv_add_landlord_icon"/>
+
+    <ImageView
+        android:id="@+id/iv_edt_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/verification_start_margin"
+        android:src="@drawable/ic_disabled_edit_icon"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

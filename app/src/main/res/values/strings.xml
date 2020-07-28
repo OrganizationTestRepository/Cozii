@@ -39,12 +39,44 @@
     <string name="reset_password_success_desc">Your password has been changed!</string>
     <string name="button_sign_in">Sign In</string>
 
+    <!-- Verify Email Fragment -->
+    <string name="verify_email_title">Verify your email</string>
+    <string name="verify_email_desc">Please enter the 4 digit code sent to\nyourmail@example.com</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="button_confirm">Confirm</string>
+    <string name="change_email">Change Email</string>
+    <string name="verfied_title">Verified!</string>
+    <string name="verified_desc">Great! You have successfully\nverified the account</string>
+    <string name="button_next">Next</string>
+
+    <!-- Tenant Home Fragment -->
+    <string name="alert_verification_title">3 Steps left</string>
+    <string name="alert_desc">We ask everyone for a few details before\nrelease all of the features of the app</string>
+    <string name="tenant_salutation">What would you like to do?</string>
+    <string name="reminders_text">Reminder</string>
+    <string name="suggested_rentals_text">Suggest listing for rent</string>
+    <string name="home_title">Home</string>
+    <string name="profile_title">Profile</string>
+
+    <!-- Tenant Home Fragment -->
+    <string name="profile_type">Tenant</string>
+
+
+    <!-- Onboarding screens -->
+    <string name="on_board_landing_title">Welcome to Cozii Proptech.\nSmart property manager in\nreal time. </string>
+    <string name="on_board_landing_salutation">You are</string>
+    <string name="on_board_landing_tenant_desc">Connect with landlord, request\nand track maintenance request</string>
+    <string name="on_board_landing_landlord_desc">Receive and monitor repairs, receive\npayments, advertise your properties</string>
+    <string name="on_board_landing_handyman_desc">Reach more customers, get new work\norders and increase your income</string>
+    <string name="on_board_back_button">Back</string>
+    <string name="on_board_next_button">Next</string>
+
     <!-- Onboarding Fragment -->
-    <string name= "onboarding_description_0">As a Tenant,</string>
-    <string name= "onboarding_description_1">you can request repairs from the landlord with cozii.</string>
-    <string name= "onboarding_description_3">you can book a handyman or service expert with cozii.</string>
-    <string name= "onboarding_description_5">you can pay rent and utilities with cozii.</string>
-    <string name= "onboarding_description_6">We ask every tenant for a few details before enjoy the new lifestyle. </string>
-    <string name= "onboarding_description_7">Almost Done.</string>
+    <string name="onboarding_description_0">As a Tenant,</string>
+    <string name="onboarding_description_1">you can request repairs\nfrom the landlord with cozii.</string>
+    <string name="onboarding_description_3">you can book a handyman\nor service expert with cozii.</string>
+    <string name="onboarding_description_5">you can pay rent and\nutilities with cozii.</string>
+    <string name="onboarding_description_6">We ask every tenant for a\nfew details before enjoy\nthe new lifestyle. </string>
+    <string name="onboarding_description_7">Almost Done.</string>
 
 </resources>

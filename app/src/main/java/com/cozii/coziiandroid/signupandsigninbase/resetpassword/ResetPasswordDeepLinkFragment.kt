@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 
 import com.cozii.coziiandroid.R
 import com.cozii.coziiandroid.signupandsigninbase.SignUpAndSignInBaseActivity
@@ -28,7 +29,7 @@ class ResetPasswordDeepLinkFragment : Fragment() {
         (activity as SignUpAndSignInBaseActivity).updateStatusBarColor("#3f2587")
 
         set_password_button.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_resetPasswordDeepLinkFragment_to_resetPasswordSuccessFragment);
+            it.findNavController().navigate(R.id.action_resetPasswordDeepLinkFragment_to_resetPasswordSuccessFragment);
         }
     }
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 
 import com.cozii.coziiandroid.R
 import kotlinx.android.synthetic.main.fragment_reset_password_success.*
@@ -25,7 +26,7 @@ class ResetPasswordSuccessFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         sign_in_button.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_resetPasswordSuccessFragment_to_loginFragment);
+            it.findNavController().navigate(R.id.action_resetPasswordSuccessFragment_to_loginFragment);
         }
     }
 }
