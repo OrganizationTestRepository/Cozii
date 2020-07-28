@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/on_board_background_color"
+    tools:context=".Home.OnBoardingLandingActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_fourth_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_fifth_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <ImageView
+        android:id="@+id/cozii_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/on_boarding_logo_top_margin"
+        android:src="@drawable/cozii_proptech_logo"
+        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/on_board_first_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/on_boarding_logo_top_margin"
+        android:src="@drawable/first_on_board_tenant_logo"
+        app:layout_constraintEnd_toEndOf="@id/fragment_fifth_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/cozii_logo" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_tenant_salutation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/on_boarding_logo_top_margin"
+        android:text="@string/onboarding_description_0"
+        android:textColor="@color/color_onboarding_orange"
+        android:textSize="@dimen/on_board_text_size_tenant"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/on_board_first_logo" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/onboarding_description_1"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/on_board_text_size_tenant"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tenant_salutation" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_on_board_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/on_boarding_logo_top_margin"
+        android:text="@string/on_board_back_button"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/on_boarding_navigation_text_size"
+        app:font_name="RobotoMedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_on_board_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/on_boarding_logo_top_margin"
+        android:text="@string/on_board_next_button"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/on_boarding_navigation_text_size"
+        app:font_name="RobotoMedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/fragment_fifth_guide_line" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

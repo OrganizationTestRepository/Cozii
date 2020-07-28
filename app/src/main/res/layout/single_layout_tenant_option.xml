@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/tenant_option_margin">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_first_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_second_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <ImageView
+        android:id="@+id/iv_tenant_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tenant_option_margin_start"
+        android:src="@drawable/ic_tenant_first_option"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_tenant_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tenant_option_left_margin"
+        android:text="First Option"
+        android:textColor="@color/color_tenant_option_inactive"
+        app:font_name="RobotoRegular"
+        app:layout_constraintBottom_toBottomOf="@id/iv_tenant_option"
+        app:layout_constraintStart_toEndOf="@+id/iv_tenant_option"
+        app:layout_constraintTop_toTopOf="@id/iv_tenant_option" />
+
+    <View
+        android:id="@+id/rv_divider"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/tenant_options_divider_margin"
+        android:layout_marginTop="@dimen/tenant_option_margin"
+        android:layout_marginEnd="@dimen/tenant_options_divider_margin"
+        android:background="@color/tenant_divider_color"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/iv_tenant_option" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

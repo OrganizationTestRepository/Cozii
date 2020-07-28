@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_first_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_second_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_third_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_reminder_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reminders_text"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/reminder_title_text_size"
+        app:font_name="RobotoMedium"
+        android:layout_marginTop="@dimen/reminder_title_margin_top"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/reminder_first_view"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="@dimen/reminder_title_margin_top"
+        android:background="@drawable/background_left_side_reminder_bg"
+        app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_reminder_title" />
+
+    <View
+        android:id="@+id/reminder_second_view"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="@dimen/reminder_title_margin_top"
+        android:background="@drawable/background_right_side_reminder_bg"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_third_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_reminder_title" />
+
+    <ImageView
+        android:id="@+id/iv_reminder_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_reminder_alert"
+        app:layout_constraintBottom_toBottomOf="@id/reminder_first_view"
+        app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toTopOf="@+id/reminder_first_view" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_reminder_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/reminder_date_alert_margin"
+        android:layout_marginEnd="@dimen/reminder_date_alert_margin"
+        android:text="Contractor (Callum Jones) accept the job request"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/reminder_alert_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_third_guide_line"
+        app:layout_constraintTop_toTopOf="@+id/iv_reminder_alert" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_reminder_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/reminder_date_alert_margin"
+        android:layout_marginTop="@dimen/reminder_date_alert_margin"
+        android:layout_marginEnd="@dimen/reminder_date_alert_margin"
+        android:text="Jun. 13 at 1:25 pm"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/reminder_date_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_third_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reminder_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

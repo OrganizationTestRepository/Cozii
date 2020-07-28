@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_first_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_second_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.48" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_third_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_fourth_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/onboarding_top_view"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_second_guide_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/on_boarding_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/on_boarding_logo_left_margin"
+        android:layout_marginTop="@dimen/on_boarding_logo_top_margin"
+        android:src="@drawable/cozii_proptech_logo"
+        app:layout_constraintStart_toStartOf="@id/fragment_third_guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_landing_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/on_boarding_logo_left_margin"
+        android:layout_marginTop="@dimen/on_boarding_landing_title_top_margin"
+        android:text="@string/on_board_landing_title"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/on_boarding_landing_title_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintEnd_toEndOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_third_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/on_boarding_logo" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/on_boarding_logo_left_margin"
+        android:layout_marginTop="@dimen/on_boarding_landing_title_top_margin"
+        android:text="@string/on_board_landing_salutation"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="@dimen/on_boarding_landing_title_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toStartOf="@id/fragment_third_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_landing_title" />
+
+    <View
+        android:id="@+id/tenant_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/on_boarding_tenant_view_height"
+        android:layout_marginBottom="@dimen/on_boarding_tenant_view_margin_top"
+        android:background="@drawable/on_boarding_rectangle_outline"
+        app:layout_constraintBottom_toTopOf="@id/landlord_view"
+        app:layout_constraintEnd_toEndOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_third_guide_line" />
+
+    <ImageView
+        android:id="@+id/iv_tenant_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_tenant_icon"
+        app:layout_constraintBottom_toBottomOf="@id/tenant_view"
+        app:layout_constraintStart_toStartOf="@id/tenant_view"
+        app:layout_constraintTop_toTopOf="@id/tenant_view" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_tenant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/on_boarding_tenant_margin_start"
+        android:layout_marginTop="@dimen/on_boarding_tenant_tenant_margin_top"
+        android:text="Tenant"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/on_boarding_tenant_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toEndOf="@+id/iv_tenant_icon"
+        app:layout_constraintTop_toTopOf="@+id/tenant_view" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/on_boarding_tenant_margin_start"
+        android:text="@string/on_board_landing_tenant_desc"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/on_boarding_tenant_function_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toEndOf="@+id/iv_tenant_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tenant" />
+
+    <View
+        android:id="@+id/landlord_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/on_boarding_tenant_view_height"
+        android:layout_marginBottom="@dimen/on_boarding_tenant_view_margin_top"
+        android:background="@drawable/on_boarding_rectangle_outline"
+        app:layout_constraintBottom_toTopOf="@id/handyman_view"
+        app:layout_constraintEnd_toEndOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_third_guide_line" />
+
+    <ImageView
+        android:id="@+id/iv_landlord_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_landlord_icon"
+        app:layout_constraintBottom_toBottomOf="@id/landlord_view"
+        app:layout_constraintStart_toStartOf="@id/landlord_view"
+        app:layout_constraintTop_toTopOf="@id/landlord_view" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_landlord"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/on_boarding_tenant_margin_start"
+        android:layout_marginTop="@dimen/on_boarding_tenant_tenant_margin_top"
+        android:text="Landlord"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/on_boarding_tenant_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toEndOf="@+id/iv_landlord_icon"
+        app:layout_constraintTop_toTopOf="@+id/landlord_view" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/on_boarding_tenant_margin_start"
+        android:text="@string/on_board_landing_landlord_desc"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/on_boarding_tenant_function_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toEndOf="@+id/iv_landlord_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_landlord" />
+
+    <View
+        android:id="@+id/handyman_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/on_boarding_tenant_view_height"
+        android:layout_marginTop="@dimen/on_boarding_tenant_view_margin_top"
+        android:background="@drawable/on_boarding_rectangle_outline"
+        app:layout_constraintBottom_toTopOf="@id/fragment_first_guide_line"
+        app:layout_constraintEnd_toEndOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_third_guide_line" />
+
+    <ImageView
+        android:id="@+id/iv_handyman_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_handyman_icon"
+        app:layout_constraintBottom_toBottomOf="@id/handyman_view"
+        app:layout_constraintStart_toStartOf="@id/handyman_view"
+        app:layout_constraintTop_toTopOf="@id/handyman_view" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_handyman"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/on_boarding_tenant_margin_start"
+        android:layout_marginTop="@dimen/on_boarding_tenant_tenant_margin_top"
+        android:text="Handyman"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/on_boarding_tenant_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toEndOf="@+id/iv_handyman_icon"
+        app:layout_constraintTop_toTopOf="@+id/handyman_view" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/on_boarding_tenant_margin_start"
+        android:text="@string/on_board_landing_handyman_desc"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/on_boarding_tenant_function_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toEndOf="@+id/iv_handyman_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_handyman" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_on_board_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/on_board_back_button"
+        android:textColor="@color/on_board_navigation_text_color"
+        android:textSize="@dimen/on_boarding_navigation_text_size"
+        app:font_name="RobotoMedium"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/fragment_third_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/fragment_first_guide_line" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_on_board_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/on_board_next_button"
+        android:textColor="@color/on_board_navigation_text_color"
+        android:textSize="@dimen/on_boarding_navigation_text_size"
+        app:font_name="RobotoMedium"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/fragment_first_guide_line" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

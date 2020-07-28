@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profile_bg_color"
+    tools:context=".profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fragment_first_guide_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.14" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fragment_second_guide_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fragment_third_guide_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.94" />
+
+        <View
+            android:id="@+id/profile_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_first_guide_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_icon_card_view"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_view"
+            app:layout_constraintStart_toStartOf="@id/fragment_second_guide_line"
+            app:layout_constraintTop_toTopOf="@+id/profile_view">
+
+            <ImageView
+                android:id="@+id/profile_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_circular_default" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+            android:id="@+id/tv_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/profile_name_margin_start"
+            android:text="Lela Buchanan"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/profile_name_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintStart_toEndOf="@+id/profile_icon_card_view"
+            app:layout_constraintTop_toTopOf="@+id/profile_icon_card_view" />
+
+        <RatingBar
+            android:id="@+id/profile_rating_bar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/profile_name_margin_start"
+            android:progressTint="@color/cozii_rating_star_color"
+            android:rating="3"
+            android:stepSize="0.5"
+            app:layout_constraintStart_toEndOf="@+id/profile_icon_card_view"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_name" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+            android:id="@+id/rating_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/profile_rating_left_margin"
+            android:text="(3.5)"
+            android:textColor="@color/cozii_rating_star_color"
+            app:font_name="RobotoRegular"
+            app:layout_constraintStart_toEndOf="@+id/profile_rating_bar"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_name" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+            android:id="@+id/rating_numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/profile_rating_left_margin"
+            android:text="(12)"
+            android:textColor="@color/cozii_rating_star_color"
+            app:font_name="RobotoRegular"
+            app:layout_constraintStart_toEndOf="@+id/rating_value"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_name" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+            android:id="@+id/tv_profile_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_profile_type"
+            android:paddingStart="@dimen/profile_type_padding"
+            android:paddingTop="@dimen/profile_rating_left_margin"
+            android:paddingEnd="@dimen/profile_type_padding"
+            android:paddingBottom="@dimen/profile_rating_left_margin"
+            android:text="@string/profile_type"
+            android:textColor="@color/cozii_rating_star_color"
+            android:textSize="@dimen/profile_type_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintBottom_toBottomOf="@id/profile_rating_bar"
+            app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
+            app:layout_constraintTop_toTopOf="@id/profile_icon_card_view" />
+
+        <include
+            android:id="@+id/layout_verification"
+            layout="@layout/layout_three_step_verification_process"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_name_margin_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_first_guide_line" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_three_steps_verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_name_margin_start"
+            android:layout_marginBottom="@dimen/profile_name_margin_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_verification" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
