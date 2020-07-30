@@ -29,7 +29,7 @@ class DocumentSlectionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as CoziiHomeActivity).updateToolbarTitle(getString(R.string.home_title))
+        (activity as CoziiHomeActivity).updateToolbarTitle(getString(R.string.document_selection_toolbar_title))
 
         rv_document_list.apply {
             layoutManager = LinearLayoutManager(activity)

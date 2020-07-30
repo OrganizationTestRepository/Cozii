@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -51,6 +52,10 @@ class TenantHomeFragment : Fragment() {
         rv_tenant_options.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = TenantHomeOptionsAdapter(homeViewModel.setTenantHomeOptions(context))
+        }
+
+        layout_verification.setOnClickListener {
+            it.findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
         }
     }
 }

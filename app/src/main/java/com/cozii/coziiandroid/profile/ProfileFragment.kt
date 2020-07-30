@@ -52,7 +52,7 @@ class ProfileFragment : Fragment(), VerificationClickListener {
     override fun onVerificationItemClick(data: ProfileInterface) {
         if (data is VerificationParams){
             if (data.verificationName.equals("ID verification",false)){
-                this.findNavController().navigate(R.id.action_profileFragment_to_documentSlectionFragment);
+                this.findNavController().navigate(R.id.action_profileFragment_to_documentInfoLandingFragment);
             }
         }
     }
