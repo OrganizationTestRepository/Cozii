@@ -14,5 +14,14 @@
         android:id="@+id/profileFragment"
         android:name="com.cozii.coziiandroid.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_documentSlectionFragment"
+            app:destination="@id/documentSlectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/documentSlectionFragment"
+        android:name="com.cozii.coziiandroid.threestepverification.DocumentSlectionFragment"
+        android:label="fragment_document_slection"
+        tools:layout="@layout/fragment_document_slection" />
 </navigation>
