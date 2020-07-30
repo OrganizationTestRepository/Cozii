@@ -10,6 +10,7 @@ import com.cozii.coziiandroid.profile.models.AddlandlordParams
 import com.cozii.coziiandroid.profile.models.ProfileInterface
 import com.cozii.coziiandroid.profile.models.ProfileOptions
 import com.cozii.coziiandroid.profile.models.VerificationParams
+import com.cozii.coziiandroid.threestepverification.models.VerificationDocs
 
 class HomeSharedViewModel : ViewModel() {
 
@@ -46,5 +47,14 @@ class HomeSharedViewModel : ViewModel() {
 
     fun checkVerificationStatus() : Boolean{
         return true
+    }
+
+    fun setListOfVerificationDocsNeeded(context: Context) : List<VerificationDocs>{
+        return listOf(
+            VerificationDocs(ContextCompat.getDrawable(context,R.drawable.ic_passport),"Passport"),
+            VerificationDocs(ContextCompat.getDrawable(context,R.drawable.ic_driving_license),"Driver’s License"),
+            VerificationDocs(ContextCompat.getDrawable(context,R.drawable.ic_national_doc),"National ID Card"),
+            VerificationDocs(ContextCompat.getDrawable(context,R.drawable.ic_residence_permit),"Residence Permit")
+        )
     }
 }
