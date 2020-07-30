@@ -6,14 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.cozii.coziiandroid.R
 import com.cozii.coziiandroid.home.CoziiHomeActivity
 import com.cozii.coziiandroid.home.viewmodel.HomeSharedViewModel
+import com.cozii.coziiandroid.profile.models.ProfileInterface
+import com.cozii.coziiandroid.profile.models.VerificationParams
+import com.cozii.coziiandroid.threestepverification.adapters.VerificationClickListener
 import kotlinx.android.synthetic.main.fragment_profile.*
 
-class ProfileFragment : Fragment() {
+class ProfileFragment : Fragment(), VerificationClickListener {
 
     private val homeViewModel: HomeSharedViewModel by activityViewModels()
 
@@ -39,7 +45,15 @@ class ProfileFragment : Fragment() {
 
         rv_three_steps_verification.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = VerificationListAdapter(homeViewModel.setVerificationList(context))
+            adapter = VerificationListAdapter(homeViewModel.setVerificationList(context),this@ProfileFragment)
+        }
+    }
+
+    override fun onVerificationItemClick(data: ProfileInterface) {
+        if (data is VerificationParams){
+            if (data.verificationName.equals("ID verification",false)){
+                this.findNavController().navigate(R.id.action_profileFragment_to_documentSlectionFragment);
+            }
         }
     }
 }
