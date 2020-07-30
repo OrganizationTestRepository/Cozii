@@ -84,4 +84,10 @@
     <string name="document_selection_desc">This document must have the credentials of\nthe app user and will be verified for\nauthentication.</string>
     <string name="document_selection_toolbar_title">Select Document Type</string>
 
+    <!-- Document Info Landing Fragment -->
+    <string name="document_info_title">Join us in providing a safe and\nsecure community experience for\nall users.</string>
+    <string name="document_verify_now">VERIFY NOW</string>
+    <string name="no_document_text">I don’t have my ID with me now</string>
+    <string name="document_info_landing_toolbar_title">ID Verification</string>
+
 </resources>
