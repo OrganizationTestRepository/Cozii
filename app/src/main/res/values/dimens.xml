@@ -85,4 +85,12 @@
     <dimen name="profile_type_padding">15dp</dimen>
     <dimen name="verification_start_margin">5dp</dimen>
     <dimen name="verification_name_left_margin">20dp</dimen>
+
+    <!-- Document Verification -->
+    <dimen name="document_selection_title_size">18sp</dimen>
+    <dimen name="document_selection_title_margin_top">20dp</dimen>
+    <dimen name="document_selection_desc_size">14sp</dimen>
+    <dimen name="document_title_text_size">16sp</dimen>
+    <dimen name="document_title_margin_start">20dp</dimen>
+    <dimen name="document_single_layout_padding">15dp</dimen>
 </resources>

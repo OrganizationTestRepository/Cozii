@@ -79,4 +79,9 @@
     <string name="onboarding_description_6">We ask every tenant for a\nfew details before enjoy\nthe new lifestyle. </string>
     <string name="onboarding_description_7">Almost Done.</string>
 
+    <!-- Document Selection Fragment -->
+    <string name="document_selection_title">Choose the type of document\nyou wish to upload.</string>
+    <string name="document_selection_desc">This document must have the credentials of\nthe app user and will be verified for\nauthentication.</string>
+    <string name="document_selection_toolbar_title">Select Document Type</string>
+
 </resources>
