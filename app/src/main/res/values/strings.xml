@@ -93,4 +93,9 @@
     <string name="document_info_landing_toolbar_title">ID Verification</string>
     <string name="button_submit">Submit</string>
 
+    <!-- Document Success Fragment -->
+    <string name="id_verification_success_title">Awesome!\nYou’re being verified.</string>
+    <string name="id_verification_success_desc">We received your data and will\nverify it.</string>
+    <string name="button_continue">Continue</string>
+
 </resources>

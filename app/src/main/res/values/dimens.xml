@@ -76,6 +76,7 @@
     <dimen name="suggested_rental_desc_text_size">12sp</dimen>
     <dimen name="layout_tenant_bottom_margin">40dp</dimen>
     <dimen name="home_activity_title_text_size">20sp</dimen>
+    <dimen name="home_toolbar_back_button_margin_start">15dp</dimen>
 
     <!-- Profile Screen -->
     <dimen name="profile_name_text_size">18sp</dimen>
@@ -101,4 +102,5 @@
     <dimen name="upload_divider_top_margin">20dp</dimen>
     <dimen name="submit_button_margin_top">40dp</dimen>
     <dimen name="submit_button_margin_start_and_end">20dp</dimen>
+    <dimen name="verification_success_message_margin_top">20dp</dimen>
 </resources>
