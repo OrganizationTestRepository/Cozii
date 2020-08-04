@@ -6,15 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.cozii.coziiandroid.R
 import com.cozii.coziiandroid.home.CoziiHomeActivity
 import com.cozii.coziiandroid.home.viewmodel.HomeSharedViewModel
+import com.cozii.coziiandroid.threestepverification.adapters.DocumentClickListener
 import com.cozii.coziiandroid.threestepverification.adapters.VerificationDocsListAdapter
+import com.cozii.coziiandroid.threestepverification.models.VerificationDocs
 import kotlinx.android.synthetic.main.fragment_document_slection.*
 
-class DocumentSlectionFragment : Fragment() {
+class DocumentSlectionFragment : Fragment(), DocumentClickListener {
 
     private val homeViewModel: HomeSharedViewModel by activityViewModels()
 
@@ -33,7 +36,11 @@ class DocumentSlectionFragment : Fragment() {
 
         rv_document_list.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = VerificationDocsListAdapter(homeViewModel.setListOfVerificationDocsNeeded(context))
+            adapter = VerificationDocsListAdapter(homeViewModel.setListOfVerificationDocsNeeded(context),this@DocumentSlectionFragment)
         }
+    }
+
+    override fun onDocumentItemClick(data: VerificationDocs) {
+        this.findNavController().navigate(R.id.action_documentSlectionFragment_to_uploadDocumentFragment);
     }
 }
