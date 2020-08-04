@@ -1,4 +1,4 @@
-package com.cozii.coziiandroid.threestepverification.adapters
+package com.cozii.coziiandroid.profile
 
 import com.cozii.coziiandroid.profile.models.ProfileInterface
 
