@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".threestepverification.UploadDocumentFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_first_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_second_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_document_upload_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/document_selection_title_margin_top"
+        android:text="@string/document_upload_title"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/document_selection_title_size"
+        app:font_name="RobotoMedium"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_doc_upload_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/document_selection_title_margin_top"
+        android:text="@string/document_upload_desc"
+        android:textColor="@color/document_selection_desc_color"
+        android:textSize="@dimen/document_selection_desc_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toStartOf="@+id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_document_upload_title" />
+
+    <ImageView
+        android:id="@+id/iv_doc_front_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/document_selection_title_margin_top"
+        android:src="@drawable/ic_upload_doc_icon"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_doc_upload_desc" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/doc_front_and_back_view_margin_start"
+        android:text="Front"
+        app:layout_constraintBottom_toBottomOf="@id/iv_doc_front_icon"
+        app:layout_constraintStart_toEndOf="@id/iv_doc_front_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_doc_front_icon" />
+
+    <ImageView
+        android:id="@+id/iv_doc_front_upload_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/document_selection_title_margin_top"
+        android:src="@drawable/upload"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_doc_upload_desc" />
+
+    <View
+        android:id="@+id/upload_doc_divider"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/upload_divider_top_margin"
+        android:background="@color/upload_doc_divider_color"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/iv_doc_front_icon" />
+
+    <ImageView
+        android:id="@+id/iv_doc_back_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/upload_divider_top_margin"
+        android:src="@drawable/ic_upload_doc_icon"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/upload_doc_divider" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/doc_front_and_back_view_margin_start"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="@id/iv_doc_back_icon"
+        app:layout_constraintStart_toEndOf="@id/iv_doc_back_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_doc_back_icon" />
+
+    <ImageView
+        android:id="@+id/iv_doc_back_upload_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/upload_divider_top_margin"
+        android:src="@drawable/upload"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/upload_doc_divider" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/upload_divider_top_margin"
+        android:background="@color/upload_doc_divider_color"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/iv_doc_back_icon" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/submit_button_margin_start_and_end"
+        android:layout_marginEnd="@dimen/submit_button_margin_start_and_end"
+        android:layout_marginBottom="@dimen/submit_button_margin_top"
+        android:background="@drawable/background_send_email_button"
+        android:paddingTop="@dimen/document_no_id_margin_top"
+        android:paddingBottom="@dimen/document_no_id_margin_top"
+        android:text="@string/button_submit"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
