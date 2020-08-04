@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/documentSlectionFragment"
-        android:name="com.cozii.coziiandroid.threestepverification.DocumentSlectionFragment"
+        android:name="com.cozii.coziiandroid.threestepverification.documentverification.DocumentSlectionFragment"
         android:label="fragment_document_slection"
         tools:layout="@layout/fragment_document_slection" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/documentInfoLandingFragment"
-        android:name="com.cozii.coziiandroid.threestepverification.DocumentInfoLandingFragment"
+        android:name="com.cozii.coziiandroid.threestepverification.documentverification.DocumentInfoLandingFragment"
         android:label="fragment_document_info_landing"
         tools:layout="@layout/fragment_document_info_landing" >
         <action
@@ -43,7 +43,16 @@
     </fragment>
     <fragment
         android:id="@+id/uploadDocumentFragment"
-        android:name="com.cozii.coziiandroid.threestepverification.UploadDocumentFragment"
+        android:name="com.cozii.coziiandroid.threestepverification.documentverification.UploadDocumentFragment"
         android:label="fragment_upload_document"
-        tools:layout="@layout/fragment_upload_document" />
+        tools:layout="@layout/fragment_upload_document" >
+        <action
+            android:id="@+id/action_uploadDocumentFragment_to_documentVerifySuccessFragment"
+            app:destination="@id/documentVerifySuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/documentVerifySuccessFragment"
+        android:name="com.cozii.coziiandroid.threestepverification.documentverification.DocumentVerifySuccessFragment"
+        android:label="fragment_document_verify_success"
+        tools:layout="@layout/fragment_document_verify_success" />
 </navigation>
