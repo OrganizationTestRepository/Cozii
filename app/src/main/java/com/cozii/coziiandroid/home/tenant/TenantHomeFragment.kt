@@ -42,6 +42,8 @@ class TenantHomeFragment : Fragment() {
 
         (activity as CoziiHomeActivity).updateToolbarTitle(getString(R.string.home_title))
 
+        (activity as CoziiHomeActivity).changeToolbarBackVisibity(false)
+
         if(homeViewModel.checkVerificationStatus()){
             rv_suggested_rentals.apply {
                 layoutManager = LinearLayoutManager(activity,RecyclerView.HORIZONTAL,false)

@@ -2,6 +2,7 @@ package com.cozii.coziiandroid.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.cozii.coziiandroid.R
@@ -22,5 +23,13 @@ class CoziiHomeActivity : AppCompatActivity() {
 
     fun updateToolbarTitle(title : String){
         toolbar_title.text = title
+    }
+
+    fun changeToolbarBackVisibity(value : Boolean){
+        if (value){
+            iv_home_back_button.visibility = View.VISIBLE
+        }else {
+            iv_home_back_button.visibility = View.GONE
+        }
     }
 }

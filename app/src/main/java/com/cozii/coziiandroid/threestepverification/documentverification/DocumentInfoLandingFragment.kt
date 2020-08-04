@@ -1,4 +1,4 @@
-package com.cozii.coziiandroid.threestepverification
+package com.cozii.coziiandroid.threestepverification.documentverification
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -25,6 +25,8 @@ class DocumentInfoLandingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as CoziiHomeActivity).updateToolbarTitle(getString(R.string.document_info_landing_toolbar_title))
+
+        (activity as CoziiHomeActivity).changeToolbarBackVisibity(true)
 
         verify_now_button.setOnClickListener {
             it.findNavController().navigate(R.id.action_documentInfoLandingFragment_to_documentSlectionFragment)

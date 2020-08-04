@@ -9,25 +9,36 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/home_toolbar"
         android:layout_width="0dp"
-        android:background="@color/cozii_home_toolbar_color"
         android:layout_height="?attr/actionBarSize"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/cozii_home_toolbar_color"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_home_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/home_toolbar_back_button_margin_start"
+        android:src="@drawable/ic_back_button"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/home_toolbar"
+        app:layout_constraintStart_toStartOf="@id/home_toolbar"
+        app:layout_constraintTop_toTopOf="@id/home_toolbar" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/toolbar_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/home_title"
-        android:textColor="@android:color/white"
-        app:layout_constraintStart_toStartOf="@id/home_toolbar"
-        app:layout_constraintEnd_toEndOf="@id/home_toolbar"
-        app:layout_constraintTop_toTopOf="@id/home_toolbar"
-        app:layout_constraintBottom_toBottomOf="@id/home_toolbar"
         android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/home_activity_title_text_size"
         app:font_name="RobotoMedium"
-        android:textSize="@dimen/home_activity_title_text_size"/>
+        app:layout_constraintBottom_toBottomOf="@id/home_toolbar"
+        app:layout_constraintEnd_toEndOf="@id/home_toolbar"
+        app:layout_constraintStart_toStartOf="@id/home_toolbar"
+        app:layout_constraintTop_toTopOf="@id/home_toolbar" />
 
     <FrameLayout
         android:layout_width="0dp"

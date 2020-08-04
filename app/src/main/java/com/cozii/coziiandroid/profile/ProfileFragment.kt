@@ -41,6 +41,8 @@ class ProfileFragment : Fragment(),
 
         (activity as CoziiHomeActivity).updateToolbarTitle(getString(R.string.profile_title))
 
+        (activity as CoziiHomeActivity).changeToolbarBackVisibity(false)
+
         rv_three_steps_verification.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = VerificationListAdapter(homeViewModel.setVerificationList(context),this@ProfileFragment)

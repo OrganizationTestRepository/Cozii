@@ -1,4 +1,4 @@
-package com.cozii.coziiandroid.threestepverification
+package com.cozii.coziiandroid.threestepverification.documentverification
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -33,6 +33,8 @@ class DocumentSlectionFragment : Fragment(), DocumentClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as CoziiHomeActivity).updateToolbarTitle(getString(R.string.document_selection_toolbar_title))
+
+        (activity as CoziiHomeActivity).changeToolbarBackVisibity(true)
 
         rv_document_list.apply {
             layoutManager = LinearLayoutManager(activity)
