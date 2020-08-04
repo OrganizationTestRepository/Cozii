@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/document_single_layout_padding"
+    android:background="@drawable/on_boarding_rectangle_outline"
+    android:padding="@dimen/document_single_layout_padding">
+
+    <ImageView
+        android:id="@+id/iv_document_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_passport"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_document_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/document_title_margin_start"
+        android:text="Pssport"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/document_title_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintBottom_toBottomOf="@id/iv_document_image"
+        app:layout_constraintStart_toEndOf="@id/iv_document_image"
+        app:layout_constraintTop_toTopOf="@id/iv_document_image" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_blue_right_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/iv_document_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_document_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>

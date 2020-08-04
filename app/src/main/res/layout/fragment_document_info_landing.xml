@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".threestepverification.documentverification.DocumentInfoLandingFragment">
+
+    <ImageView
+        android:id="@+id/iv_landing_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/document_landing_margin_top"
+        android:src="@drawable/ic_id_verify_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/document_landing_margin_top"
+        android:gravity="center"
+        android:text="@string/document_info_title"
+        android:textColor="@color/document_selection_desc_color"
+        android:textSize="@dimen/document_title_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_landing_image" />
+
+    <Button
+        android:id="@+id/verify_now_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/document_landing_margin_bottom"
+        android:background="@drawable/background_send_email_button"
+        android:paddingTop="@dimen/document_no_id_margin_top"
+        android:paddingBottom="@dimen/document_no_id_margin_top"
+        android:text="@string/document_verify_now"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/iv_landing_image"
+        app:layout_constraintStart_toStartOf="@id/iv_landing_image" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_no_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/document_no_id_margin_top"
+        android:text="@string/no_document_text"
+        android:textColor="@color/document_no_id_color"
+        android:textSize="@dimen/document_selection_desc_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verify_now_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

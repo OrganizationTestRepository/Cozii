@@ -12,7 +12,7 @@ import com.cozii.coziiandroid.profile.models.ProfileInterface
 import com.cozii.coziiandroid.profile.models.ProfileOptions
 import com.cozii.coziiandroid.profile.models.VerificationParams
 
-class VerificationListAdapter(private val profileOptions: List<ProfileInterface>) :
+class VerificationListAdapter(private val profileOptions: List<ProfileInterface>, private val verificationClickListener: VerificationClickListener) :
     RecyclerView.Adapter<VerificationListAdapter.ProfileBaseViewHolder<*>>() {
 
     companion object {
@@ -64,15 +64,15 @@ class VerificationListAdapter(private val profileOptions: List<ProfileInterface>
     ) {
         val element = profileOptions[position]
         when (holder) {
-            is VerificationOptionsViewHolder -> holder.bind(element as VerificationParams,position)
-            is AddLandlordViewHolder -> holder.bind(element as AddlandlordParams,position)
-            is ProfileOptionsViewHolder -> holder.bind(element as ProfileOptions,position)
+            is VerificationOptionsViewHolder -> holder.bind(element as VerificationParams,position,verificationClickListener)
+            is AddLandlordViewHolder -> holder.bind(element as AddlandlordParams,position,verificationClickListener)
+            is ProfileOptionsViewHolder -> holder.bind(element as ProfileOptions,position,verificationClickListener)
             else -> throw IllegalArgumentException()
         }
     }
 
     abstract class ProfileBaseViewHolder<T>(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        abstract fun bind(item: T,position: Int)
+        abstract fun bind(item: T,position: Int,verificationClickListener: VerificationClickListener)
     }
 
     class VerificationOptionsViewHolder(itemView: View) : ProfileBaseViewHolder<VerificationParams>(itemView) {
@@ -81,12 +81,16 @@ class VerificationListAdapter(private val profileOptions: List<ProfileInterface>
         private val verifyOption = itemView.findViewById(R.id.tv_verification_option) as CoziiTextView
         private val divider = itemView.findViewById(R.id.rv_verification_divider) as View
 
-        override fun bind(item: VerificationParams, position: Int) {
+        override fun bind(item: VerificationParams, position: Int,verificationClickListener: VerificationClickListener) {
             verifyOptionImage.setImageDrawable(item.verificationIcon)
             verifyOption.text = item.verificationName
 
             if (position == 2) {
                 divider.visibility = View.INVISIBLE
+            }
+
+            itemView.setOnClickListener {
+                verificationClickListener.onVerificationItemClick(item)
             }
         }
 
@@ -96,7 +100,7 @@ class VerificationListAdapter(private val profileOptions: List<ProfileInterface>
 
         private val landlordTitle = itemView.findViewById(R.id.tv_add_landlord) as CoziiTextView
 
-        override fun bind(item: AddlandlordParams, position: Int) {
+        override fun bind(item: AddlandlordParams, position: Int,verificationClickListener: VerificationClickListener) {
             landlordTitle.text = item.title
         }
 
@@ -107,7 +111,7 @@ class VerificationListAdapter(private val profileOptions: List<ProfileInterface>
         private val profileIcon = itemView.findViewById(R.id.iv_profile_option_icon) as ImageView
         private val profileOption = itemView.findViewById(R.id.tv_profile_option) as CoziiTextView
 
-        override fun bind(item: ProfileOptions, position: Int) {
+        override fun bind(item: ProfileOptions, position: Int,verificationClickListener: VerificationClickListener) {
             profileIcon.setImageDrawable(item.profileOptionIcon)
             profileOption.text = item.profileOption
         }

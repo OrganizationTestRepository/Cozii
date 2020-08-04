@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".threestepverification.documentverification.DocumentSlectionFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_first_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_second_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_document_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/document_selection_title_margin_top"
+        android:text="@string/document_selection_title"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/document_selection_title_size"
+        app:font_name="RobotoMedium"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_doc_listing_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/document_selection_title_margin_top"
+        android:text="@string/document_selection_desc"
+        android:textColor="@color/document_selection_desc_color"
+        android:textSize="@dimen/document_selection_desc_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toStartOf="@+id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_document_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_document_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/document_selection_title_margin_top"
+        android:layout_marginBottom="@dimen/document_selection_title_margin_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_doc_listing_desc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

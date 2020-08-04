@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -41,6 +42,8 @@ class TenantHomeFragment : Fragment() {
 
         (activity as CoziiHomeActivity).updateToolbarTitle(getString(R.string.home_title))
 
+        (activity as CoziiHomeActivity).changeToolbarBackVisibity(false)
+
         if(homeViewModel.checkVerificationStatus()){
             rv_suggested_rentals.apply {
                 layoutManager = LinearLayoutManager(activity,RecyclerView.HORIZONTAL,false)
@@ -51,6 +54,10 @@ class TenantHomeFragment : Fragment() {
         rv_tenant_options.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = TenantHomeOptionsAdapter(homeViewModel.setTenantHomeOptions(context))
+        }
+
+        layout_verification.setOnClickListener {
+            it.findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
         }
     }
 }

@@ -48,4 +48,9 @@
     <color name="verification_divider_color">#b3979797</color>
     <color name="color_onboarding_orange">#f8a000</color>
 
+    <!-- Document Selection Fragment-->
+    <color name="document_selection_desc_color">#373d3f</color>
+    <color name="document_no_id_color">#3f2587</color>
+    <color name="upload_doc_divider_color">#b3979797</color>
+
 </resources>

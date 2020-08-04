@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".threestepverification.documentverification.DocumentVerifySuccessFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_first_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_second_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_third_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <ImageView
+        android:id="@+id/img_verify_doc_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_verification_success"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fragment_first_guide_line" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_success_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/verification_success_message_margin_top"
+        android:gravity="center"
+        android:text="@string/id_verification_success_title"
+        android:textColor="@color/document_no_id_color"
+        android:textSize="@dimen/document_selection_title_size"
+        app:font_name="RobotoMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_verify_doc_success" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_success_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/verification_success_message_margin_top"
+        android:gravity="center"
+        android:text="@string/id_verification_success_desc"
+        android:textColor="@color/document_selection_desc_color"
+        android:textSize="@dimen/document_title_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_success_title" />
+
+    <Button
+        android:id="@+id/verify_doc_continue_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/submit_button_margin_start_and_end"
+        android:layout_marginEnd="@dimen/submit_button_margin_start_and_end"
+        android:layout_marginBottom="@dimen/submit_button_margin_top"
+        android:background="@drawable/background_send_email_button"
+        android:paddingTop="@dimen/document_no_id_margin_top"
+        android:paddingBottom="@dimen/document_no_id_margin_top"
+        android:text="@string/button_submit"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_second_guide_line" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

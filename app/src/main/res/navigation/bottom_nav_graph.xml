@@ -9,10 +9,50 @@
         android:id="@+id/homeFragment"
         android:name="com.cozii.coziiandroid.home.tenant.TenantHomeFragment"
         android:label="fragment_tenant_home"
-        tools:layout="@layout/fragment_tenant_home" />
+        tools:layout="@layout/fragment_tenant_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.cozii.coziiandroid.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_documentInfoLandingFragment"
+            app:destination="@id/documentInfoLandingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/documentSlectionFragment"
+        android:name="com.cozii.coziiandroid.threestepverification.documentverification.DocumentSlectionFragment"
+        android:label="fragment_document_slection"
+        tools:layout="@layout/fragment_document_slection" >
+        <action
+            android:id="@+id/action_documentSlectionFragment_to_uploadDocumentFragment"
+            app:destination="@id/uploadDocumentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/documentInfoLandingFragment"
+        android:name="com.cozii.coziiandroid.threestepverification.documentverification.DocumentInfoLandingFragment"
+        android:label="fragment_document_info_landing"
+        tools:layout="@layout/fragment_document_info_landing" >
+        <action
+            android:id="@+id/action_documentInfoLandingFragment_to_documentSlectionFragment"
+            app:destination="@id/documentSlectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadDocumentFragment"
+        android:name="com.cozii.coziiandroid.threestepverification.documentverification.UploadDocumentFragment"
+        android:label="fragment_upload_document"
+        tools:layout="@layout/fragment_upload_document" >
+        <action
+            android:id="@+id/action_uploadDocumentFragment_to_documentVerifySuccessFragment"
+            app:destination="@id/documentVerifySuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/documentVerifySuccessFragment"
+        android:name="com.cozii.coziiandroid.threestepverification.documentverification.DocumentVerifySuccessFragment"
+        android:label="fragment_document_verify_success"
+        tools:layout="@layout/fragment_document_verify_success" />
 </navigation>
