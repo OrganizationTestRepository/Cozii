@@ -27,7 +27,11 @@
         android:id="@+id/documentSlectionFragment"
         android:name="com.cozii.coziiandroid.threestepverification.DocumentSlectionFragment"
         android:label="fragment_document_slection"
-        tools:layout="@layout/fragment_document_slection" />
+        tools:layout="@layout/fragment_document_slection" >
+        <action
+            android:id="@+id/action_documentSlectionFragment_to_uploadDocumentFragment"
+            app:destination="@id/uploadDocumentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/documentInfoLandingFragment"
         android:name="com.cozii.coziiandroid.threestepverification.DocumentInfoLandingFragment"
@@ -37,4 +41,9 @@
             android:id="@+id/action_documentInfoLandingFragment_to_documentSlectionFragment"
             app:destination="@id/documentSlectionFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/uploadDocumentFragment"
+        android:name="com.cozii.coziiandroid.threestepverification.UploadDocumentFragment"
+        android:label="fragment_upload_document"
+        tools:layout="@layout/fragment_upload_document" />
 </navigation>
