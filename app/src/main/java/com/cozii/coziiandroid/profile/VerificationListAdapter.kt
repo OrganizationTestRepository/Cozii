@@ -11,7 +11,6 @@ import com.cozii.coziiandroid.profile.models.AddlandlordParams
 import com.cozii.coziiandroid.profile.models.ProfileInterface
 import com.cozii.coziiandroid.profile.models.ProfileOptions
 import com.cozii.coziiandroid.profile.models.VerificationParams
-import com.cozii.coziiandroid.threestepverification.adapters.VerificationClickListener
 
 class VerificationListAdapter(private val profileOptions: List<ProfileInterface>, private val verificationClickListener: VerificationClickListener) :
     RecyclerView.Adapter<VerificationListAdapter.ProfileBaseViewHolder<*>>() {

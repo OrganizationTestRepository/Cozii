@@ -11,7 +11,7 @@ import com.cozii.coziiandroid.coziicustomviews.CoziiTextView
 import com.cozii.coziiandroid.home.tenant.models.TenantHomeOptions
 import com.cozii.coziiandroid.threestepverification.models.VerificationDocs
 
-class VerificationDocsListAdapter(private val verificationDocs: List<VerificationDocs>) :
+class VerificationDocsListAdapter(private val verificationDocs: List<VerificationDocs>,private val documentClickListener: DocumentClickListener) :
     RecyclerView.Adapter<VerificationDocsListAdapter.VerificationDocViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -31,17 +31,21 @@ class VerificationDocsListAdapter(private val verificationDocs: List<Verificatio
         holder: VerificationDocsListAdapter.VerificationDocViewHolder,
         position: Int
     ) {
-        holder.bindView(verificationDocs[position])
+        holder.bindView(verificationDocs[position],documentClickListener)
     }
 
     class VerificationDocViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bindView(verificationDoc: VerificationDocs) {
+        fun bindView(verificationDoc: VerificationDocs,documentClickListener: DocumentClickListener) {
             val docImage = itemView.findViewById(R.id.iv_document_image) as ImageView
             val documentName = itemView.findViewById(R.id.tv_document_title) as CoziiTextView
 
             docImage.setImageDrawable(verificationDoc.verificationDocImage)
             documentName.text = verificationDoc.verificationDocName
+
+            itemView.setOnClickListener {
+                documentClickListener.onDocumentItemClick(verificationDoc)
+            }
         }
 
     }
