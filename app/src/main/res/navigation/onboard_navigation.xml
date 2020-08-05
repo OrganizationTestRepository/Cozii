@@ -8,17 +8,5 @@
     <fragment
         android:id="@+id/onBoardUserSelectionFragment"
         android:name="com.cozii.coziiandroid.onboarding.OnBoardUserSelectionFragment"
-        android:label="OnBoardFirstFragment" >
-        <action
-            android:id="@+id/action_onBoardUserSelectionFragment_to_onBoardingTenantFragment"
-            app:destination="@id/onBoardingTenantFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/onBoardingTenantFragment"
-        android:name="com.cozii.coziiandroid.onboarding.OnBoardingTenantFragment"
-        android:label="OnBoardingTenantFragment" >
-        <action
-            android:id="@+id/action_onBoardingTenantFragment_to_onBoardUserSelectionFragment"
-            app:destination="@id/onBoardUserSelectionFragment" />
-    </fragment>
+        android:label="OnBoardFirstFragment" />
 </navigation>
