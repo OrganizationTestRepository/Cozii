@@ -1,4 +1,4 @@
-package com.cozii.coziiandroid.Home
+package com.cozii.coziiandroid.onboarding
 
 import android.graphics.Color
 import android.os.Build

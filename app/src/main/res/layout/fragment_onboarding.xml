@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/on_board_background_color"
-    tools:context=".Home.OnBoardingLandingActivity">
+    android:background="@color/on_board_background_color">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/fragment_fourth_guide_line"
