@@ -53,4 +53,7 @@
     <color name="document_no_id_color">#3f2587</color>
     <color name="upload_doc_divider_color">#b3979797</color>
 
+    <!-- Edit Profile Fragment -->
+    <color name="profile_param_text_color">#3f2587</color>
+
 </resources>

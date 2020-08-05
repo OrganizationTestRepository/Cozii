@@ -30,4 +30,10 @@
         <item name="colorControlHighlight">@color/colorPrimary</item>
     </style>
 
+    <style name="ProfileEditTextAppearance" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal">#b3979797</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
 </resources>
