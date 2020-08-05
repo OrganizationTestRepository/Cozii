@@ -20,6 +20,42 @@ import kotlinx.android.synthetic.main.fragment_onboarding.tv_on_board_back
 
 class OnBoardingTenantFragment : Fragment() {
 
+    companion object {
+        private const val ARG_POSITION = "ARG_POSITION"
+
+        fun getInstance(position: Int) = OnBoardingTenantFragment().apply {
+            arguments = bundleOf(ARG_POSITION to position)
+        }
+    }
+
+    private lateinit var binding: FragmentOnBoardingBinding
+
+    override fun onCreateView(inflater: LayoutInflater,container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        binding = FragmentOnBoardingBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val position = requireArguments().getInt(ARG_POSITION)
+        val onBoardingTitles = requireContext().resources.getStringArray(R.array.on_boarding_titles)
+        val onBoardingTexts = requireContext().resources.getStringArray(R.array.on_boarding_texts)
+        val onBoardingImages = getOnBoardAssetsLocation()
+        with(binding) {
+            onBoardingImage.setImageFromRaw(onBoardingImages[position])
+            onBoardingTextTitle.text = onBoardingTitles[position]
+            onBoardingTextMsg.text = onBoardingTexts[position]
+        }
+    }
+
+    private fun getOnBoardAssetsLocation(): List<Int> {
+        val onBoardAssets: MutableList<Int> = ArrayList()
+        onBoardAssets.add(R.raw.on_board_img1_land)
+        onBoardAssets.add(R.raw.on_board_img2_land)
+        onBoardAssets.add(R.raw.on_board_img3_land)
+        return onBoardAssets
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,99 +64,5 @@ class OnBoardingTenantFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_onboarding, container, false)
-    }
 
-    @SuppressLint("UseRequireInsteadOfGet")
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        (activity as OnBoardingLandingActivity).updateStatusBarColor("#3f2587")
-        var counter = 1;
-
-        tv_on_board_next.setOnClickListener {
-            if (counter < 4)
-                counter++;
-            if (counter == 1) {
-                on_board_first_logo.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        context!!,
-                        R.drawable.second_onboard_tenant_logo
-                    )
-                )
-
-                welcome.setText(R.string.onboarding_description_3)
-            }
-            if (counter == 2) {
-                on_board_first_logo.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        context!!,
-                        R.drawable.third_onboard_tenant_logo
-                    )
-                )
-                welcome.setText(R.string.onboarding_description_5)
-            }
-            if (counter == 3) {
-                on_board_first_logo.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        context!!,
-                        R.drawable.fith_onboard_tenant_logo
-                    )
-                )
-                welcome.setText(R.string.onboarding_description_6)
-                tv_tenant_salutation.setText(R.string.onboarding_description_7)
-            }
-            if (counter == 4) {
-                val intent = Intent(activity,
-                    SignUpAndSignInBaseActivity::class.java)
-                startActivity(intent)
-                activity?.finish()
-            }
-
-        }
-
-        tv_on_board_back.setOnClickListener {
-            counter--;
-            if (counter == 0) {
-                it.findNavController()
-                    .navigate(R.id.action_onBoardingTenantFragment_to_onBoardUserSelectionFragment)
-            }
-            if (counter == 1) {
-                on_board_first_logo.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        context!!,
-                        R.drawable.second_onboard_tenant_logo
-                    )
-                )
-
-                welcome.setText(R.string.onboarding_description_3)
-            }
-            if (counter == 2) {
-                on_board_first_logo.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        context!!,
-                        R.drawable.third_onboard_tenant_logo
-                    )
-                )
-                welcome.setText(R.string.onboarding_description_5)
-                tv_tenant_salutation.setText(R.string.onboarding_description_0)
-            }
-            if (counter == 3) {
-                on_board_first_logo.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        context!!,
-                        R.drawable.fith_onboard_tenant_logo
-                    )
-                )
-                welcome.setText(R.string.onboarding_description_6)
-                tv_tenant_salutation.setText(R.string.onboarding_description_0)
-            }
-
-        }
-
-    }
 }
