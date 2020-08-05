@@ -1,5 +1,10 @@
 package com.cozii.coziiandroid.onboarding
 
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.cozii.coziiandroid.onboarding.OnBoardingTenantFragment.Companion.getInstance
+
 class OnBoardingAdapter(activity: AppCompatActivity, private val itemsCount: Int) :
     FragmentStateAdapter(activity) {
 
@@ -8,6 +13,6 @@ class OnBoardingAdapter(activity: AppCompatActivity, private val itemsCount: Int
     }
 
     override fun createFragment(position: Int): Fragment {
-        return OnBoardingFragment.getInstance(position)
+        return OnboardingMainFragment.getInstance(position)
     }
 }
