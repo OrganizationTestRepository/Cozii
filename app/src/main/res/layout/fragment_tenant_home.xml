@@ -7,100 +7,120 @@
     android:layout_marginBottom="@dimen/layout_tenant_bottom_margin"
     tools:context=".home.tenant.TenantHomeFragment">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/fragment_first_guide_line"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/fragment_second_guide_line"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
-
-    <include
-        android:id="@+id/layout_verification"
-        layout="@layout/layout_three_step_verification_process"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
-        android:id="@+id/tv_tenant_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/tenant_name_margin_top"
-        android:text="Hey Lela"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/alert_title_text_size"
-        app:font_name="RobotoMedium"
-        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toBottomOf="@+id/layout_verification" />
-
-    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
-        android:id="@+id/tv_tenant_salutation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tenant_salutation"
-        android:textColor="@color/tenant_name_salutation_color"
-        android:textSize="@dimen/tenant_name_salutation_text_size"
-        app:font_name="RobotoRegular"
-        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toBottomOf="@+id/tv_tenant_name" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/tenant_image_card_view"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="@dimen/home_tenant_profile_margin_top"
-        app:cardCornerRadius="40dp"
-        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
-        app:layout_constraintTop_toBottomOf="@+id/layout_verification">
-
-        <ImageView
-            android:id="@+id/tenant_profile_image"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fragment_first_guide_line"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_circular_default" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
 
-    </androidx.cardview.widget.CardView>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fragment_second_guide_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_tenant_options"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tenant_image_card_view"
-        android:layout_marginTop="@dimen/home_tenant_recycler_view_margin"/>
+        <include
+            android:id="@+id/layout_verification"
+            layout="@layout/layout_three_step_verification_process"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <include
-        android:id="@+id/layout_reminder"
-        layout="@layout/home_reminder_layout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_tenant_options"/>
+        <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+            android:id="@+id/tv_tenant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tenant_name_margin_top"
+            android:text="Hey Lela"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/alert_title_text_size"
+            app:font_name="RobotoMedium"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@+id/layout_verification" />
 
-    <include
-        android:id="@+id/layout_suggested_rentals"
-        layout="@layout/home_rent_suggestion_layout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_reminder"/>
+        <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+            android:id="@+id/tv_tenant_salutation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tenant_salutation"
+            android:textColor="@color/tenant_name_salutation_color"
+            android:textSize="@dimen/tenant_name_salutation_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tenant_name" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tenant_image_card_view"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/home_tenant_profile_margin_top"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+            app:layout_constraintTop_toBottomOf="@+id/layout_verification">
+
+            <ImageView
+                android:id="@+id/tenant_profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_circular_default" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tenant_options"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/home_tenant_recycler_view_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tenant_image_card_view" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/home_layout_view_height"
+            android:layout_marginTop="@dimen/home_layout_view_margin"
+            android:background="@color/tenant_home_background_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_tenant_options" />
+
+        <include
+            android:id="@+id/layout_reminder"
+            layout="@layout/home_reminder_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/home_layout_view_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_tenant_options" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/home_layout_view_height"
+            android:layout_marginTop="@dimen/home_layout_view_margin"
+            android:background="@color/tenant_home_background_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_reminder" />
+
+        <include
+            android:id="@+id/layout_suggested_rentals"
+            layout="@layout/home_rent_suggestion_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/home_layout_view_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_reminder" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
