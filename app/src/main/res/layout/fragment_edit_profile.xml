@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".threestepverification.editprofile.EditProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fragment_first_guide_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fragment_second_guide_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fragment_third_guide_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.49" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fragment_fourth_guide_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.53" />
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_image_margin_top"
+            android:src="@drawable/ic_default_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ic_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_camera_icon"
+            android:translationX="@dimen/translation_margin"
+            android:translationY="@dimen/translation_margin"
+            app:layout_constraintBottom_toBottomOf="@id/img_profile"
+            app:layout_constraintEnd_toEndOf="@id/img_profile"
+            app:layout_constraintStart_toStartOf="@id/img_profile"
+            app:layout_constraintTop_toTopOf="@id/img_profile" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/profile_param_margin_start"
+            android:layout_marginTop="@dimen/profile_image_margin_top"
+            android:text="@string/profile_name"
+            android:textColor="@color/profile_param_text_color"
+            android:textSize="@dimen/profile_param_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/img_profile" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+            android:id="@+id/et_first_name"
+            style="@style/ProfileEditTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/first_name_hint"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/profile_edit_text_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+            android:id="@+id/et_last_name"
+            style="@style/ProfileEditTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/last_name_hint"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/profile_edit_text_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+            app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/profile_param_margin_start"
+            android:layout_marginTop="@dimen/profile_image_margin_top"
+            android:text="@string/profile_email"
+            android:textColor="@color/profile_param_text_color"
+            android:textSize="@dimen/profile_param_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/et_first_name" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+            android:id="@+id/et_email"
+            style="@style/ProfileEditTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/profile_edit_text_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/profile_param_margin_start"
+            android:layout_marginTop="@dimen/profile_image_margin_top"
+            android:text="@string/profile_phone"
+            android:textColor="@color/profile_param_text_color"
+            android:textSize="@dimen/profile_param_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/et_email" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+            android:id="@+id/et_phone"
+            style="@style/ProfileEditTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/phone_hint"
+            android:inputType="phone"
+            android:textSize="@dimen/profile_edit_text_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_phone" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+            android:id="@+id/tv_residential_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/profile_param_margin_start"
+            android:layout_marginTop="@dimen/profile_image_margin_top"
+            android:text="@string/profile_residential_address"
+            android:textColor="@color/profile_param_text_color"
+            android:textSize="@dimen/profile_param_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/et_phone" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+            android:id="@+id/et_suite_number"
+            style="@style/ProfileEditTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/suite_number_hint"
+            android:inputType="text"
+            android:textSize="@dimen/profile_edit_text_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_residential_address" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+            android:id="@+id/et_street_number"
+            style="@style/ProfileEditTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/street_number_hint"
+            android:inputType="text"
+            android:textSize="@dimen/profile_edit_text_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+            app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_residential_address" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+            android:id="@+id/et_street_name"
+            style="@style/ProfileEditTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_residential_address_margin_top"
+            android:hint="@string/street_name_hint"
+            android:inputType="text"
+            android:textSize="@dimen/profile_edit_text_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/et_suite_number" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+            android:id="@+id/et_city"
+            style="@style/ProfileEditTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_residential_address_margin_top"
+            android:hint="@string/city_hint"
+            android:inputType="text"
+            android:textSize="@dimen/profile_edit_text_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+            app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/et_suite_number" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+            android:id="@+id/et_province"
+            style="@style/ProfileEditTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_residential_address_margin_top"
+            android:hint="@string/province_hint"
+            android:inputType="text"
+            android:textSize="@dimen/profile_edit_text_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/et_street_name" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+            android:id="@+id/et_postal_code"
+            style="@style/ProfileEditTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_residential_address_margin_top"
+            android:hint="@string/postal_code_hint"
+            android:inputType="text"
+            android:textSize="@dimen/profile_edit_text_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+            app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+            app:layout_constraintTop_toBottomOf="@id/et_street_name" />
+
+        <Button
+            android:id="@+id/verify_doc_continue_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/save_button_margin_start_and_end"
+            android:layout_marginTop="@dimen/profile_save_margin_top"
+            android:layout_marginEnd="@dimen/save_button_margin_start_and_end"
+            android:layout_marginBottom="@dimen/save_button_margin_start_and_end"
+            android:background="@drawable/background_send_email_button"
+            android:paddingTop="@dimen/save_button_padding"
+            android:paddingBottom="@dimen/save_button_padding"
+            android:text="@string/button_save"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toBottomOf="@+id/et_province" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
