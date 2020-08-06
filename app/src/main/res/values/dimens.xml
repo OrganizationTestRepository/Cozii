@@ -77,6 +77,8 @@
     <dimen name="layout_tenant_bottom_margin">40dp</dimen>
     <dimen name="home_activity_title_text_size">20sp</dimen>
     <dimen name="home_toolbar_back_button_margin_start">15dp</dimen>
+    <dimen name="home_layout_view_height">10dp</dimen>
+    <dimen name="home_layout_view_margin">35dp</dimen>
 
     <!-- Profile Screen -->
     <dimen name="profile_name_text_size">18sp</dimen>
@@ -103,4 +105,16 @@
     <dimen name="submit_button_margin_top">40dp</dimen>
     <dimen name="submit_button_margin_start_and_end">20dp</dimen>
     <dimen name="verification_success_message_margin_top">20dp</dimen>
+
+    <!-- Edit Profile -->
+    <dimen name="profile_image_margin_top">30dp</dimen>
+    <dimen name="translation_margin">30dp</dimen>
+    <dimen name="profile_param_text_size">12sp</dimen>
+    <dimen name="profile_edit_text_text_size">14sp</dimen>
+    <dimen name="Profile_edit_text_margin_top">10dp</dimen>
+    <dimen name="save_button_margin_start_and_end">20dp</dimen>
+    <dimen name="save_button_padding">10dp</dimen>
+    <dimen name="profile_save_margin_top">50dp</dimen>
+    <dimen name="profile_param_margin_start">5dp</dimen>
+    <dimen name="profile_residential_address_margin_top">5dp</dimen>
 </resources>

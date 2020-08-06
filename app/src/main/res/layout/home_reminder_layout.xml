@@ -40,7 +40,7 @@
     <View
         android:id="@+id/reminder_first_view"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:layout_marginTop="@dimen/reminder_title_margin_top"
         android:background="@drawable/background_left_side_reminder_bg"
         app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
@@ -50,7 +50,7 @@
     <View
         android:id="@+id/reminder_second_view"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:layout_marginTop="@dimen/reminder_title_margin_top"
         android:background="@drawable/background_right_side_reminder_bg"
         app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"

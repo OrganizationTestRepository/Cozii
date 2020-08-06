@@ -30,12 +30,12 @@ class TenantHomeOptionsAdapter(private val tenantOptions: List<TenantHomeOptions
         holder: TenantHomeOptionsAdapter.TenantOptionViewHolder,
         position: Int
     ) {
-        holder.bindView(tenantOptions[position],position)
+        holder.bindView(tenantOptions[position], position)
     }
 
     class TenantOptionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bindView(tenantOption: TenantHomeOptions,position: Int) {
+        fun bindView(tenantOption: TenantHomeOptions, position: Int) {
             val optionImage = itemView.findViewById(R.id.iv_tenant_option) as ImageView
             val optionText = itemView.findViewById(R.id.tv_tenant_option) as CoziiTextView
             val divider = itemView.findViewById(R.id.rv_divider) as View
@@ -43,7 +43,7 @@ class TenantHomeOptionsAdapter(private val tenantOptions: List<TenantHomeOptions
             optionImage.setImageDrawable(tenantOption.optionImage)
             optionText.text = tenantOption.option
 
-            if (position == 2){
+            if (position == 2) {
                 divider.isVisible = false
             }
         }

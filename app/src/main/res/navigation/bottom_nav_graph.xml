@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_profileFragment_to_documentInfoLandingFragment"
             app:destination="@id/documentInfoLandingFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/documentSlectionFragment"
@@ -55,4 +58,9 @@
         android:name="com.cozii.coziiandroid.threestepverification.documentverification.DocumentVerifySuccessFragment"
         android:label="fragment_document_verify_success"
         tools:layout="@layout/fragment_document_verify_success" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.cozii.coziiandroid.threestepverification.editprofile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
 </navigation>

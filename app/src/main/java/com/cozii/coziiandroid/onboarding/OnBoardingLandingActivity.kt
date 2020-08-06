@@ -1,4 +1,4 @@
-package com.cozii.coziiandroid.Home
+package com.cozii.coziiandroid.onboarding
 
 import android.graphics.Color
 import android.os.Build
@@ -15,8 +15,8 @@ class OnBoardingLandingActivity : AppCompatActivity() {
 
     }
 
-    fun updateStatusBarColor(color : String){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+    fun updateStatusBarColor(color: String) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val window = window
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             window.statusBarColor = Color.parseColor(color)

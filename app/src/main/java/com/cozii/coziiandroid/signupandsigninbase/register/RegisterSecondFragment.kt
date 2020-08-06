@@ -33,7 +33,8 @@ class RegisterSecondFragment : Fragment() {
         }
 
         second_register_login_button.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_registerSecondFragment_to_verifyEmailOtpFragment);
+            Navigation.findNavController(it)
+                .navigate(R.id.action_registerSecondFragment_to_verifyEmailOtpFragment);
         }
     }
 

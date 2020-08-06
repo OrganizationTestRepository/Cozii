@@ -26,7 +26,8 @@ class ResetPasswordSuccessFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         sign_in_button.setOnClickListener {
-            it.findNavController().navigate(R.id.action_resetPasswordSuccessFragment_to_loginFragment);
+            it.findNavController()
+                .navigate(R.id.action_resetPasswordSuccessFragment_to_loginFragment);
         }
     }
 }
