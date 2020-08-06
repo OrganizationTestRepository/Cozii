@@ -8,5 +8,13 @@
     <fragment
         android:id="@+id/onBoardUserSelectionFragment"
         android:name="com.cozii.coziiandroid.onboarding.OnBoardUserSelectionFragment"
-        android:label="OnBoardFirstFragment" />
+        android:label="OnBoardFirstFragment" >
+        <action
+            android:id="@+id/action_onBoardUserSelectionFragment_to_onBoardViewPagerFragment"
+            app:destination="@id/onBoardViewPagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardViewPagerFragment"
+        android:name="com.cozii.coziiandroid.onboarding.OnBoardViewPagerFragment"
+        android:label="OnBoardViewPagerFragment" />
 </navigation>
