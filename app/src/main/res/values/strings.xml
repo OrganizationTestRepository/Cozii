@@ -72,12 +72,19 @@
     <string name="on_board_next_button">Next</string>
 
     <!-- Onboarding Fragment -->
-    <string name="onboarding_description_0">As a Tenant,</string>
-    <string name="onboarding_description_1">you can request repairs\nfrom the landlord with cozii.</string>
-    <string name="onboarding_description_3">you can book a handyman\nor service expert with cozii.</string>
-    <string name="onboarding_description_5">you can pay rent and\nutilities with cozii.</string>
-    <string name="onboarding_description_6">We ask every tenant for a\nfew details before enjoy\nthe new lifestyle. </string>
-    <string name="onboarding_description_7">Almost Done.</string>
+    <string-array name="on_boarding_salutation">
+        <item>As a Tenant,</item>
+        <item>As a Tenant,</item>
+        <item>As a Tenant,</item>
+        <item>Almost Done.</item>
+    </string-array>
+
+    <string-array name="on_boarding_titles">
+        <item>you can request repairs\nfrom the landlord with cozii.</item>
+        <item>you can book a handyman\nor service expert with cozii.</item>
+        <item>you can pay rent and\nutilities with cozii.</item>
+        <item>We ask every tenant for a\nfew details before enjoy\nthe new lifestyle. </item>
+    </string-array>
 
     <!-- Document Selection Fragment -->
     <string name="document_selection_title">Choose the type of document\nyou wish to upload.</string>
@@ -116,11 +123,7 @@
     <string name="button_save">Save</string>
     <string name="edit_profile_toolbar_title">Edit Profile</string>
 
-    <string-array name="on_boarding_titles">
-        <item>you can request repairs\nfrom the landlord with cozii.</item>
-        <item>you can book a handyman\nor service expert with cozii.</item>
-        <item>you can pay rent and\nutilities with cozii.</item>
-        <item>We ask every tenant for a\nfew details before enjoy\nthe new lifestyle. </item>
-    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
