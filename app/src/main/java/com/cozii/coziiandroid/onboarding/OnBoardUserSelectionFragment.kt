@@ -1,12 +1,12 @@
 package com.cozii.coziiandroid.onboarding
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.findNavController
 import com.cozii.coziiandroid.R
 import kotlinx.android.synthetic.main.fragment_user_selection.*
 
@@ -28,9 +28,7 @@ class OnBoardUserSelectionFragment : Fragment(),View.OnClickListener {
         (activity as OnBoardingLandingActivity).updateStatusBarColor("#3f2587")
 
         tv_on_board_next.setOnClickListener{
-            val intent = Intent(activity,
-                OnBoardViewPagerActivity::class.java)
-            startActivity(intent)
+            it.findNavController().navigate(R.id.action_onBoardUserSelectionFragment_to_onBoardViewPagerFragment)
         }
 
         tenant_view.setOnClickListener(this)

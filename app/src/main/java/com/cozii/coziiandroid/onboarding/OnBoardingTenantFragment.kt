@@ -33,13 +33,16 @@ class OnBoardingTenantFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        (activity as OnBoardViewPagerActivity).updateStatusBarColor("#3f2587")
+        (activity as OnBoardingLandingActivity).updateStatusBarColor("#3f2587")
         val position = requireArguments().getInt(ARG_POSITION)
+        val onBoardingSalutations =  resources.getStringArray(R.array.on_boarding_salutation)
         val onBoardingTitles =  resources.getStringArray(R.array.on_boarding_titles)
         val onBoardingImages = getOnBoardAssetsLocation()
         with(binding) {
             onBoardFirstLogo.setImageDrawable(onBoardingImages[position])
             welcome.text = onBoardingTitles[position]
+            tvTenantSalutation.text = onBoardingSalutations[position]
+
         }
     }
 
