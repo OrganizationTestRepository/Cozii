@@ -17,21 +17,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48" />
+        app:layout_constraintGuide_percent="0.465" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/fragment_third_guide_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.06" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/fragment_fourth_guide_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.94" />
 
     <View
         android:id="@+id/view"
@@ -123,6 +123,15 @@
         app:layout_constraintStart_toEndOf="@+id/iv_tenant_icon"
         app:layout_constraintTop_toBottomOf="@+id/tv_tenant" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_round_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/iv_tenant_icon"
+        app:layout_constraintEnd_toEndOf="@id/tenant_view"
+        app:layout_constraintTop_toTopOf="@id/iv_tenant_icon" />
+
     <View
         android:id="@+id/landlord_view"
         android:layout_width="0dp"
@@ -166,6 +175,15 @@
         app:font_name="RobotoRegular"
         app:layout_constraintStart_toEndOf="@+id/iv_landlord_icon"
         app:layout_constraintTop_toBottomOf="@+id/tv_landlord" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_round_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/iv_landlord_icon"
+        app:layout_constraintEnd_toEndOf="@id/landlord_view"
+        app:layout_constraintTop_toTopOf="@id/iv_landlord_icon" />
 
     <View
         android:id="@+id/handyman_view"
@@ -211,6 +229,15 @@
         app:layout_constraintStart_toEndOf="@+id/iv_handyman_icon"
         app:layout_constraintTop_toBottomOf="@+id/tv_handyman" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_round_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/iv_handyman_icon"
+        app:layout_constraintEnd_toEndOf="@id/handyman_view"
+        app:layout_constraintTop_toTopOf="@id/iv_handyman_icon" />
+
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_on_board_back"
         android:layout_width="wrap_content"
@@ -218,8 +245,8 @@
         android:text="@string/on_board_back_button"
         android:textColor="@color/on_board_navigation_text_color"
         android:textSize="@dimen/on_boarding_navigation_text_size"
-        app:font_name="RobotoMedium"
         android:visibility="gone"
+        app:font_name="RobotoMedium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/fragment_third_guide_line"
         app:layout_constraintTop_toBottomOf="@id/fragment_first_guide_line" />
@@ -231,8 +258,8 @@
         android:text="@string/on_board_next_button"
         android:textColor="@color/on_board_navigation_text_color"
         android:textSize="@dimen/on_boarding_navigation_text_size"
-        app:font_name="RobotoMedium"
         android:visibility="gone"
+        app:font_name="RobotoMedium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/fragment_fourth_guide_line"
         app:layout_constraintTop_toBottomOf="@id/fragment_first_guide_line" />
