@@ -45,16 +45,21 @@ class ProfileFragment : Fragment(),
 
         rv_three_steps_verification.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = VerificationListAdapter(homeViewModel.setVerificationList(context),this@ProfileFragment)
+            adapter = VerificationListAdapter(
+                homeViewModel.setVerificationList(context),
+                this@ProfileFragment
+            )
         }
     }
 
     override fun onVerificationItemClick(data: ProfileInterface) {
-        if (data is VerificationParams){
-            if (data.verificationName.equals("ID verification",false)){
-                this.findNavController().navigate(R.id.action_profileFragment_to_documentInfoLandingFragment)
-            }else if (data.verificationName.equals("Edit Profile",false)){
-                this.findNavController().navigate(R.id.action_profileFragment_to_editProfileFragment)
+        if (data is VerificationParams) {
+            if (data.verificationName.equals("ID verification", false)) {
+                this.findNavController()
+                    .navigate(R.id.action_profileFragment_to_documentInfoLandingFragment)
+            } else if (data.verificationName.equals("Edit Profile", false)) {
+                this.findNavController()
+                    .navigate(R.id.action_profileFragment_to_editProfileFragment)
             }
         }
     }

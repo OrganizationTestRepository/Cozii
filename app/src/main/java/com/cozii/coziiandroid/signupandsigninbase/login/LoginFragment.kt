@@ -33,7 +33,8 @@ class LoginFragment : Fragment() {
         }
 
         tv_forget_password.setOnClickListener {
-            it.findNavController().navigate(R.id.action_loginFragment_to_resetPasswordFirstFragment);
+            it.findNavController()
+                .navigate(R.id.action_loginFragment_to_resetPasswordFirstFragment);
         }
     }
 }

@@ -29,7 +29,8 @@ class DocumentInfoLandingFragment : Fragment() {
         (activity as CoziiHomeActivity).changeToolbarBackVisibity(true)
 
         verify_now_button.setOnClickListener {
-            it.findNavController().navigate(R.id.action_documentInfoLandingFragment_to_documentSlectionFragment)
+            it.findNavController()
+                .navigate(R.id.action_documentInfoLandingFragment_to_documentSlectionFragment)
         }
     }
 }

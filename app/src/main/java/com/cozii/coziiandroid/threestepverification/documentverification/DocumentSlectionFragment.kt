@@ -38,11 +38,15 @@ class DocumentSlectionFragment : Fragment(), DocumentClickListener {
 
         rv_document_list.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = VerificationDocsListAdapter(homeViewModel.setListOfVerificationDocsNeeded(context),this@DocumentSlectionFragment)
+            adapter = VerificationDocsListAdapter(
+                homeViewModel.setListOfVerificationDocsNeeded(context),
+                this@DocumentSlectionFragment
+            )
         }
     }
 
     override fun onDocumentItemClick(data: VerificationDocs) {
-        this.findNavController().navigate(R.id.action_documentSlectionFragment_to_uploadDocumentFragment);
+        this.findNavController()
+            .navigate(R.id.action_documentSlectionFragment_to_uploadDocumentFragment);
     }
 }

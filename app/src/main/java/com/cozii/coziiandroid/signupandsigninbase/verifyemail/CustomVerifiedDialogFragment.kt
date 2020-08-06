@@ -24,9 +24,11 @@ class CustomVerifiedDialogFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        verified_next_button.setOnClickListener{
-            val intent = Intent(activity,
-                CoziiHomeActivity::class.java)
+        verified_next_button.setOnClickListener {
+            val intent = Intent(
+                activity,
+                CoziiHomeActivity::class.java
+            )
             startActivity(intent)
             activity?.finish()
         }

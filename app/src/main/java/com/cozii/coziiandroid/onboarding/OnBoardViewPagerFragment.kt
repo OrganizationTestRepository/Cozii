@@ -17,7 +17,7 @@ import com.cozii.coziiandroid.signupandsigninbase.SignUpAndSignInBaseActivity
 import kotlinx.android.synthetic.main.fragment_on_board_view_pager.*
 
 
-class OnBoardViewPagerFragment : Fragment(),View.OnClickListener {
+class OnBoardViewPagerFragment : Fragment(), View.OnClickListener {
 
     private lateinit var binding: FragmentOnBoardViewPagerBinding
 
@@ -39,56 +39,90 @@ class OnBoardViewPagerFragment : Fragment(),View.OnClickListener {
         val onBoardingAdapter = OnBoardingAdapter(this, numberOfScreens)
         binding.onBoardingViewPager.adapter = onBoardingAdapter
 
-        setViewPagerDotControls(binding.onBoardingViewPager,onBoardingAdapter)
+        setViewPagerDotControls(binding.onBoardingViewPager, onBoardingAdapter)
 
         tv_on_board_back.setOnClickListener(this)
         tv_on_board_next.setOnClickListener(this)
     }
 
 
-    private fun setViewPagerDotControls(onBoardingViewPager: ViewPager2, onBoardingAdapter: OnBoardingAdapter) {
+    private fun setViewPagerDotControls(
+        onBoardingViewPager: ViewPager2,
+        onBoardingAdapter: OnBoardingAdapter
+    ) {
         val dotsCount = onBoardingAdapter.itemCount
         var circularDots = arrayOfNulls<ImageView>(dotsCount)
 
-        for (i in 0 until dotsCount){
+        for (i in 0 until dotsCount) {
             circularDots[i] = ImageView(context)
-            circularDots[i]?.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.inactive_dot))
-            val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-            params.setMargins(8,0,8,0)
-            binding.sliderDots.addView(circularDots[i],params)
+            circularDots[i]?.setImageDrawable(
+                ContextCompat.getDrawable(
+                    requireContext(),
+                    R.drawable.inactive_dot
+                )
+            )
+            val params = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            )
+            params.setMargins(8, 0, 8, 0)
+            binding.sliderDots.addView(circularDots[i], params)
         }
 
-        circularDots[0]?.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.active_dot))
+        circularDots[0]?.setImageDrawable(
+            ContextCompat.getDrawable(
+                requireContext(),
+                R.drawable.active_dot
+            )
+        )
 
         onBoardingViewPager.registerOnPageChangeCallback(object :
-            ViewPager2.OnPageChangeCallback(){
+            ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                for (i in 0 until dotsCount){
-                    circularDots[i]?.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.inactive_dot))
+                for (i in 0 until dotsCount) {
+                    circularDots[i]?.setImageDrawable(
+                        ContextCompat.getDrawable(
+                            requireContext(),
+                            R.drawable.inactive_dot
+                        )
+                    )
                 }
 
-                circularDots[position]?.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.active_dot))
+                circularDots[position]?.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        requireContext(),
+                        R.drawable.active_dot
+                    )
+                )
 
             }
         })
     }
 
     override fun onClick(v: View?) {
-        when(v?.id){
+        when (v?.id) {
             R.id.tv_on_board_back -> {
-                if (getItemofviewpager(binding.onBoardingViewPager) in 1..3){
-                    binding.onBoardingViewPager.setCurrentItem(getItemofviewpager(binding.onBoardingViewPager) - 1, true)
-                }else if(getItemofviewpager(binding.onBoardingViewPager) == 0){
+                if (getItemofViewpager(binding.onBoardingViewPager) in 1..3) {
+                    binding.onBoardingViewPager.setCurrentItem(
+                        getItemofViewpager(binding.onBoardingViewPager) - 1,
+                        true
+                    )
+                } else if (getItemofViewpager(binding.onBoardingViewPager) == 0) {
                     activity?.finish()
                 }
             }
             R.id.tv_on_board_next -> {
-                if (getItemofviewpager(binding.onBoardingViewPager) in 0..2){
-                    binding.onBoardingViewPager.setCurrentItem(getItemofviewpager(binding.onBoardingViewPager) + 1, true)
-                }else if(getItemofviewpager(binding.onBoardingViewPager) == 3){
-                    val intent = Intent(activity,
-                        SignUpAndSignInBaseActivity::class.java)
+                if (getItemofViewpager(binding.onBoardingViewPager) in 0..2) {
+                    binding.onBoardingViewPager.setCurrentItem(
+                        getItemofViewpager(binding.onBoardingViewPager) + 1,
+                        true
+                    )
+                } else if (getItemofViewpager(binding.onBoardingViewPager) == 3) {
+                    val intent = Intent(
+                        activity,
+                        SignUpAndSignInBaseActivity::class.java
+                    )
                     startActivity(intent)
                     activity?.finish()
                 }
@@ -96,7 +130,7 @@ class OnBoardViewPagerFragment : Fragment(),View.OnClickListener {
         }
     }
 
-    private fun getItemofviewpager(onBoardingViewPager: ViewPager2): Int {
+    private fun getItemofViewpager(onBoardingViewPager: ViewPager2): Int {
         return onBoardingViewPager.currentItem
     }
 }

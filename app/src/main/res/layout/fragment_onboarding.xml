@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/fragment_fourth_guide_line"
+        android:id="@+id/fragment_first_guide_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/fragment_fifth_guide_line"
+        android:id="@+id/fragment_second_guide_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -25,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/on_boarding_logo_top_margin"
         android:src="@drawable/cozii_proptech_logo"
-        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -34,8 +33,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/on_boarding_logo_top_margin"
         android:src="@drawable/first_on_board_tenant_logo"
-        app:layout_constraintEnd_toEndOf="@id/fragment_fifth_guide_line"
-        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
         app:layout_constraintTop_toBottomOf="@id/cozii_logo" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
@@ -46,7 +45,7 @@
         android:textColor="@color/color_onboarding_orange"
         android:textSize="@dimen/on_board_text_size_tenant"
         app:font_name="RobotoRegular"
-        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
         app:layout_constraintTop_toBottomOf="@+id/on_board_first_logo" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
@@ -56,7 +55,7 @@
         android:textColor="@android:color/white"
         android:textSize="@dimen/on_board_text_size_tenant"
         app:font_name="RobotoRegular"
-        app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
         app:layout_constraintTop_toBottomOf="@+id/tv_tenant_salutation" />
 
 

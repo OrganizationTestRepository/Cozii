@@ -16,19 +16,19 @@ class CoziiHomeActivity : AppCompatActivity() {
         setUpView()
     }
 
-    private fun setUpView(){
+    private fun setUpView() {
         val navFragment = findNavController(R.id.home_nav_fragment)
         home_bottom_navigation_view.setupWithNavController(navFragment)
     }
 
-    fun updateToolbarTitle(title : String){
+    fun updateToolbarTitle(title: String) {
         toolbar_title.text = title
     }
 
-    fun changeToolbarBackVisibity(value : Boolean){
-        if (value){
+    fun changeToolbarBackVisibity(value: Boolean) {
+        if (value) {
             iv_home_back_button.visibility = View.VISIBLE
-        }else {
+        } else {
             iv_home_back_button.visibility = View.GONE
         }
     }

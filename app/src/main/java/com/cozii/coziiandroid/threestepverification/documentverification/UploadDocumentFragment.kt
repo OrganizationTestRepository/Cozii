@@ -28,7 +28,8 @@ class UploadDocumentFragment : Fragment() {
         (activity as CoziiHomeActivity).changeToolbarBackVisibity(true)
 
         submit_button.setOnClickListener {
-            it.findNavController().navigate(R.id.action_uploadDocumentFragment_to_documentVerifySuccessFragment)
+            it.findNavController()
+                .navigate(R.id.action_uploadDocumentFragment_to_documentVerifySuccessFragment)
         }
     }
 }
