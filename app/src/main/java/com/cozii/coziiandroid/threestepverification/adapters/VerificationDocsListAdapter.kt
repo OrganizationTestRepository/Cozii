@@ -50,6 +50,7 @@ class VerificationDocsListAdapter(
             documentName.text = verificationDoc.verificationDocName
 
             itemView.setOnClickListener {
+                itemView.setBackgroundResource(R.drawable.rectangular_outline_coloured)
                 documentClickListener.onDocumentItemClick(verificationDoc)
             }
         }

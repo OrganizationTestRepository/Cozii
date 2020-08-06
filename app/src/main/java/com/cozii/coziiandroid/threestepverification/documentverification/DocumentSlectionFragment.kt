@@ -1,6 +1,7 @@
 package com.cozii.coziiandroid.threestepverification.documentverification
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -46,7 +47,10 @@ class DocumentSlectionFragment : Fragment(), DocumentClickListener {
     }
 
     override fun onDocumentItemClick(data: VerificationDocs) {
-        this.findNavController()
-            .navigate(R.id.action_documentSlectionFragment_to_uploadDocumentFragment);
+        val handler = Handler()
+        handler.postDelayed({
+            this.findNavController()
+                .navigate(R.id.action_documentSlectionFragment_to_uploadDocumentFragment)
+        }, 400)
     }
 }
