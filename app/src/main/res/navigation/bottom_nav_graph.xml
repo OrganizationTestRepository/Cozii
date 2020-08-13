@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.cozii.coziiandroid.home.tenant.TenantHomeFragment"
+        android:name="com.cozii.coziiandroid.home.HomeFragment"
         android:label="fragment_tenant_home"
         tools:layout="@layout/fragment_tenant_home" >
         <action
