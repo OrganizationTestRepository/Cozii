@@ -11,15 +11,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.cozii.coziiandroid.R
 import com.cozii.coziiandroid.home.CoziiHomeActivity
-import com.cozii.coziiandroid.home.viewmodel.HomeSharedViewModel
+import com.cozii.coziiandroid.home.viewmodel.HomeViewModel
 import com.cozii.coziiandroid.profile.models.ProfileInterface
 import com.cozii.coziiandroid.profile.models.VerificationParams
+import com.cozii.coziiandroid.profile.viewmodel.ProfileViewModel
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 class ProfileFragment : Fragment(),
     VerificationClickListener {
 
-    private val homeViewModel: HomeSharedViewModel by activityViewModels()
+    private val profileViewModel: ProfileViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +47,7 @@ class ProfileFragment : Fragment(),
         rv_three_steps_verification.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = VerificationListAdapter(
-                homeViewModel.setVerificationList(context),
+                profileViewModel.setVerificationList(context),
                 this@ProfileFragment
             )
         }

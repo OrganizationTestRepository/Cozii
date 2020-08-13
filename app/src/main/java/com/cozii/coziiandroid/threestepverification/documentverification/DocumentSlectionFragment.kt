@@ -12,7 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.cozii.coziiandroid.R
 import com.cozii.coziiandroid.home.CoziiHomeActivity
-import com.cozii.coziiandroid.home.viewmodel.HomeSharedViewModel
+import com.cozii.coziiandroid.home.viewmodel.HomeViewModel
+import com.cozii.coziiandroid.profile.viewmodel.ProfileViewModel
 import com.cozii.coziiandroid.threestepverification.adapters.DocumentClickListener
 import com.cozii.coziiandroid.threestepverification.adapters.VerificationDocsListAdapter
 import com.cozii.coziiandroid.threestepverification.models.VerificationDocs
@@ -20,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_document_slection.*
 
 class DocumentSlectionFragment : Fragment(), DocumentClickListener {
 
-    private val homeViewModel: HomeSharedViewModel by activityViewModels()
+    private val profileViewModel: ProfileViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +41,7 @@ class DocumentSlectionFragment : Fragment(), DocumentClickListener {
         rv_document_list.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = VerificationDocsListAdapter(
-                homeViewModel.setListOfVerificationDocsNeeded(context),
+                profileViewModel.setListOfVerificationDocsNeeded(context),
                 this@DocumentSlectionFragment
             )
         }
