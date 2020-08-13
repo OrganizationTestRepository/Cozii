@@ -4,11 +4,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.cozii.coziiandroid.R
 import com.cozii.coziiandroid.coziicustomviews.CoziiTextView
-import com.cozii.coziiandroid.home.tenant.models.TenantHomeOptions
 import com.cozii.coziiandroid.threestepverification.models.VerificationDocs
 
 class VerificationDocsListAdapter(
