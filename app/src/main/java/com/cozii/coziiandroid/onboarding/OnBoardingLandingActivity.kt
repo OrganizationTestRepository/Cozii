@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import com.cozii.coziiandroid.R
+import com.cozii.coziiandroid.util.stringPreference
 
 class OnBoardingLandingActivity : AppCompatActivity() {
 
