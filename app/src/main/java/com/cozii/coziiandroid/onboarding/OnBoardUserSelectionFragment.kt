@@ -5,13 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.cozii.coziiandroid.R
+import com.cozii.coziiandroid.onboarding.viewmodel.OnBoardingSharedViewModel
+import com.cozii.coziiandroid.util.stringPreference
 import kotlinx.android.synthetic.main.fragment_user_selection.*
 
 
 class OnBoardUserSelectionFragment : Fragment(), View.OnClickListener {
+
+    private val onBoardingViewModel: OnBoardingSharedViewModel by activityViewModels()
 
 
     override fun onCreateView(
@@ -35,6 +41,7 @@ class OnBoardUserSelectionFragment : Fragment(), View.OnClickListener {
         tenant_view.setOnClickListener(this)
         landlord_view.setOnClickListener(this)
         handyman_view.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View?) {
@@ -54,6 +61,7 @@ class OnBoardUserSelectionFragment : Fragment(), View.OnClickListener {
                 )
                 tv_on_board_back.visibility = View.VISIBLE
                 tv_on_board_next.visibility = View.VISIBLE
+                onBoardingViewModel.getSelectedUserType(requireContext(),"Tenant")
             }
             R.id.landlord_view -> {
                 landlord_view.background = ContextCompat.getDrawable(
@@ -70,6 +78,7 @@ class OnBoardUserSelectionFragment : Fragment(), View.OnClickListener {
                 )
                 tv_on_board_back.visibility = View.VISIBLE
                 tv_on_board_next.visibility = View.VISIBLE
+                onBoardingViewModel.getSelectedUserType(requireContext(),"Landlord")
             }
             R.id.handyman_view -> {
                 handyman_view.background = ContextCompat.getDrawable(
@@ -86,6 +95,7 @@ class OnBoardUserSelectionFragment : Fragment(), View.OnClickListener {
                 )
                 tv_on_board_back.visibility = View.VISIBLE
                 tv_on_board_next.visibility = View.VISIBLE
+                onBoardingViewModel.getSelectedUserType(requireContext(),"Handyman")
             }
             else -> {
                 tv_on_board_back.visibility = View.GONE
