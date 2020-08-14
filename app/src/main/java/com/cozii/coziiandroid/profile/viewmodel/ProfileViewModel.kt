@@ -1,14 +1,17 @@
 package com.cozii.coziiandroid.profile.viewmodel
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModel
 import com.cozii.coziiandroid.R
+import com.cozii.coziiandroid.onboarding.viewmodel.OnBoardingSharedViewModel
 import com.cozii.coziiandroid.profile.models.AddlandlordParams
 import com.cozii.coziiandroid.profile.models.ProfileInterface
 import com.cozii.coziiandroid.profile.models.ProfileOptions
 import com.cozii.coziiandroid.profile.models.VerificationParams
 import com.cozii.coziiandroid.threestepverification.models.VerificationDocs
+import com.cozii.coziiandroid.util.stringPreference
 
 class ProfileViewModel : ViewModel() {
 

@@ -36,4 +36,11 @@
         <item name="colorControlHighlight">@color/colorPrimary</item>
     </style>
 
+    <style name="AddCardEditTextAppearance" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal">#b3979797</item>
+        <item name="android:paddingBottom">25dp</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
 </resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="paymentOptions"
+            type="com.cozii.coziiandroid.payment.models.PaymentMethods" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/verification_name_left_margin"
+        android:background="@android:color/white">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fragment_first_guide_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fragment_second_guide_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.94" />
+
+        <ImageView
+            android:id="@+id/iv_added_payment_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/verification_start_margin"
+            android:src="@drawable/ic_added_card"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+            android:id="@+id/tv_added_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/verification_name_left_margin"
+            android:text="**** 0957"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/profile_type_text_size"
+            app:font_name="RobotoRegular"
+            app:layout_constraintStart_toEndOf="@id/iv_added_payment_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_added_payment_icon"
+            app:layout_constraintBottom_toBottomOf="@id/iv_added_payment_icon" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/verification_start_margin"
+            android:src="@drawable/ic_grey_right_arrow"
+            app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#b3979797"
+            app:layout_constraintTop_toBottomOf="@id/iv_added_payment_icon"
+            app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+            app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

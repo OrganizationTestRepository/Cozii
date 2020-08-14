@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/verification_name_left_margin"
-    android:layout_marginBottom="@dimen/verification_name_left_margin"
     android:paddingTop="@dimen/verification_name_left_margin"
     android:paddingBottom="@dimen/verification_name_left_margin"
+    android:layout_marginTop="@dimen/verification_name_left_margin"
+    android:layout_marginBottom="@dimen/verification_name_left_margin"
     android:background="@android:color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 

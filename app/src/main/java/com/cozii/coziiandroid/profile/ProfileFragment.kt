@@ -11,16 +11,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.cozii.coziiandroid.R
 import com.cozii.coziiandroid.home.CoziiHomeActivity
-import com.cozii.coziiandroid.home.viewmodel.HomeViewModel
+import com.cozii.coziiandroid.onboarding.viewmodel.OnBoardingSharedViewModel
 import com.cozii.coziiandroid.profile.models.ProfileInterface
 import com.cozii.coziiandroid.profile.models.VerificationParams
 import com.cozii.coziiandroid.profile.viewmodel.ProfileViewModel
+import com.cozii.coziiandroid.util.stringPreference
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 class ProfileFragment : Fragment(),
     VerificationClickListener {
 
     private val profileViewModel: ProfileViewModel by activityViewModels()
+
+    private var typeOfUser = stringPreference(OnBoardingSharedViewModel.USER_TYPE, "cozii_android")
+    private  var userType : String? = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +43,15 @@ class ProfileFragment : Fragment(),
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        userType = typeOfUser.getValue(requireContext(), ::typeOfUser)
+        if (userType == "Tenant"){
+            tv_profile_type.text = "Tenant"
+            tv_profile_type.background = resources.getDrawable(R.drawable.background_tenant_profile_type)
+        }else {
+            tv_profile_type.text = "Landlord"
+            tv_profile_type.background = resources.getDrawable(R.drawable.background_landlord_profile_type)
+        }
 
         (activity as CoziiHomeActivity).updateToolbarTitle(getString(R.string.profile_title))
 
@@ -61,6 +74,9 @@ class ProfileFragment : Fragment(),
             } else if (data.verificationName.equals("Edit Profile", false)) {
                 this.findNavController()
                     .navigate(R.id.action_profileFragment_to_editProfileFragment)
+            } else if (data.verificationName.equals("Payment method", false)) {
+                this.findNavController()
+                    .navigate(R.id.action_profileFragment_to_paymentFragment)
             }
         }
     }

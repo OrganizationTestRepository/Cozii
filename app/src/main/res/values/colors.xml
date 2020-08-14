@@ -56,4 +56,10 @@
     <!-- Edit Profile Fragment -->
     <color name="profile_param_text_color">#3f2587</color>
 
+    <!-- Payment Selection Fragment -->
+    <color name="payment_selection_bg_color">#eceff5</color>
+    <color name="add_card_text_color">#3f2587</color>
+    <color name="add_bank_info_desc_text_color">#373d3f</color>
+    <color name="payment_default_divider_color">#eceff5</color>
+
 </resources>
