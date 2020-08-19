@@ -15,7 +15,7 @@ import com.cozii.coziiandroid.util.stringPreference
 
 class ProfileViewModel : ViewModel() {
 
-    fun setVerificationList(context: Context): List<ProfileInterface> {
+    private fun setVerificationList(context: Context): List<ProfileInterface> {
         return listOf(
             VerificationParams(
                 ContextCompat.getDrawable(context, R.drawable.ic_id_verification),
@@ -29,7 +29,9 @@ class ProfileViewModel : ViewModel() {
                 ContextCompat.getDrawable(context, R.drawable.ic_payment_method),
                 "Payment method"
             ),
-            AddlandlordParams("Add Landlord"),
+            AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_disabled_add_landlord),"Add Landlord"),
+            AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_home),"My properties"),
+            AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_disabled_add_landlord),"Tenants"),
             ProfileOptions(
                 ContextCompat.getDrawable(context, R.drawable.ic_disabled_invite_icon),
                 "Invite friends"
@@ -53,6 +55,18 @@ class ProfileViewModel : ViewModel() {
                 "Sign out"
             )
         )
+    }
+
+    fun filterProfileOptions(context: Context, userType: String?): MutableList<ProfileInterface> {
+        val profileOptions = setVerificationList(context)
+        val finalProfileOptions = profileOptions.toMutableList()
+        if (userType == "Tenant") {
+            finalProfileOptions.removeAt(4)
+            finalProfileOptions.removeAt(4)
+        } else if (userType == "Landlord") {
+            finalProfileOptions.removeAt(3)
+        }
+        return finalProfileOptions
     }
 
     fun checkVerificationStatus(): Boolean {

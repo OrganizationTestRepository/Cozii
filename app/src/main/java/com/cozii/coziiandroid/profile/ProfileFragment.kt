@@ -60,7 +60,7 @@ class ProfileFragment : Fragment(),
         rv_three_steps_verification.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = VerificationListAdapter(
-                profileViewModel.setVerificationList(context),
+                profileViewModel.filterProfileOptions(context,userType),
                 this@ProfileFragment
             )
         }
