@@ -143,6 +143,12 @@
     <string name="empty_password">Password cannot be empty!</string>
     <string name="invalid_password">Password is too short!</string>
 
+    <string name="empty_first_name">First Name cannot be empty!</string>
+    <string name="invalid_first_name">First Name is too short!</string>
+    <string name="empty_last_name">Last Name cannot be empty!</string>
+    <string name="invalid_last_name">Last Name is too short!</string>
+    <string name="non_matching_passwords">Passwords doesn\'t match</string>
+
     <!-- Payment-->
     <string name="card_number">Card number</string>
     <string name="card_number_hint">0000 0000 0000 0000</string>
