@@ -6,18 +6,5 @@ import com.cozii.coziiandroid.signupandsigninbase.login.models.LoginFields
 import com.cozii.coziiandroid.signupandsigninbase.login.models.LoginForm
 
 class SignUpAndSignInSharedViewModel : ViewModel() {
-    private var loginForm = LoginForm()
 
-
-    fun getLogin(): LoginForm{
-        return loginForm
-    }
-
-    fun onLoginButtonClick() {
-        loginForm.onClick()
-    }
-
-    fun getLoginFields(): MutableLiveData<LoginFields>{
-        return loginForm.getLoginFields()
-    }
 }
