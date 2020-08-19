@@ -51,7 +51,8 @@
         android:layout_marginTop="@dimen/on_boarding_logo_top_margin"
         android:src="@drawable/cozii_proptech_logo"
         app:layout_constraintStart_toStartOf="@id/fragment_third_guide_line"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_landing_title"
@@ -97,7 +98,8 @@
         android:src="@drawable/ic_tenant_icon"
         app:layout_constraintBottom_toBottomOf="@id/tenant_view"
         app:layout_constraintStart_toStartOf="@id/tenant_view"
-        app:layout_constraintTop_toTopOf="@id/tenant_view" />
+        app:layout_constraintTop_toTopOf="@id/tenant_view"
+        android:contentDescription="TODO" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_tenant"
@@ -130,7 +132,8 @@
         android:src="@drawable/ic_round_arrow"
         app:layout_constraintBottom_toBottomOf="@id/iv_tenant_icon"
         app:layout_constraintEnd_toEndOf="@id/tenant_view"
-        app:layout_constraintTop_toTopOf="@id/iv_tenant_icon" />
+        app:layout_constraintTop_toTopOf="@id/iv_tenant_icon"
+        android:contentDescription="TODO" />
 
     <View
         android:id="@+id/landlord_view"
@@ -150,7 +153,8 @@
         android:src="@drawable/ic_landlord_icon"
         app:layout_constraintBottom_toBottomOf="@id/landlord_view"
         app:layout_constraintStart_toStartOf="@id/landlord_view"
-        app:layout_constraintTop_toTopOf="@id/landlord_view" />
+        app:layout_constraintTop_toTopOf="@id/landlord_view"
+        android:contentDescription="TODO" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_landlord"
@@ -183,7 +187,8 @@
         android:src="@drawable/ic_round_arrow"
         app:layout_constraintBottom_toBottomOf="@id/iv_landlord_icon"
         app:layout_constraintEnd_toEndOf="@id/landlord_view"
-        app:layout_constraintTop_toTopOf="@id/iv_landlord_icon" />
+        app:layout_constraintTop_toTopOf="@id/iv_landlord_icon"
+        android:contentDescription="TODO" />
 
     <View
         android:id="@+id/handyman_view"
@@ -203,7 +208,8 @@
         android:src="@drawable/ic_handyman_icon"
         app:layout_constraintBottom_toBottomOf="@id/handyman_view"
         app:layout_constraintStart_toStartOf="@id/handyman_view"
-        app:layout_constraintTop_toTopOf="@id/handyman_view" />
+        app:layout_constraintTop_toTopOf="@id/handyman_view"
+        android:contentDescription="TODO" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_handyman"
@@ -236,7 +242,8 @@
         android:src="@drawable/ic_round_arrow"
         app:layout_constraintBottom_toBottomOf="@id/iv_handyman_icon"
         app:layout_constraintEnd_toEndOf="@id/handyman_view"
-        app:layout_constraintTop_toTopOf="@id/iv_handyman_icon" />
+        app:layout_constraintTop_toTopOf="@id/iv_handyman_icon"
+        android:contentDescription="TODO" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_on_board_back"

@@ -57,7 +57,8 @@
                 android:id="@+id/profile_icon"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_circular_default" />
+                android:src="@drawable/ic_circular_default"
+                android:contentDescription="TODO" />
 
         </androidx.cardview.widget.CardView>
 

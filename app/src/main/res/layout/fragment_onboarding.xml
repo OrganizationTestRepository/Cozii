@@ -25,7 +25,8 @@
         android:layout_marginTop="@dimen/on_boarding_logo_top_margin"
         android:src="@drawable/cozii_proptech_logo"
         app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/on_board_first_logo"
@@ -35,7 +36,8 @@
         android:src="@drawable/first_on_board_tenant_logo"
         app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
         app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toBottomOf="@id/cozii_logo" />
+        app:layout_constraintTop_toBottomOf="@id/cozii_logo"
+        android:contentDescription="TODO" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_tenant_salutation"
