@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -52,8 +53,12 @@ class RegisterSecondFragment : Fragment() {
 
     private fun goToOtpVerificationFragment(registerSecondFragment: RegisterSecondFragment) {
         registerViewModel.getSecondRegisterFields().observe(viewLifecycleOwner, Observer<RegisterSecondFields> {
-            registerSecondFragment.findNavController()
-                .navigate(R.id.action_registerSecondFragment_to_verifyEmailOtpFragment)
+            if (binding.termsCheckBox.isChecked){
+                registerSecondFragment.findNavController()
+                    .navigate(R.id.action_registerSecondFragment_to_verifyEmailOtpFragment)
+            }else {
+                Toast.makeText(activity,"Please accept terms & conditions!",Toast.LENGTH_SHORT).show()
+            }
         })
     }
 

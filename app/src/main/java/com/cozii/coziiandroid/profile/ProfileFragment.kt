@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -47,10 +48,10 @@ class ProfileFragment : Fragment(),
         userType = typeOfUser.getValue(requireContext(), ::typeOfUser)
         if (userType == "Tenant"){
             tv_profile_type.text = "Tenant"
-            tv_profile_type.background = resources.getDrawable(R.drawable.background_tenant_profile_type)
+            tv_profile_type.background = ContextCompat.getDrawable(requireContext(),R.drawable.background_tenant_profile_type)
         }else {
             tv_profile_type.text = "Landlord"
-            tv_profile_type.background = resources.getDrawable(R.drawable.background_landlord_profile_type)
+            tv_profile_type.background = ContextCompat.getDrawable(requireContext(),R.drawable.background_landlord_profile_type)
         }
 
         (activity as CoziiHomeActivity).updateToolbarTitle(getString(R.string.profile_title))

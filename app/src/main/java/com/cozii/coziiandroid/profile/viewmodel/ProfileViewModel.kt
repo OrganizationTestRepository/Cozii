@@ -30,7 +30,7 @@ class ProfileViewModel : ViewModel() {
                 "Payment method"
             ),
             AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_disabled_add_landlord),"Add Landlord"),
-            AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_home),"My properties"),
+            AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_profile_disabled_home),"My properties"),
             AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_disabled_add_landlord),"Tenants"),
             ProfileOptions(
                 ContextCompat.getDrawable(context, R.drawable.ic_disabled_invite_icon),

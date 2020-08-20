@@ -148,6 +148,16 @@
     <string name="empty_last_name">Last Name cannot be empty!</string>
     <string name="invalid_last_name">Last Name is too short!</string>
     <string name="non_matching_passwords">Passwords doesn\'t match</string>
+    <string name="empty_phone">Phone Number cannot be empty!</string>
+    <string name="invalid_phone">Phone Number is too short!</string>
+    <string name="empty_street">Street Name cannot be empty!</string>
+    <string name="invalid_street">Street Name is too short!</string>
+    <string name="empty_city">City Name cannot be empty!</string>
+    <string name="invalid_city">City Name is too short!</string>
+    <string name="empty_province">Province Name cannot be empty!</string>
+    <string name="invalid_province">Province Name is too short!</string>
+    <string name="empty_postal_code">Postal Code cannot be empty!</string>
+    <string name="invalid_postal_code">Postal Code is too short!</string>
 
     <!-- Payment-->
     <string name="card_number">Card number</string>

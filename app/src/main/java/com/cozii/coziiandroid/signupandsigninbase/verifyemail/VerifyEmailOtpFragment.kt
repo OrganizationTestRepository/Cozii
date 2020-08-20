@@ -28,7 +28,7 @@ class VerifyEmailOtpFragment : Fragment() {
         confirm_otp_button.setOnClickListener {
             val handler = Handler()
             handler.postDelayed({
-                layout_verification_parent.setBackgroundColor(Color.parseColor("#d83f2587"))
+                layout_verification_parent.setBackgroundColor(Color.parseColor("#7f7f7f"))
             }, 100)
             it.findNavController()
                 .navigate(R.id.action_verifyEmailOtpFragment_to_customVerifiedDialogFragment2)

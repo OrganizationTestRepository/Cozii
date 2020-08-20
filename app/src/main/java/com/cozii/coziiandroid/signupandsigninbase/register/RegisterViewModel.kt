@@ -7,6 +7,9 @@ import com.cozii.coziiandroid.signupandsigninbase.register.models.RegisterForm
 import com.cozii.coziiandroid.signupandsigninbase.register.models.RegisterSecondFields
 
 class RegisterViewModel : ViewModel() {
+
+    val page = "register"
+
     private var registerForm = RegisterForm()
 
 

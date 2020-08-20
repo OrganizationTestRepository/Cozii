@@ -7,6 +7,8 @@ import com.cozii.coziiandroid.signupandsigninbase.login.models.LoginForm
 
 class LoginViewModel : ViewModel() {
 
+    val page = "login"
+
     private var loginForm = LoginForm()
 
 
