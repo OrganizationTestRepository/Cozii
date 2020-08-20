@@ -8,6 +8,7 @@
         <variable
             name="registerSecondViewModel"
             type="com.cozii.coziiandroid.signupandsigninbase.register.RegisterViewModel" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -143,6 +144,7 @@
             android:drawableRight="@drawable/ic_invisible"
             android:hint="@string/register_password_hint"
             android:inputType="textPassword"
+            android:tag="1"
             android:text="@={registerSecondViewModel.registerForm.secondRegisterFields.password}"
             android:textColor="@android:color/black"
             android:textSize="@dimen/login_edit_text_text_size"
@@ -150,7 +152,9 @@
             app:font_name="RobotoRegular"
             app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
             app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-            app:layout_constraintTop_toBottomOf="@id/et_register_email" />
+            app:layout_constraintTop_toBottomOf="@id/et_register_email"
+            app:showPassword="@{true}"
+            app:typeOfPage="@{registerSecondViewModel.page}" />
 
         <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
             android:id="@+id/et_register_re_enter_password"
@@ -162,6 +166,7 @@
             android:drawableRight="@drawable/ic_invisible"
             android:hint="@string/register_reenter_password_hint"
             android:inputType="textPassword"
+            android:tag="1"
             android:text="@={registerSecondViewModel.registerForm.secondRegisterFields.confirm_password}"
             android:textColor="@android:color/black"
             android:textSize="@dimen/login_edit_text_text_size"
@@ -169,7 +174,9 @@
             app:font_name="RobotoRegular"
             app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
             app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-            app:layout_constraintTop_toBottomOf="@id/et_register_password" />
+            app:layout_constraintTop_toBottomOf="@id/et_register_password"
+            app:showPassword="@{true}"
+            app:typeOfPage="@{registerSecondViewModel.page}" />
 
         <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
             android:id="@+id/tv_step_info"
@@ -183,6 +190,7 @@
             app:layout_constraintTop_toBottomOf="@+id/et_register_re_enter_password" />
 
         <CheckBox
+            android:id="@+id/termsCheckBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/reset_second_title_top_margin"
