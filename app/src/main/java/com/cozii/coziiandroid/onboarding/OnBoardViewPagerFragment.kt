@@ -35,7 +35,7 @@ class OnBoardViewPagerFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         (activity as OnBoardingLandingActivity).updateStatusBarColor("#3f2587")
 
-        val numberOfScreens = resources.getStringArray(R.array.on_boarding_titles).size
+        val numberOfScreens = resources.getStringArray(R.array.on_boarding_tenant_titles).size
         val onBoardingAdapter = OnBoardingAdapter(this, numberOfScreens)
         binding.onBoardingViewPager.adapter = onBoardingAdapter
 

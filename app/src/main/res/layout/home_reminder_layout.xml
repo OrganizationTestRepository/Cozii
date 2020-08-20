@@ -71,7 +71,8 @@
             app:layout_constraintBottom_toBottomOf="@id/reminder_first_view"
             app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
             app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-            app:layout_constraintTop_toTopOf="@+id/reminder_first_view" />
+            app:layout_constraintTop_toTopOf="@+id/reminder_first_view"
+            android:contentDescription="TODO" />
 
         <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
             android:id="@+id/tv_reminder_text"

@@ -1,18 +1,21 @@
 package com.cozii.coziiandroid.profile.viewmodel
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModel
 import com.cozii.coziiandroid.R
+import com.cozii.coziiandroid.onboarding.viewmodel.OnBoardingSharedViewModel
 import com.cozii.coziiandroid.profile.models.AddlandlordParams
 import com.cozii.coziiandroid.profile.models.ProfileInterface
 import com.cozii.coziiandroid.profile.models.ProfileOptions
 import com.cozii.coziiandroid.profile.models.VerificationParams
 import com.cozii.coziiandroid.threestepverification.models.VerificationDocs
+import com.cozii.coziiandroid.util.stringPreference
 
 class ProfileViewModel : ViewModel() {
 
-    fun setVerificationList(context: Context): List<ProfileInterface> {
+    private fun setVerificationList(context: Context): List<ProfileInterface> {
         return listOf(
             VerificationParams(
                 ContextCompat.getDrawable(context, R.drawable.ic_id_verification),
@@ -26,7 +29,9 @@ class ProfileViewModel : ViewModel() {
                 ContextCompat.getDrawable(context, R.drawable.ic_payment_method),
                 "Payment method"
             ),
-            AddlandlordParams("Add Landlord"),
+            AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_disabled_add_landlord),"Add Landlord"),
+            AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_profile_disabled_home),"My properties"),
+            AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_disabled_add_landlord),"Tenants"),
             ProfileOptions(
                 ContextCompat.getDrawable(context, R.drawable.ic_disabled_invite_icon),
                 "Invite friends"
@@ -50,6 +55,18 @@ class ProfileViewModel : ViewModel() {
                 "Sign out"
             )
         )
+    }
+
+    fun filterProfileOptions(context: Context, userType: String?): MutableList<ProfileInterface> {
+        val profileOptions = setVerificationList(context)
+        val finalProfileOptions = profileOptions.toMutableList()
+        if (userType == "Tenant") {
+            finalProfileOptions.removeAt(4)
+            finalProfileOptions.removeAt(4)
+        } else if (userType == "Landlord") {
+            finalProfileOptions.removeAt(3)
+        }
+        return finalProfileOptions
     }
 
     fun checkVerificationStatus(): Boolean {

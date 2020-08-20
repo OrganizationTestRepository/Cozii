@@ -126,13 +126,32 @@ class VerificationListAdapter(
         ProfileBaseViewHolder<AddlandlordParams>(itemView) {
 
         private val landlordTitle = itemView.findViewById(R.id.tv_add_landlord) as CoziiTextView
+        private val landlordOrTenantOptionImage = itemView.findViewById(R.id.iv_add_landlord_icon) as ImageView
+        private val editIcon = itemView.findViewById(R.id.iv_edt_icon) as ImageView
+        private val tenantAndPropertNumber = itemView.findViewById(R.id.tv_property_tenant_number) as CoziiTextView
+        private val divider = itemView.findViewById(R.id.rv_verification_divider) as View
+        private val topView = itemView.findViewById(R.id.top_view) as View
+        private val bottomView = itemView.findViewById(R.id.bottom_view) as View
 
         override fun bind(
             item: AddlandlordParams,
             position: Int,
             verificationClickListener: VerificationClickListener
         ) {
+
+            if (item.title == "Add Landlord"){
+                divider.visibility = View.INVISIBLE
+                tenantAndPropertNumber.visibility = View.GONE
+            }else if (item.title == "My properties"){
+                bottomView.visibility = View.GONE
+                editIcon.visibility = View.GONE
+            }else if (item.title == "Tenants"){
+                topView.visibility = View.GONE
+                editIcon.visibility = View.GONE
+            }
+
             landlordTitle.text = item.title
+            landlordOrTenantOptionImage.setImageDrawable(item.landlordOrTenantOptionIcon)
         }
 
     }

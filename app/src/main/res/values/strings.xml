@@ -72,18 +72,32 @@
     <string name="on_board_next_button">Next</string>
 
     <!-- Onboarding Fragment -->
-    <string-array name="on_boarding_salutation">
+    <string-array name="on_boarding_tenant_salutation">
         <item>As a Tenant,</item>
         <item>As a Tenant,</item>
         <item>As a Tenant,</item>
         <item>Almost Done.</item>
     </string-array>
 
-    <string-array name="on_boarding_titles">
+    <string-array name="on_boarding_landlord_salutation">
+        <item>As a Landlord,</item>
+        <item>As a Landlord,</item>
+        <item>As a Landlord,</item>
+        <item>Almost Done.</item>
+    </string-array>
+
+    <string-array name="on_boarding_tenant_titles">
         <item>you can request repairs\nfrom the landlord with cozii.</item>
         <item>you can book a handyman\nor service expert with cozii.</item>
         <item>you can pay rent and\nutilities with cozii.</item>
         <item>We ask every tenant for a\nfew details before enjoy\nthe new lifestyle. </item>
+    </string-array>
+
+    <string-array name="on_boarding_landlord_titles">
+        <item>you can receive and\nschedule maintenance\nrequest from tenants with\ncozii.</item>
+        <item>you can book a handyman\nand monitor repairs on the\ngo with cozii.</item>
+        <item>you can collect you rent\npayment with cozii even\nmore easier.</item>
+        <item>We ask every landlord for\na few details before enjoy\nthe new lifestyle.</item>
     </string-array>
 
     <!-- Document Selection Fragment -->
@@ -128,5 +142,56 @@
     <string name="empty_email">Email Id cannot be empty!</string>
     <string name="empty_password">Password cannot be empty!</string>
     <string name="invalid_password">Password is too short!</string>
+
+    <string name="empty_first_name">First Name cannot be empty!</string>
+    <string name="invalid_first_name">First Name is too short!</string>
+    <string name="empty_last_name">Last Name cannot be empty!</string>
+    <string name="invalid_last_name">Last Name is too short!</string>
+    <string name="non_matching_passwords">Passwords doesn\'t match</string>
+    <string name="empty_phone">Phone Number cannot be empty!</string>
+    <string name="invalid_phone">Phone Number is too short!</string>
+    <string name="empty_street">Street Name cannot be empty!</string>
+    <string name="invalid_street">Street Name is too short!</string>
+    <string name="empty_city">City Name cannot be empty!</string>
+    <string name="invalid_city">City Name is too short!</string>
+    <string name="empty_province">Province Name cannot be empty!</string>
+    <string name="invalid_province">Province Name is too short!</string>
+    <string name="empty_postal_code">Postal Code cannot be empty!</string>
+    <string name="invalid_postal_code">Postal Code is too short!</string>
+
+    <!-- Payment-->
+    <string name="card_number">Card number</string>
+    <string name="card_number_hint">0000 0000 0000 0000</string>
+    <string name="card_holder_name">Card Holder name</string>
+    <string name="card_holder_name_hint">Enter your name</string>
+    <string name="card_expiration">Expiration</string>
+    <string name="card_expiration_hint">MM/YY</string>
+    <string name="card_cvv">CVV</string>
+    <string name="card_cvv_hint">123</string>
+    <string name="card_country">Country</string>
+    <string name="card_postal_code">Postal Code</string>
+    <string name="card_postal_code_hint">A1A A1A</string>
+    <string name="add_card">ADD CARD</string>
+    <string name="add_bank_info_title">Fill in your bank account information</string>
+    <string name="add_bank_info_desc">Our app needs your most up to date bank\naccount information to deposit your rental\nincome from tenants.</string>
+    <string name="bank_info_title">Bank Information</string>
+    <string name="account_owner_hint">Name of Account Owner</string>
+    <string name="branch_number_hint">Branch Number</string>
+    <string name="account_number_hint">Account Number</string>
+    <string name="institution_number_hint">Institution Number</string>
+    <string name="bank_info_save">SAVE</string>
+    <string name="payment_defaults">Payment defaults</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="add_payment_method">Add Payment Method</string>
+    <string name="promotions">Promotions</string>
+    <string name="add_promo_code">Add Promo Code</string>
+    <string name="promotion_code">Promotion Code</string>
+    <string name="promo_code_hint">Enter promotion code</string>
+    <string name="submit_promo_code">SUBMIT</string>
+
+    <string name="payment_method_toolbar_title">Payment Method</string>
+    <string name="add_payment_toolbar_title">Add Payment</string>
+    <string name="bank_info_toolbar_title">Bank Information</string>
+    <string name="promo_code_toolbar_title">Add Promo Code</string>
 
 </resources>

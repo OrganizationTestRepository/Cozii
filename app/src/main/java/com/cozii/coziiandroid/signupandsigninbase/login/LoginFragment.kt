@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment() {
 
-    private val loginViewModel: SignUpAndSignInSharedViewModel by activityViewModels()
+    private val loginViewModel: LoginViewModel by activityViewModels()
 
     private lateinit var binding: FragmentLoginBinding
 

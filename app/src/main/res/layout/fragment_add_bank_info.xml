@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".payment.AddBankInfoFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_first_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_second_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_third_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_fourth_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_fifth_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_bank_info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/add_card_margin_top"
+        android:text="@string/add_bank_info_title"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/bank_info_title_text_size"
+        app:font_name="RobotoMedium"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_bank_info_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/add_card_margin_top"
+        android:text="@string/add_bank_info_desc"
+        android:textColor="@color/add_bank_info_desc_text_color"
+        app:font_name="RobotoRegular"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bank_info_title" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/add_card_margin_top"
+        android:text="@string/card_country"
+        android:textColor="@color/add_card_text_color"
+        android:textSize="@dimen/add_card_text_size"
+        app:font_name="RobotoMedium"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bank_info_desc" />
+
+    <Spinner
+        android:id="@+id/sp_country"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:overlapAnchor="false"
+        android:spinnerMode="dropdown"
+        android:dropDownWidth="match_parent"
+        app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_country" />
+
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_bank_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bank_info_margin_top"
+        android:text="@string/bank_info_title"
+        android:textColor="@color/add_card_text_color"
+        android:textSize="@dimen/add_card_text_size"
+        app:font_name="RobotoMedium"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/sp_country" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+        android:id="@+id/et_account_owner"
+        style="@style/AddCardEditTextAppearance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/account_owner_hint"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/card_number_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_bank_info" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+        android:id="@+id/et_branch_number"
+        style="@style/AddCardEditTextAppearance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/add_card_margin_top"
+        android:hint="@string/branch_number_hint"
+        android:textSize="@dimen/card_number_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintEnd_toEndOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/et_account_owner" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+        android:id="@+id/et_account_number"
+        style="@style/AddCardEditTextAppearance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/add_card_margin_top"
+        android:hint="@string/account_number_hint"
+        android:textSize="@dimen/card_number_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintEnd_toEndOf="@id/fragment_fourth_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/et_branch_number" />
+
+    <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+        android:id="@+id/et_institution_number"
+        style="@style/AddCardEditTextAppearance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/add_card_margin_top"
+        android:hint="@string/institution_number_hint"
+        android:textSize="@dimen/card_number_text_size"
+        app:font_name="RobotoRegular"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_branch_number"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_fifth_guide_line" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/add_card_button_margin"
+        android:layout_marginEnd="@dimen/add_card_button_margin"
+        android:layout_marginBottom="@dimen/add_card_button_bottom_margin"
+        android:background="@drawable/background_send_email_button"
+        android:paddingTop="@dimen/add_card_button_padding"
+        android:paddingBottom="@dimen/add_card_button_padding"
+        android:text="@string/bank_info_save"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+        app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

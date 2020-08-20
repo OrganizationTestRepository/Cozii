@@ -34,13 +34,6 @@ tools:ignore="LockedOrientationActivity">
         android:theme="@style/HomeActivityTheme">
 
     </activity>
-    <activity
-        android:name="com.cozii.coziiandroid.onboarding.OnBoardViewPagerActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/SignUpAndSignInActivityTheme"
-        android:windowSoftInputMode="stateHidden|adjustPan">
-
-    </activity>
 </application>
 
 </manifest>

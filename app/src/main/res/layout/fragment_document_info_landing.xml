@@ -14,9 +14,11 @@
         android:src="@drawable/ic_id_verify_info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
+        android:id="@+id/tv_upload_doc_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/document_landing_margin_top"
@@ -33,13 +35,13 @@
         android:id="@+id/verify_now_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/document_landing_margin_bottom"
+        android:layout_marginTop="@dimen/document_landing_margin_bottom"
         android:background="@drawable/background_send_email_button"
         android:paddingTop="@dimen/document_no_id_margin_top"
         android:paddingBottom="@dimen/document_no_id_margin_top"
         android:text="@string/document_verify_now"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_upload_doc_info"
         app:layout_constraintEnd_toEndOf="@id/iv_landing_image"
         app:layout_constraintStart_toStartOf="@id/iv_landing_image" />
 

@@ -27,7 +27,8 @@
         android:layout_marginStart="@dimen/verification_start_margin"
         android:src="@drawable/ic_disabled_invite_icon"
         app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_profile_option"

@@ -7,7 +7,7 @@
 
         <variable
             name="loginviewmodel"
-            type="com.cozii.coziiandroid.signupandsigninbase.viewmodel.SignUpAndSignInSharedViewModel" />
+            type="com.cozii.coziiandroid.signupandsigninbase.login.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -139,10 +139,13 @@
             android:drawablePadding="@dimen/login_drawable_password_padding"
             android:hint="@string/login_password_hint"
             android:inputType="textPassword"
+            android:tag="1"
             android:text="@={loginviewmodel.login.fields.password}"
             android:textColor="@android:color/black"
             android:textSize="@dimen/login_edit_text_text_size"
             app:error="@{loginviewmodel.login.passwordError}"
+            app:showPassword="@{true}"
+            app:typeOfPage="@{loginviewmodel.page}"
             app:font_name="RobotoRegular"
             app:layout_constraintEnd_toEndOf="@id/fragment_fifth_guide_line"
             app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
@@ -180,7 +183,8 @@
             android:layout_marginBottom="@dimen/login_icons_bottom_margin"
             android:src="@drawable/ic_google"
             app:layout_constraintBottom_toTopOf="@id/fragment_third_guide_line"
-            app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line" />
+            app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+            android:contentDescription="TODO" />
 
         <ImageView
             android:id="@+id/iv_facebook"
@@ -191,7 +195,8 @@
             android:layout_marginBottom="@dimen/login_icons_bottom_margin"
             android:src="@drawable/ic_facebook"
             app:layout_constraintBottom_toTopOf="@id/fragment_third_guide_line"
-            app:layout_constraintStart_toEndOf="@id/iv_google" />
+            app:layout_constraintStart_toEndOf="@id/iv_google"
+            android:contentDescription="TODO" />
 
         <ImageView
             android:id="@+id/iv_linkedin"
@@ -202,7 +207,8 @@
             android:layout_marginBottom="@dimen/login_icons_bottom_margin"
             android:src="@drawable/ic_linkedin"
             app:layout_constraintBottom_toTopOf="@id/fragment_third_guide_line"
-            app:layout_constraintStart_toEndOf="@id/iv_facebook" />
+            app:layout_constraintStart_toEndOf="@id/iv_facebook"
+            android:contentDescription="TODO" />
 
         <View
             android:layout_width="0dp"
@@ -227,7 +233,8 @@
             android:onClick="@{() -> loginviewmodel.onLoginButtonClick()}"
             android:src="@drawable/ic_right_arrow"
             app:layout_constraintBottom_toTopOf="@+id/fragment_sixth_guide_line"
-            app:layout_constraintEnd_toEndOf="@id/fragment_fifth_guide_line" />
+            app:layout_constraintEnd_toEndOf="@id/fragment_fifth_guide_line"
+            android:contentDescription="TODO" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

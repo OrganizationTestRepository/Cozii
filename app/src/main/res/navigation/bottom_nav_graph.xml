@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_profileFragment_to_editProfileFragment"
             app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
     </fragment>
     <fragment
         android:id="@+id/documentSlectionFragment"
@@ -63,4 +66,43 @@
         android:name="com.cozii.coziiandroid.threestepverification.editprofile.EditProfileFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.cozii.coziiandroid.payment.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_paymentSelectionFragment"
+            app:destination="@id/paymentSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentSelectionFragment"
+        android:name="com.cozii.coziiandroid.payment.PaymentSelectionFragment"
+        android:label="fragment_payment_selection"
+        tools:layout="@layout/fragment_payment_selection" >
+        <action
+            android:id="@+id/action_paymentSelectionFragment_to_addBankInfoFragment"
+            app:destination="@id/addBankInfoFragment" />
+        <action
+            android:id="@+id/action_paymentSelectionFragment_to_addCardPaymentFragment"
+            app:destination="@id/addCardPaymentFragment" />
+        <action
+            android:id="@+id/action_paymentSelectionFragment_to_promoCodeFragment"
+            app:destination="@id/promoCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBankInfoFragment"
+        android:name="com.cozii.coziiandroid.payment.AddBankInfoFragment"
+        android:label="fragment_add_bank_info"
+        tools:layout="@layout/fragment_add_bank_info" />
+    <fragment
+        android:id="@+id/addCardPaymentFragment"
+        android:name="com.cozii.coziiandroid.payment.AddCardPaymentFragment"
+        android:label="fragment_add_card_payment"
+        tools:layout="@layout/fragment_add_card_payment" />
+    <fragment
+        android:id="@+id/promoCodeFragment"
+        android:name="com.cozii.coziiandroid.payment.PromoCodeFragment"
+        android:label="fragment_promo_code"
+        tools:layout="@layout/fragment_promo_code" />
 </navigation>

@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_passport"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_document_title"
@@ -34,5 +35,6 @@
         android:src="@drawable/ic_round_arrow"
         app:layout_constraintBottom_toBottomOf="@id/iv_document_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/iv_document_image" />
+        app:layout_constraintTop_toTopOf="@id/iv_document_image"
+        android:contentDescription="TODO" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,10 +48,11 @@
         android:id="@+id/iv_doc_front_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/document_selection_title_margin_top"
+        android:layout_marginTop="@dimen/document_selection_field_margin_top"
         android:src="@drawable/ic_upload_doc_icon"
         app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toBottomOf="@id/tv_doc_upload_desc" />
+        app:layout_constraintTop_toBottomOf="@id/tv_doc_upload_desc"
+        android:contentDescription="TODO" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:layout_width="wrap_content"
@@ -66,10 +67,11 @@
         android:id="@+id/iv_doc_front_upload_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/document_selection_title_margin_top"
+        android:layout_marginTop="@dimen/document_selection_field_margin_top"
         android:src="@drawable/upload"
         app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
-        app:layout_constraintTop_toBottomOf="@id/tv_doc_upload_desc" />
+        app:layout_constraintTop_toBottomOf="@id/tv_doc_upload_desc"
+        android:contentDescription="TODO" />
 
     <View
         android:id="@+id/upload_doc_divider"
@@ -88,7 +90,8 @@
         android:layout_marginTop="@dimen/upload_divider_top_margin"
         android:src="@drawable/ic_upload_doc_icon"
         app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toBottomOf="@id/upload_doc_divider" />
+        app:layout_constraintTop_toBottomOf="@id/upload_doc_divider"
+        android:contentDescription="TODO" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:layout_width="wrap_content"
@@ -106,7 +109,8 @@
         android:layout_marginTop="@dimen/upload_divider_top_margin"
         android:src="@drawable/upload"
         app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
-        app:layout_constraintTop_toBottomOf="@id/upload_doc_divider" />
+        app:layout_constraintTop_toBottomOf="@id/upload_doc_divider"
+        android:contentDescription="TODO" />
 
     <View
         android:layout_width="0dp"
