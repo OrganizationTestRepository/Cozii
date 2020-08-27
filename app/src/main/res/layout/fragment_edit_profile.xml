@@ -93,6 +93,7 @@
                 android:inputType="textPersonName"
                 android:text="@={editProfileViewModel.editProfileForm.editFields.firstname}"
                 android:textSize="@dimen/profile_edit_text_text_size"
+                android:digits="@string/charset"
                 app:error="@{editProfileViewModel.editProfileForm.firstNameError}"
                 app:font_name="RobotoRegular"
                 app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
@@ -108,6 +109,7 @@
                 android:inputType="textPersonName"
                 android:text="@={editProfileViewModel.editProfileForm.editFields.lastname}"
                 android:textSize="@dimen/profile_edit_text_text_size"
+                android:digits="@string/charset"
                 app:error="@{editProfileViewModel.editProfileForm.lastNameError}"
                 app:font_name="RobotoRegular"
                 app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
@@ -183,47 +185,20 @@
                 app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
                 app:layout_constraintTop_toBottomOf="@id/et_phone" />
 
-            <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
-                android:id="@+id/et_suite_number"
-                style="@style/ProfileEditTextAppearance"
+            <AutoCompleteTextView
+                android:id="@+id/et_address"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/suite_number_hint"
-                android:inputType="text"
+                android:text="@={editProfileViewModel.location}"
                 android:textSize="@dimen/profile_edit_text_text_size"
-                app:font_name="RobotoRegular"
-                app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
-                app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-                app:layout_constraintTop_toBottomOf="@id/tv_residential_address" />
-
-            <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
-                android:id="@+id/et_street_number"
-                style="@style/ProfileEditTextAppearance"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/street_number_hint"
-                android:inputType="text"
-                android:textSize="@dimen/profile_edit_text_text_size"
-                app:font_name="RobotoRegular"
+                android:dropDownAnchor="@id/et_address"
+                android:dropDownVerticalOffset="-80dp"
+                android:dropDownHorizontalOffset="0dp"
                 app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
-                app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+                app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
                 app:layout_constraintTop_toBottomOf="@id/tv_residential_address" />
 
-            <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
-                android:id="@+id/et_street_name"
-                style="@style/ProfileEditTextAppearance"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/profile_residential_address_margin_top"
-                android:hint="@string/street_name_hint"
-                android:inputType="text"
-                android:text="@={editProfileViewModel.editProfileForm.editFields.streetname}"
-                android:textSize="@dimen/profile_edit_text_text_size"
-                app:error="@{editProfileViewModel.editProfileForm.streetNameError}"
-                app:font_name="RobotoRegular"
-                app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
-                app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-                app:layout_constraintTop_toBottomOf="@id/et_suite_number" />
 
             <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
                 android:id="@+id/et_city"
@@ -233,13 +208,13 @@
                 android:layout_marginTop="@dimen/profile_residential_address_margin_top"
                 android:hint="@string/city_hint"
                 android:inputType="text"
-                android:text="@={editProfileViewModel.editProfileForm.editFields.city}"
+                android:text="@={editProfileViewModel.editProfileForm.editFields.streetname}"
                 android:textSize="@dimen/profile_edit_text_text_size"
-                app:error="@{editProfileViewModel.editProfileForm.cityNameError}"
+                app:error="@{editProfileViewModel.editProfileForm.streetNameError}"
                 app:font_name="RobotoRegular"
-                app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
-                app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
-                app:layout_constraintTop_toBottomOf="@id/et_suite_number" />
+                app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
+                app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
+                app:layout_constraintTop_toBottomOf="@id/et_address" />
 
             <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
                 android:id="@+id/et_province"
@@ -249,16 +224,32 @@
                 android:layout_marginTop="@dimen/profile_residential_address_margin_top"
                 android:hint="@string/province_hint"
                 android:inputType="text"
+                android:text="@={editProfileViewModel.editProfileForm.editFields.city}"
+                android:textSize="@dimen/profile_edit_text_text_size"
+                app:error="@{editProfileViewModel.editProfileForm.cityNameError}"
+                app:font_name="RobotoRegular"
+                app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
+                app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
+                app:layout_constraintTop_toBottomOf="@id/et_address" />
+
+            <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
+                android:id="@+id/et_postal_code"
+                style="@style/ProfileEditTextAppearance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/profile_residential_address_margin_top"
+                android:hint="@string/postal_code_hint"
+                android:inputType="text"
                 android:text="@={editProfileViewModel.editProfileForm.editFields.province}"
                 android:textSize="@dimen/profile_edit_text_text_size"
                 app:error="@{editProfileViewModel.editProfileForm.provinceError}"
                 app:font_name="RobotoRegular"
                 app:layout_constraintEnd_toEndOf="@id/fragment_third_guide_line"
                 app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-                app:layout_constraintTop_toBottomOf="@id/et_street_name" />
+                app:layout_constraintTop_toBottomOf="@id/et_city" />
 
             <com.cozii.coziiandroid.coziicustomviews.CoziiEditText
-                android:id="@+id/et_postal_code"
+                android:id="@+id/et_country"
                 style="@style/ProfileEditTextAppearance"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -271,7 +262,7 @@
                 app:font_name="RobotoRegular"
                 app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
                 app:layout_constraintStart_toStartOf="@id/fragment_fourth_guide_line"
-                app:layout_constraintTop_toBottomOf="@id/et_street_name" />
+                app:layout_constraintTop_toBottomOf="@id/et_city" />
 
             <Button
                 android:id="@+id/verify_doc_continue_button"
@@ -281,6 +272,7 @@
                 android:layout_marginTop="@dimen/profile_save_margin_top"
                 android:layout_marginEnd="@dimen/save_button_margin_start_and_end"
                 android:layout_marginBottom="@dimen/save_button_margin_start_and_end"
+                android:enabled="@{editProfileViewModel.valid}"
                 android:background="@drawable/background_send_email_button"
                 android:onClick="@{() -> editProfileViewModel.onSaveButtonClick()}"
                 android:paddingTop="@dimen/save_button_padding"
@@ -289,7 +281,7 @@
                 android:textColor="@android:color/white"
                 app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
                 app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-                app:layout_constraintTop_toBottomOf="@+id/et_province" />
+                app:layout_constraintTop_toBottomOf="@+id/et_postal_code" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

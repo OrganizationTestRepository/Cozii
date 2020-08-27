@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_card_number"
@@ -67,8 +67,6 @@
         style="@style/AddCardEditTextAppearance"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:drawableEnd="@drawable/ic_payment_camera"
-        android:drawablePadding="15dp"
         android:hint="@string/card_number_hint"
         android:inputType="number"
         android:textSize="@dimen/card_number_text_size"
@@ -76,6 +74,16 @@
         app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
         app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
         app:layout_constraintTop_toBottomOf="@id/tv_card_number" />
+
+    <ImageView
+        android:id="@+id/iv_scan_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_payment_camera"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintTop_toTopOf="@id/et_card_number"
+        app:layout_constraintBottom_toBottomOf="@id/et_card_number"
+        app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"/>
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
         android:id="@+id/tv_card_holder_name"

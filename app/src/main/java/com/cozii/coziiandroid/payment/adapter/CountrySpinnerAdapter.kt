@@ -9,7 +9,7 @@ import com.cozii.coziiandroid.R
 import com.cozii.coziiandroid.payment.models.CountrySpinnerItem
 import kotlinx.android.synthetic.main.layout_single_spinner_item.view.*
 
-class CountrySpinnerAdapter(private val countrySpinnerItems: List<CountrySpinnerItem>, private val context: Context) : BaseAdapter(){
+class CountrySpinnerAdapter(private val countrySpinnerItems: List<CountrySpinnerItem>, context: Context) : BaseAdapter(){
 
     private val inflater = LayoutInflater.from(context)
 

@@ -86,6 +86,13 @@
         <item>Almost Done.</item>
     </string-array>
 
+    <string-array name="on_boarding_handyman_salutation">
+        <item>As a Handyman,</item>
+        <item>As a Handyman,</item>
+        <item>As a Handyman,</item>
+        <item>Almost Done.</item>
+    </string-array>
+
     <string-array name="on_boarding_tenant_titles">
         <item>you can request repairs\nfrom the landlord with cozii.</item>
         <item>you can book a handyman\nor service expert with cozii.</item>
@@ -98,6 +105,13 @@
         <item>you can book a handyman\nand monitor repairs on the\ngo with cozii.</item>
         <item>you can collect you rent\npayment with cozii even\nmore easier.</item>
         <item>We ask every landlord for\na few details before enjoy\nthe new lifestyle.</item>
+    </string-array>
+
+    <string-array name="on_boarding_handyman_titles">
+        <item>you can get new job\nrequests with a single click.</item>
+        <item>you can be in charge of your\nschedule and stay\norganized.</item>
+        <item>you can reach more\ncustomer and get paid\nfast with direct deposit.</item>
+        <item>We ask every handyman\nfor a few details before\nenjoy the new lifestyle.</item>
     </string-array>
 
     <!-- Document Selection Fragment -->
@@ -193,5 +207,9 @@
     <string name="add_payment_toolbar_title">Add Payment</string>
     <string name="bank_info_toolbar_title">Bank Information</string>
     <string name="promo_code_toolbar_title">Add Promo Code</string>
+
+    <string name="api_key">AIzaSyDbJCIWQ7c59lJBYhUXALFGHmu0TZdtFew</string>
+
+    <string name="charset">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY Z</string>
 
 </resources>

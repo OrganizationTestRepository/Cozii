@@ -5,6 +5,9 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModel
 import com.cozii.coziiandroid.R
 import com.cozii.coziiandroid.payment.models.CountrySpinnerItem
+import com.google.android.libraries.places.internal.s
+import java.lang.StringBuilder
+
 
 class PaymentInformationViewModel : ViewModel() {
 
@@ -21,5 +24,15 @@ class PaymentInformationViewModel : ViewModel() {
                 ), "United States"
             )
         )
+    }
+
+    fun formatCardNumber(cardNumber: String) : String {
+        var builder = StringBuilder(cardNumber)
+            var i = 4
+            while (i < builder.length) {
+                builder.insert(i, " ")
+                i += 5
+            }
+        return builder.toString()
     }
 }

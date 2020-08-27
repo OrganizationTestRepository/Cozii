@@ -3,6 +3,8 @@ xmlns:tools="http://schemas.android.com/tools"
 package="com.cozii.coziiandroid"
 tools:ignore="LockedOrientationActivity">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
 <application
     android:allowBackup="true"
     android:icon="@mipmap/ic_launcher"
@@ -31,6 +33,7 @@ tools:ignore="LockedOrientationActivity">
     <activity
         android:name="com.cozii.coziiandroid.home.CoziiHomeActivity"
         android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden|adjustPan"
         android:theme="@style/HomeActivityTheme">
 
     </activity>

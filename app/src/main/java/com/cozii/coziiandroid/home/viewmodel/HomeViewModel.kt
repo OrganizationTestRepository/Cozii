@@ -60,18 +60,14 @@ class HomeViewModel : ViewModel() {
     private fun setHandymanHomeOptions(context: Context): List<HomeOptions> {
         return listOf(
             HomeOptions(
-                ContextCompat.getDrawable(context, R.drawable.ic_tenant_first_option),
-                "Request repairs from landlord", View.VISIBLE
+                ContextCompat.getDrawable(context, R.drawable.ic_handyman_first_option),
+                "My work order", View.VISIBLE
             ),
             HomeOptions(
                 ContextCompat.getDrawable(
                     context,
-                    R.drawable.ic_tenant_and_landlord_second_option
-                ), "Book handyman", View.VISIBLE
-            ),
-            HomeOptions(
-                ContextCompat.getDrawable(context, R.drawable.ic_tenant_third_option),
-                "Pay rent & utilities", View.GONE
+                    R.drawable.ic_handyman_second_option
+                ), "Payment history", View.GONE
             )
         )
     }
@@ -172,7 +168,7 @@ class HomeViewModel : ViewModel() {
             "Landlord" -> {
                 "See what’s happening"
             }
-            else -> "Handyman"
+            else -> "The latest"
         }
     }
 }

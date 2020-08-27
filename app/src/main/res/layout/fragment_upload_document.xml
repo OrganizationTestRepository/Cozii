@@ -49,17 +49,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/document_selection_field_margin_top"
+        android:contentDescription="TODO"
         android:src="@drawable/ic_upload_doc_icon"
         app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toBottomOf="@id/tv_doc_upload_desc"
-        android:contentDescription="TODO" />
+        app:layout_constraintTop_toBottomOf="@id/tv_doc_upload_desc" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_doc_front"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/doc_front_and_back_view_margin_start"
+        android:layout_marginEnd="@dimen/doc_front_and_back_view_margin_start"
         android:text="Front"
         app:layout_constraintBottom_toBottomOf="@id/iv_doc_front_icon"
+        app:layout_constraintEnd_toStartOf="@+id/iv_doc_front_upload_icon"
         app:layout_constraintStart_toEndOf="@id/iv_doc_front_icon"
         app:layout_constraintTop_toTopOf="@+id/iv_doc_front_icon" />
 
@@ -68,10 +71,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/document_selection_field_margin_top"
+        android:contentDescription="TODO"
         android:src="@drawable/upload"
         app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
-        app:layout_constraintTop_toBottomOf="@id/tv_doc_upload_desc"
-        android:contentDescription="TODO" />
+        app:layout_constraintTop_toBottomOf="@id/tv_doc_upload_desc" />
 
     <View
         android:id="@+id/upload_doc_divider"
@@ -88,17 +91,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/upload_divider_top_margin"
+        android:contentDescription="TODO"
         android:src="@drawable/ic_upload_doc_icon"
         app:layout_constraintStart_toStartOf="@id/fragment_first_guide_line"
-        app:layout_constraintTop_toBottomOf="@id/upload_doc_divider"
-        android:contentDescription="TODO" />
+        app:layout_constraintTop_toBottomOf="@id/upload_doc_divider" />
 
     <com.cozii.coziiandroid.coziicustomviews.CoziiTextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_doc_back"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/doc_front_and_back_view_margin_start"
+        android:layout_marginEnd="@dimen/doc_front_and_back_view_margin_start"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="@id/iv_doc_back_icon"
+        app:layout_constraintEnd_toStartOf="@+id/iv_doc_back_upload_icon"
         app:layout_constraintStart_toEndOf="@id/iv_doc_back_icon"
         app:layout_constraintTop_toTopOf="@+id/iv_doc_back_icon" />
 
@@ -107,10 +113,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/upload_divider_top_margin"
+        android:contentDescription="TODO"
         android:src="@drawable/upload"
         app:layout_constraintEnd_toEndOf="@id/fragment_second_guide_line"
-        app:layout_constraintTop_toBottomOf="@id/upload_doc_divider"
-        android:contentDescription="TODO" />
+        app:layout_constraintTop_toBottomOf="@id/upload_doc_divider" />
 
     <View
         android:layout_width="0dp"

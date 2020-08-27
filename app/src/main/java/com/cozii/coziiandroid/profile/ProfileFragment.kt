@@ -49,9 +49,12 @@ class ProfileFragment : Fragment(),
         if (userType == "Tenant"){
             tv_profile_type.text = "Tenant"
             tv_profile_type.background = ContextCompat.getDrawable(requireContext(),R.drawable.background_tenant_profile_type)
-        }else {
+        }else if (userType == "Landlord") {
             tv_profile_type.text = "Landlord"
             tv_profile_type.background = ContextCompat.getDrawable(requireContext(),R.drawable.background_landlord_profile_type)
+        }else  {
+            tv_profile_type.text = "Handyman"
+            tv_profile_type.background = ContextCompat.getDrawable(requireContext(),R.drawable.background_handyman_profile_type)
         }
 
         (activity as CoziiHomeActivity).updateToolbarTitle(getString(R.string.profile_title))

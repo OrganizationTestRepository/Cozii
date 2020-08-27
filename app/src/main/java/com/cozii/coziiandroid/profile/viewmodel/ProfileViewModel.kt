@@ -32,6 +32,11 @@ class ProfileViewModel : ViewModel() {
             AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_disabled_add_landlord),"Add Landlord"),
             AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_profile_disabled_home),"My properties"),
             AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_disabled_add_landlord),"Tenants"),
+
+            AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_add_service_details),"Add service details"),
+            AddlandlordParams(ContextCompat.getDrawable(context, R.drawable.ic_profile_document),"Document"),
+
+
             ProfileOptions(
                 ContextCompat.getDrawable(context, R.drawable.ic_disabled_invite_icon),
                 "Invite friends"
@@ -63,8 +68,17 @@ class ProfileViewModel : ViewModel() {
         if (userType == "Tenant") {
             finalProfileOptions.removeAt(4)
             finalProfileOptions.removeAt(4)
+            finalProfileOptions.removeAt(5)
+            finalProfileOptions.removeAt(5)
         } else if (userType == "Landlord") {
             finalProfileOptions.removeAt(3)
+            finalProfileOptions.removeAt(5)
+            finalProfileOptions.removeAt(5)
+        }else if (userType == "Handyman") {
+            finalProfileOptions.removeAt(3)
+            finalProfileOptions.removeAt(3)
+            finalProfileOptions.removeAt(3)
+            finalProfileOptions.removeAt(6)
         }
         return finalProfileOptions
     }

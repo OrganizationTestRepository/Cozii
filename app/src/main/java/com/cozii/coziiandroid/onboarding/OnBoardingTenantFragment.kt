@@ -50,6 +50,9 @@ class OnBoardingTenantFragment : Fragment() {
         }else if (userType.equals("Landlord")){
             onBoardingSalutations = resources.getStringArray(R.array.on_boarding_landlord_salutation)
             onBoardingTitles = resources.getStringArray(R.array.on_boarding_landlord_titles)
+        }else if (userType.equals("Handyman")) {
+            onBoardingSalutations = resources.getStringArray(R.array.on_boarding_handyman_salutation)
+            onBoardingTitles = resources.getStringArray(R.array.on_boarding_handyman_titles)
         }
         val onBoardingImages =
             onBoardingViewModel.getOnBoardingImages(activity as OnBoardingLandingActivity)

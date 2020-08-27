@@ -1,5 +1,7 @@
 package com.cozii.coziiandroid.threestepverification.documentverification
 
+import android.app.Activity.RESULT_OK
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -31,5 +33,32 @@ class UploadDocumentFragment : Fragment() {
             it.findNavController()
                 .navigate(R.id.action_uploadDocumentFragment_to_documentVerifySuccessFragment)
         }
+
+        iv_doc_front_upload_icon.setOnClickListener{
+           selectDocument(111)
+        }
+
+        iv_doc_back_upload_icon.setOnClickListener {
+            selectDocument(112)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        val selectedFile = data?.data
+
+        if (requestCode == 111 && resultCode == RESULT_OK) {
+            tv_doc_front.text = selectedFile.toString()
+        }else if (requestCode == 112 && resultCode == RESULT_OK) {
+            tv_doc_back.text = selectedFile.toString()
+        }
+    }
+
+    private fun selectDocument(requestCode: Int){
+        val intent = Intent()
+            .setType("*/*")
+            .setAction(Intent.ACTION_GET_CONTENT)
+
+        startActivityForResult(Intent.createChooser(intent, "Select a file"), requestCode)
     }
 }

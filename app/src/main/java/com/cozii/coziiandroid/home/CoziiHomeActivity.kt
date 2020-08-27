@@ -40,6 +40,8 @@ class CoziiHomeActivity : AppCompatActivity() {
             binding.homeBottomNavigationView.inflateMenu(R.menu.tenant_bottom_navigation_menu)
         }else if (user == "Landlord"){
             binding.homeBottomNavigationView.inflateMenu(R.menu.landlord_bottom_navigation_menu)
+        }else if (user == "Handyman"){
+            binding.homeBottomNavigationView.inflateMenu(R.menu.handyman_bottom_navigation_menu)
         }
     }
 

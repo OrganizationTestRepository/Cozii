@@ -142,10 +142,10 @@ class VerificationListAdapter(
             if (item.title == "Add Landlord"){
                 divider.visibility = View.INVISIBLE
                 tenantAndPropertNumber.visibility = View.GONE
-            }else if (item.title == "My properties"){
+            }else if (item.title == "My properties" || item.title == "Add service details"){
                 bottomView.visibility = View.GONE
                 editIcon.visibility = View.GONE
-            }else if (item.title == "Tenants"){
+            }else if (item.title == "Tenants" || item.title == "Document"){
                 topView.visibility = View.GONE
                 editIcon.visibility = View.GONE
             }

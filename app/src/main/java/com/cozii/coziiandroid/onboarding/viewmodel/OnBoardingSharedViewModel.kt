@@ -36,10 +36,10 @@ class OnBoardingSharedViewModel : ViewModel() {
 
     private fun getOnBoardAssetsHandyMan(context: Context): List<Drawable?> {
         return listOf(
-            ContextCompat.getDrawable(context, R.drawable.first_on_board_tenant_logo),
-            ContextCompat.getDrawable(context, R.drawable.second_onboard_tenant_logo),
-            ContextCompat.getDrawable(context, R.drawable.third_onboard_tenant_logo),
-            ContextCompat.getDrawable(context, R.drawable.fith_onboard_tenant_logo)
+            ContextCompat.getDrawable(context, R.drawable.handyman_first_onboard_logo),
+            ContextCompat.getDrawable(context, R.drawable.handyman_onboard_second_logo),
+            ContextCompat.getDrawable(context, R.drawable.handyman_third_onboard_logo),
+            ContextCompat.getDrawable(context, R.drawable.handyman_fourth_onboard_logo)
         )
     }
 
