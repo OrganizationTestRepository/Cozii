@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/onboard_navigation"
-    app:startDestination="@id/onBoardUserSelectionFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/onBoardUserSelectionFragment"
@@ -17,4 +17,13 @@
         android:id="@+id/onBoardViewPagerFragment"
         android:name="com.cozii.coziiandroid.onboarding.OnBoardViewPagerFragment"
         android:label="OnBoardViewPagerFragment" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.cozii.coziiandroid.onboarding.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardUserSelectionFragment"
+            app:destination="@id/onBoardUserSelectionFragment" />
+    </fragment>
 </navigation>
